@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.3.1 (64-bit)
+# SW Build 2489853 on Tue Mar 26 04:18:30 MDT 2019
+# IP Build 2486929 on Tue Mar 26 06:44:21 MDT 2019
+# Start of session at: Thu Jul 29 13:58:42 2021
+# Process ID: 4160967
+# Current directory: /mnt/data/Programming/STAGE/open_1553/HDL/library/xilinx/util_clkdiv
+# Command line: vivado -mode batch -source util_clkdiv_ip.tcl
+# Log file: /mnt/data/Programming/STAGE/open_1553/HDL/library/xilinx/util_clkdiv/vivado.log
+# Journal file: /mnt/data/Programming/STAGE/open_1553/HDL/library/xilinx/util_clkdiv/vivado.jou
+#-----------------------------------------------------------
+source util_clkdiv_ip.tcl

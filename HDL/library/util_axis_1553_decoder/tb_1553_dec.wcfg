@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_1553_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_1553" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="15180000000fs"></ZoomStartTime>
+      <ZoomEndTime time="22520000001fs"></ZoomEndTime>
+      <Cursor1Time time="20790000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="583"></NameColumnWidth>
+      <ValueColumnWidth column_width="249"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="46" />
+   <wvobject type="logic" fp_name="/tb_1553/dut/aclk">
+      <obj_property name="ElementShortName">aclk</obj_property>
+      <obj_property name="ObjectShortName">aclk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_1553/dut/arstn">
+      <obj_property name="ElementShortName">arstn</obj_property>
+      <obj_property name="ObjectShortName">arstn</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_1553/dut/m_axis_tdata">
+      <obj_property name="ElementShortName">m_axis_tdata[15:0]</obj_property>
+      <obj_property name="ObjectShortName">m_axis_tdata[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_1553/dut/m_axis_tvalid">
+      <obj_property name="ElementShortName">m_axis_tvalid</obj_property>
+      <obj_property name="ObjectShortName">m_axis_tvalid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_1553/dut/m_axis_tuser">
+      <obj_property name="ElementShortName">m_axis_tuser[7:0]</obj_property>
+      <obj_property name="ObjectShortName">m_axis_tuser[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_1553/dut/m_axis_tready">
+      <obj_property name="ElementShortName">m_axis_tready</obj_property>
+      <obj_property name="ObjectShortName">m_axis_tready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_1553/dut/bit_slice_index">
+      <obj_property name="ElementShortName">bit_slice_index[31:0]</obj_property>
+      <obj_property name="ObjectShortName">bit_slice_index[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_1553/dut/reg_data">
+      <obj_property name="ElementShortName">reg_data[39:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_data[39:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_1553/dut/parity_bit">
+      <obj_property name="ElementShortName">parity_bit</obj_property>
+      <obj_property name="ObjectShortName">parity_bit</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_1553/dut/delay_bit">
+      <obj_property name="ElementShortName">delay_bit</obj_property>
+      <obj_property name="ObjectShortName">delay_bit</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_1553/dut/state">
+      <obj_property name="ElementShortName">state[4:0]</obj_property>
+      <obj_property name="ObjectShortName">state[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_1553/dut/data">
+      <obj_property name="ElementShortName">data[15:0]</obj_property>
+      <obj_property name="ObjectShortName">data[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_1553/dut/cmd">
+      <obj_property name="ElementShortName">cmd[7:0]</obj_property>
+      <obj_property name="ObjectShortName">cmd[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_1553/dut/diff">
+      <obj_property name="ElementShortName">diff[1:0]</obj_property>
+      <obj_property name="ObjectShortName">diff[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_1553/dut/p_diff">
+      <obj_property name="ElementShortName">p_diff[1:0]</obj_property>
+      <obj_property name="ObjectShortName">p_diff[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_1553/dut/skip_counter">
+      <obj_property name="ElementShortName">skip_counter[6:0]</obj_property>
+      <obj_property name="ObjectShortName">skip_counter[6:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_1553/dut/trans_counter">
+      <obj_property name="ElementShortName">trans_counter[5:0]</obj_property>
+      <obj_property name="ObjectShortName">trans_counter[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_1553/dut/pause_counter">
+      <obj_property name="ElementShortName">pause_counter[8:0]</obj_property>
+      <obj_property name="ObjectShortName">pause_counter[8:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_1553/dut/clock_speed">
+      <obj_property name="ElementShortName">clock_speed[31:0]</obj_property>
+      <obj_property name="ObjectShortName">clock_speed[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_1553/dut/sample_rate">
+      <obj_property name="ElementShortName">sample_rate[31:0]</obj_property>
+      <obj_property name="ObjectShortName">sample_rate[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_1553/dut/bit_slice_offset">
+      <obj_property name="ElementShortName">bit_slice_offset[31:0]</obj_property>
+      <obj_property name="ObjectShortName">bit_slice_offset[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_1553/dut/invert_data">
+      <obj_property name="ElementShortName">invert_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">invert_data[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_1553/dut/sample_select">
+      <obj_property name="ElementShortName">sample_select[31:0]</obj_property>
+      <obj_property name="ObjectShortName">sample_select[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_1553/dut/base_1553_clock_rate">
+      <obj_property name="ElementShortName">base_1553_clock_rate[31:0]</obj_property>
+      <obj_property name="ObjectShortName">base_1553_clock_rate[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_1553/dut/samples_per_mhz">
+      <obj_property name="ElementShortName">samples_per_mhz[31:0]</obj_property>
+      <obj_property name="ObjectShortName">samples_per_mhz[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_1553/dut/cycles_per_mhz">
+      <obj_property name="ElementShortName">cycles_per_mhz[31:0]</obj_property>
+      <obj_property name="ObjectShortName">cycles_per_mhz[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_1553/dut/delay_time">
+      <obj_property name="ElementShortName">delay_time[31:0]</obj_property>
+      <obj_property name="ObjectShortName">delay_time[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_1553/dut/samples_to_skip">
+      <obj_property name="ElementShortName">samples_to_skip[31:0]</obj_property>
+      <obj_property name="ObjectShortName">samples_to_skip[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_1553/dut/round_sample_select">
+      <obj_property name="ElementShortName">round_sample_select[31:0]</obj_property>
+      <obj_property name="ObjectShortName">round_sample_select[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_1553/dut/bit_rate_per_mhz">
+      <obj_property name="ElementShortName">bit_rate_per_mhz[31:0]</obj_property>
+      <obj_property name="ObjectShortName">bit_rate_per_mhz[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_1553/dut/round_bit_slice_offset">
+      <obj_property name="ElementShortName">round_bit_slice_offset[31:0]</obj_property>
+      <obj_property name="ObjectShortName">round_bit_slice_offset[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_1553/dut/sync_pulse_len">
+      <obj_property name="ElementShortName">sync_pulse_len[31:0]</obj_property>
+      <obj_property name="ObjectShortName">sync_pulse_len[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_1553/dut/bits_per_trans">
+      <obj_property name="ElementShortName">bits_per_trans[31:0]</obj_property>
+      <obj_property name="ObjectShortName">bits_per_trans[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_1553/dut/synth_bits_per_trans">
+      <obj_property name="ElementShortName">synth_bits_per_trans[31:0]</obj_property>
+      <obj_property name="ObjectShortName">synth_bits_per_trans[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_1553/dut/diff_wait">
+      <obj_property name="ElementShortName">diff_wait[4:0]</obj_property>
+      <obj_property name="ObjectShortName">diff_wait[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_1553/dut/data_cap">
+      <obj_property name="ElementShortName">data_cap[4:0]</obj_property>
+      <obj_property name="ObjectShortName">data_cap[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_1553/dut/data_reduce">
+      <obj_property name="ElementShortName">data_reduce[4:0]</obj_property>
+      <obj_property name="ObjectShortName">data_reduce[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_1553/dut/parity_gen">
+      <obj_property name="ElementShortName">parity_gen[4:0]</obj_property>
+      <obj_property name="ObjectShortName">parity_gen[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_1553/dut/trans">
+      <obj_property name="ElementShortName">trans[4:0]</obj_property>
+      <obj_property name="ObjectShortName">trans[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_1553/dut/error">
+      <obj_property name="ElementShortName">error[4:0]</obj_property>
+      <obj_property name="ObjectShortName">error[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_1553/dut/sync_cmd_stat">
+      <obj_property name="ElementShortName">sync_cmd_stat[5:0]</obj_property>
+      <obj_property name="ObjectShortName">sync_cmd_stat[5:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_1553/dut/sync_data">
+      <obj_property name="ElementShortName">sync_data[5:0]</obj_property>
+      <obj_property name="ObjectShortName">sync_data[5:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_1553/dut/cmd_data">
+      <obj_property name="ElementShortName">cmd_data[2:0]</obj_property>
+      <obj_property name="ObjectShortName">cmd_data[2:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_1553/dut/cmd_cmnd">
+      <obj_property name="ElementShortName">cmd_cmnd[2:0]</obj_property>
+      <obj_property name="ObjectShortName">cmd_cmnd[2:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_1553/dut/bit_pattern">
+      <obj_property name="ElementShortName">bit_pattern[1:0]</obj_property>
+      <obj_property name="ObjectShortName">bit_pattern[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_1553/dut/synth_clk">
+      <obj_property name="ElementShortName">synth_clk[39:0]</obj_property>
+      <obj_property name="ObjectShortName">synth_clk[39:0]</obj_property>
+   </wvobject>
+</wave_config>

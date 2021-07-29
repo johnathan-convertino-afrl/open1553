@@ -1,0 +1,6 @@
+(fp_lib_table
+  (lib (name murata_pulse_transformers)(type KiCad)(uri ${KIPRJMOD}/../kicad_symbols/murata_pulse_transformers.pretty)(options "")(descr ""))
+  (lib (name logos)(type KiCad)(uri ${KIPRJMOD}/../kicad_symbols/logos.pretty)(options "")(descr ""))
+  (lib (name cui)(type KiCad)(uri ${KIPRJMOD}/../kicad_symbols/cui.pretty)(options "")(descr ""))
+  (lib (name traco)(type KiCad)(uri ${KIPRJMOD}/../kicad_symbols/traco.pretty)(options "")(descr ""))
+)

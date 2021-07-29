@@ -1,0 +1,1550 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_core_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_core" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="501000000001fs"></ZoomEndTime>
+      <Cursor1Time time="352180000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="288"></NameColumnWidth>
+      <ValueColumnWidth column_width="261"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="38" />
+   <wvobject type="logic" fp_name="/tb_core/tb_data_clk">
+      <obj_property name="ElementShortName">tb_data_clk</obj_property>
+      <obj_property name="ObjectShortName">tb_data_clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_core/tb_rst">
+      <obj_property name="ElementShortName">tb_rst</obj_property>
+      <obj_property name="ObjectShortName">tb_rst</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_core/tb_din">
+      <obj_property name="ElementShortName">tb_din[1:0]</obj_property>
+      <obj_property name="ObjectShortName">tb_din[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_core/tb_dout">
+      <obj_property name="ElementShortName">tb_dout[1:0]</obj_property>
+      <obj_property name="ObjectShortName">tb_dout[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_core/tb_uart_loop">
+      <obj_property name="ElementShortName">tb_uart_loop</obj_property>
+      <obj_property name="ObjectShortName">tb_uart_loop</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_core/data_expand">
+      <obj_property name="ElementShortName">data_expand[799:0]</obj_property>
+      <obj_property name="ObjectShortName">data_expand[799:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_core/data">
+      <obj_property name="ElementShortName">data[15:0]</obj_property>
+      <obj_property name="ObjectShortName">data[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_core/reg_data">
+      <obj_property name="ElementShortName">reg_data[999:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_data[999:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_core/parity_gen">
+      <obj_property name="ElementShortName">parity_gen</obj_property>
+      <obj_property name="ObjectShortName">parity_gen</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_core/xor_index">
+      <obj_property name="ElementShortName">xor_index[31:0]</obj_property>
+      <obj_property name="ObjectShortName">xor_index[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_core/cycle_index">
+      <obj_property name="ElementShortName">cycle_index[31:0]</obj_property>
+      <obj_property name="ObjectShortName">cycle_index[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_core/pos_counter">
+      <obj_property name="ElementShortName">pos_counter[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pos_counter[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_core/delay_counter">
+      <obj_property name="ElementShortName">delay_counter[31:0]</obj_property>
+      <obj_property name="ObjectShortName">delay_counter[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_core/CLK_PERIOD">
+      <obj_property name="ElementShortName">CLK_PERIOD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CLK_PERIOD[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_core/RST_PERIOD">
+      <obj_property name="ElementShortName">RST_PERIOD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">RST_PERIOD[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_core/CLK_SPEED_HZ">
+      <obj_property name="ElementShortName">CLK_SPEED_HZ[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CLK_SPEED_HZ[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_core/BITS_PER_TRANS">
+      <obj_property name="ElementShortName">BITS_PER_TRANS[31:0]</obj_property>
+      <obj_property name="ObjectShortName">BITS_PER_TRANS[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_core/DELAY_COUNT">
+      <obj_property name="ElementShortName">DELAY_COUNT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DELAY_COUNT[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_core/CYCLES_PER_MHZ">
+      <obj_property name="ElementShortName">CYCLES_PER_MHZ[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CYCLES_PER_MHZ[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_core/BIT_RATE_PER_MHZ">
+      <obj_property name="ElementShortName">BIT_RATE_PER_MHZ[31:0]</obj_property>
+      <obj_property name="ObjectShortName">BIT_RATE_PER_MHZ[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_core/SYNC_PULSE_LEN">
+      <obj_property name="ElementShortName">SYNC_PULSE_LEN[31:0]</obj_property>
+      <obj_property name="ObjectShortName">SYNC_PULSE_LEN[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_core/BIT_PATTERN">
+      <obj_property name="ElementShortName">BIT_PATTERN[49:0]</obj_property>
+      <obj_property name="ObjectShortName">BIT_PATTERN[49:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_core/SYNTH_CLK">
+      <obj_property name="ElementShortName">SYNTH_CLK[999:0]</obj_property>
+      <obj_property name="ObjectShortName">SYNTH_CLK[999:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_core/sync_cmd_stat">
+      <obj_property name="ElementShortName">sync_cmd_stat[149:0]</obj_property>
+      <obj_property name="ObjectShortName">sync_cmd_stat[149:0]</obj_property>
+      <obj_property name="Radix">OCTALRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_core/sync_data">
+      <obj_property name="ElementShortName">sync_data[149:0]</obj_property>
+      <obj_property name="ObjectShortName">sync_data[149:0]</obj_property>
+      <obj_property name="Radix">OCTALRADIX</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group26">
+      <obj_property name="label">mil1553_decoder</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/tb_core/dut/mil1553_decoder/aclk">
+         <obj_property name="ElementShortName">aclk</obj_property>
+         <obj_property name="ObjectShortName">aclk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/mil1553_decoder/arstn">
+         <obj_property name="ElementShortName">arstn</obj_property>
+         <obj_property name="ObjectShortName">arstn</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_decoder/diff">
+         <obj_property name="ElementShortName">diff[1:0]</obj_property>
+         <obj_property name="ObjectShortName">diff[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_decoder/m_axis_tdata">
+         <obj_property name="ElementShortName">m_axis_tdata[15:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tdata[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/mil1553_decoder/m_axis_tvalid">
+         <obj_property name="ElementShortName">m_axis_tvalid</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tvalid</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_decoder/m_axis_tuser">
+         <obj_property name="ElementShortName">m_axis_tuser[7:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tuser[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/mil1553_decoder/m_axis_tready">
+         <obj_property name="ElementShortName">m_axis_tready</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tready</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_decoder/bit_slice_index">
+         <obj_property name="ElementShortName">bit_slice_index[31:0]</obj_property>
+         <obj_property name="ObjectShortName">bit_slice_index[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_decoder/reg_data">
+         <obj_property name="ElementShortName">reg_data[39:0]</obj_property>
+         <obj_property name="ObjectShortName">reg_data[39:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/mil1553_decoder/parity_bit">
+         <obj_property name="ElementShortName">parity_bit</obj_property>
+         <obj_property name="ObjectShortName">parity_bit</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_decoder/state">
+         <obj_property name="ElementShortName">state[2:0]</obj_property>
+         <obj_property name="ObjectShortName">state[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_decoder/data">
+         <obj_property name="ElementShortName">data[15:0]</obj_property>
+         <obj_property name="ObjectShortName">data[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_decoder/cmd">
+         <obj_property name="ElementShortName">cmd[7:0]</obj_property>
+         <obj_property name="ObjectShortName">cmd[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_decoder/skip_counter">
+         <obj_property name="ElementShortName">skip_counter[5:0]</obj_property>
+         <obj_property name="ObjectShortName">skip_counter[5:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/tb_din">
+         <obj_property name="ElementShortName">tb_din[1:0]</obj_property>
+         <obj_property name="ObjectShortName">tb_din[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_decoder/clock_speed">
+         <obj_property name="ElementShortName">clock_speed[31:0]</obj_property>
+         <obj_property name="ObjectShortName">clock_speed[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_decoder/sample_rate">
+         <obj_property name="ElementShortName">sample_rate[31:0]</obj_property>
+         <obj_property name="ObjectShortName">sample_rate[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_decoder/bit_slice_offset">
+         <obj_property name="ElementShortName">bit_slice_offset[31:0]</obj_property>
+         <obj_property name="ObjectShortName">bit_slice_offset[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_decoder/invert_data">
+         <obj_property name="ElementShortName">invert_data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">invert_data[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_decoder/base_1553_clock_rate">
+         <obj_property name="ElementShortName">base_1553_clock_rate[31:0]</obj_property>
+         <obj_property name="ObjectShortName">base_1553_clock_rate[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_decoder/samples_per_mhz">
+         <obj_property name="ElementShortName">samples_per_mhz[31:0]</obj_property>
+         <obj_property name="ObjectShortName">samples_per_mhz[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_decoder/cycles_per_mhz">
+         <obj_property name="ElementShortName">cycles_per_mhz[31:0]</obj_property>
+         <obj_property name="ObjectShortName">cycles_per_mhz[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_decoder/samples_to_skip">
+         <obj_property name="ElementShortName">samples_to_skip[31:0]</obj_property>
+         <obj_property name="ObjectShortName">samples_to_skip[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_decoder/bit_rate_per_mhz">
+         <obj_property name="ElementShortName">bit_rate_per_mhz[31:0]</obj_property>
+         <obj_property name="ObjectShortName">bit_rate_per_mhz[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_decoder/sync_pulse_len">
+         <obj_property name="ElementShortName">sync_pulse_len[31:0]</obj_property>
+         <obj_property name="ObjectShortName">sync_pulse_len[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_decoder/bits_per_trans">
+         <obj_property name="ElementShortName">bits_per_trans[31:0]</obj_property>
+         <obj_property name="ObjectShortName">bits_per_trans[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_decoder/synth_bits_per_trans">
+         <obj_property name="ElementShortName">synth_bits_per_trans[31:0]</obj_property>
+         <obj_property name="ObjectShortName">synth_bits_per_trans[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_decoder/data_cap">
+         <obj_property name="ElementShortName">data_cap[2:0]</obj_property>
+         <obj_property name="ObjectShortName">data_cap[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_decoder/sync_check">
+         <obj_property name="ElementShortName">sync_check[2:0]</obj_property>
+         <obj_property name="ObjectShortName">sync_check[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_decoder/data_reduce">
+         <obj_property name="ElementShortName">data_reduce[2:0]</obj_property>
+         <obj_property name="ObjectShortName">data_reduce[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_decoder/parity_gen">
+         <obj_property name="ElementShortName">parity_gen[2:0]</obj_property>
+         <obj_property name="ObjectShortName">parity_gen[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_decoder/trans">
+         <obj_property name="ElementShortName">trans[2:0]</obj_property>
+         <obj_property name="ObjectShortName">trans[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_decoder/error">
+         <obj_property name="ElementShortName">error[2:0]</obj_property>
+         <obj_property name="ObjectShortName">error[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_decoder/sync_cmd_stat">
+         <obj_property name="ElementShortName">sync_cmd_stat[5:0]</obj_property>
+         <obj_property name="ObjectShortName">sync_cmd_stat[5:0]</obj_property>
+         <obj_property name="Radix">OCTALRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_decoder/sync_data">
+         <obj_property name="ElementShortName">sync_data[5:0]</obj_property>
+         <obj_property name="ObjectShortName">sync_data[5:0]</obj_property>
+         <obj_property name="Radix">OCTALRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_decoder/cmd_data">
+         <obj_property name="ElementShortName">cmd_data[2:0]</obj_property>
+         <obj_property name="ObjectShortName">cmd_data[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_decoder/cmd_cmnd">
+         <obj_property name="ElementShortName">cmd_cmnd[2:0]</obj_property>
+         <obj_property name="ObjectShortName">cmd_cmnd[2:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group329">
+      <obj_property name="label">decoder_fifo</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/tb_core/dut/decoder_fifo/m_axis_aclk">
+         <obj_property name="ElementShortName">m_axis_aclk</obj_property>
+         <obj_property name="ObjectShortName">m_axis_aclk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/decoder_fifo/m_axis_arstn">
+         <obj_property name="ElementShortName">m_axis_arstn</obj_property>
+         <obj_property name="ObjectShortName">m_axis_arstn</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/decoder_fifo/m_axis_tvalid">
+         <obj_property name="ElementShortName">m_axis_tvalid</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tvalid</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/decoder_fifo/m_axis_tready">
+         <obj_property name="ElementShortName">m_axis_tready</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tready</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/decoder_fifo/m_axis_tdata">
+         <obj_property name="ElementShortName">m_axis_tdata[15:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tdata[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/decoder_fifo/m_axis_tkeep">
+         <obj_property name="ElementShortName">m_axis_tkeep[1:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tkeep[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/decoder_fifo/m_axis_tlast">
+         <obj_property name="ElementShortName">m_axis_tlast</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tlast</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/decoder_fifo/m_axis_tuser">
+         <obj_property name="ElementShortName">m_axis_tuser[7:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tuser[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/decoder_fifo/m_axis_tdest">
+         <obj_property name="ElementShortName">m_axis_tdest[0:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tdest[0:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/decoder_fifo/s_axis_arstn">
+         <obj_property name="ElementShortName">s_axis_arstn</obj_property>
+         <obj_property name="ObjectShortName">s_axis_arstn</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/decoder_fifo/s_axis_tvalid">
+         <obj_property name="ElementShortName">s_axis_tvalid</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tvalid</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/decoder_fifo/s_axis_aclk">
+         <obj_property name="ElementShortName">s_axis_aclk</obj_property>
+         <obj_property name="ObjectShortName">s_axis_aclk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/decoder_fifo/s_axis_tready">
+         <obj_property name="ElementShortName">s_axis_tready</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tready</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/decoder_fifo/s_axis_tdata">
+         <obj_property name="ElementShortName">s_axis_tdata[15:0]</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tdata[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/decoder_fifo/s_axis_tkeep">
+         <obj_property name="ElementShortName">s_axis_tkeep[1:0]</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tkeep[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/decoder_fifo/s_axis_tlast">
+         <obj_property name="ElementShortName">s_axis_tlast</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tlast</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/decoder_fifo/s_axis_tuser">
+         <obj_property name="ElementShortName">s_axis_tuser[7:0]</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tuser[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/decoder_fifo/s_axis_tdest">
+         <obj_property name="ElementShortName">s_axis_tdest[0:0]</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tdest[0:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/decoder_fifo/data_count_aclk">
+         <obj_property name="ElementShortName">data_count_aclk</obj_property>
+         <obj_property name="ObjectShortName">data_count_aclk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/decoder_fifo/data_count_arstn">
+         <obj_property name="ElementShortName">data_count_arstn</obj_property>
+         <obj_property name="ObjectShortName">data_count_arstn</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/decoder_fifo/data_count">
+         <obj_property name="ElementShortName">data_count[0:0]</obj_property>
+         <obj_property name="ObjectShortName">data_count[0:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/decoder_fifo/s_axis_concat_data">
+         <obj_property name="ElementShortName">s_axis_concat_data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">s_axis_concat_data[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/decoder_fifo/s_wr_full">
+         <obj_property name="ElementShortName">s_wr_full</obj_property>
+         <obj_property name="ObjectShortName">s_wr_full</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/decoder_fifo/s_rd_valid">
+         <obj_property name="ElementShortName">s_rd_valid</obj_property>
+         <obj_property name="ObjectShortName">s_rd_valid</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/decoder_fifo/s_rd_empty">
+         <obj_property name="ElementShortName">s_rd_empty</obj_property>
+         <obj_property name="ObjectShortName">s_rd_empty</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/decoder_fifo/s_rd_en">
+         <obj_property name="ElementShortName">s_rd_en</obj_property>
+         <obj_property name="ObjectShortName">s_rd_en</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/decoder_fifo/s_rd_data">
+         <obj_property name="ElementShortName">s_rd_data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">s_rd_data[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/decoder_fifo/open">
+         <obj_property name="ElementShortName">open</obj_property>
+         <obj_property name="ObjectShortName">open</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/decoder_fifo/FIFO_DEPTH">
+         <obj_property name="ElementShortName">FIFO_DEPTH[31:0]</obj_property>
+         <obj_property name="ObjectShortName">FIFO_DEPTH[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/decoder_fifo/COUNT_WIDTH">
+         <obj_property name="ElementShortName">COUNT_WIDTH[31:0]</obj_property>
+         <obj_property name="ObjectShortName">COUNT_WIDTH[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/decoder_fifo/BUS_WIDTH">
+         <obj_property name="ElementShortName">BUS_WIDTH[31:0]</obj_property>
+         <obj_property name="ObjectShortName">BUS_WIDTH[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/decoder_fifo/USER_WIDTH">
+         <obj_property name="ElementShortName">USER_WIDTH[31:0]</obj_property>
+         <obj_property name="ObjectShortName">USER_WIDTH[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/decoder_fifo/DEST_WIDTH">
+         <obj_property name="ElementShortName">DEST_WIDTH[31:0]</obj_property>
+         <obj_property name="ObjectShortName">DEST_WIDTH[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/decoder_fifo/RAM_TYPE">
+         <obj_property name="ElementShortName">RAM_TYPE[39:0]</obj_property>
+         <obj_property name="ObjectShortName">RAM_TYPE[39:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/decoder_fifo/PACKET_MODE">
+         <obj_property name="ElementShortName">PACKET_MODE[31:0]</obj_property>
+         <obj_property name="ObjectShortName">PACKET_MODE[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/decoder_fifo/COUNT_DELAY">
+         <obj_property name="ElementShortName">COUNT_DELAY[31:0]</obj_property>
+         <obj_property name="ObjectShortName">COUNT_DELAY[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/decoder_fifo/COUNT_ENA">
+         <obj_property name="ElementShortName">COUNT_ENA[31:0]</obj_property>
+         <obj_property name="ObjectShortName">COUNT_ENA[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/decoder_fifo/c_ARRAY_LENGTH">
+         <obj_property name="ElementShortName">c_ARRAY_LENGTH[31:0]</obj_property>
+         <obj_property name="ObjectShortName">c_ARRAY_LENGTH[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/decoder_fifo/c_TDATA_OFFSET">
+         <obj_property name="ElementShortName">c_TDATA_OFFSET[31:0]</obj_property>
+         <obj_property name="ObjectShortName">c_TDATA_OFFSET[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/decoder_fifo/c_TKEEP_OFFSET">
+         <obj_property name="ElementShortName">c_TKEEP_OFFSET[31:0]</obj_property>
+         <obj_property name="ObjectShortName">c_TKEEP_OFFSET[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/decoder_fifo/c_TUSER_OFFSET">
+         <obj_property name="ElementShortName">c_TUSER_OFFSET[31:0]</obj_property>
+         <obj_property name="ObjectShortName">c_TUSER_OFFSET[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/decoder_fifo/c_TDEST_OFFSET">
+         <obj_property name="ElementShortName">c_TDEST_OFFSET[31:0]</obj_property>
+         <obj_property name="ObjectShortName">c_TDEST_OFFSET[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/decoder_fifo/c_TLAST_OFFSET">
+         <obj_property name="ElementShortName">c_TLAST_OFFSET[31:0]</obj_property>
+         <obj_property name="ObjectShortName">c_TLAST_OFFSET[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/decoder_fifo/c_PWR_FIFO">
+         <obj_property name="ElementShortName">c_PWR_FIFO[31:0]</obj_property>
+         <obj_property name="ObjectShortName">c_PWR_FIFO[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/decoder_fifo/c_FIFO_DEPTH">
+         <obj_property name="ElementShortName">c_FIFO_DEPTH[31:0]</obj_property>
+         <obj_property name="ObjectShortName">c_FIFO_DEPTH[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/decoder_fifo/c_FIFO_WIDTH">
+         <obj_property name="ElementShortName">c_FIFO_WIDTH[31:0]</obj_property>
+         <obj_property name="ObjectShortName">c_FIFO_WIDTH[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group66">
+      <obj_property name="label">string_encoder</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/tb_core/dut/string_encoder/aclk">
+         <obj_property name="ElementShortName">aclk</obj_property>
+         <obj_property name="ObjectShortName">aclk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/string_encoder/arstn">
+         <obj_property name="ElementShortName">arstn</obj_property>
+         <obj_property name="ObjectShortName">arstn</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/string_encoder/s_axis_tdata">
+         <obj_property name="ElementShortName">s_axis_tdata[15:0]</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tdata[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/string_encoder/s_axis_tvalid">
+         <obj_property name="ElementShortName">s_axis_tvalid</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tvalid</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/string_encoder/s_axis_tuser">
+         <obj_property name="ElementShortName">s_axis_tuser[7:0]</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tuser[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/string_encoder/s_axis_tready">
+         <obj_property name="ElementShortName">s_axis_tready</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tready</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/string_encoder/m_axis_tdata">
+         <obj_property name="ElementShortName">m_axis_tdata[167:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tdata[167:0]</obj_property>
+         <obj_property name="Radix">ASCIIRADIX</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/string_encoder/m_axis_tvalid">
+         <obj_property name="ElementShortName">m_axis_tvalid</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tvalid</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/string_encoder/m_axis_tready">
+         <obj_property name="ElementShortName">m_axis_tready</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tready</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/string_encoder/p_m_axis_tready">
+         <obj_property name="ElementShortName">p_m_axis_tready</obj_property>
+         <obj_property name="ObjectShortName">p_m_axis_tready</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group77">
+      <obj_property name="label">string_to_char</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/tb_core/dut/string_to_char/aclk">
+         <obj_property name="ElementShortName">aclk</obj_property>
+         <obj_property name="ObjectShortName">aclk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/string_to_char/arstn">
+         <obj_property name="ElementShortName">arstn</obj_property>
+         <obj_property name="ObjectShortName">arstn</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/string_to_char/m_axis_tdata">
+         <obj_property name="ElementShortName">m_axis_tdata[7:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tdata[7:0]</obj_property>
+         <obj_property name="Radix">ASCIIRADIX</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/string_to_char/m_axis_tvalid">
+         <obj_property name="ElementShortName">m_axis_tvalid</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tvalid</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/string_to_char/m_axis_tready">
+         <obj_property name="ElementShortName">m_axis_tready</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tready</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/string_to_char/s_axis_tdata">
+         <obj_property name="ElementShortName">s_axis_tdata[167:0]</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tdata[167:0]</obj_property>
+         <obj_property name="Radix">ASCIIRADIX</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/string_to_char/s_axis_tvalid">
+         <obj_property name="ElementShortName">s_axis_tvalid</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tvalid</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/string_to_char/s_axis_tready">
+         <obj_property name="ElementShortName">s_axis_tready</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tready</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/string_to_char/\genblk1.reg_data_buffer ">
+         <obj_property name="ElementShortName">\genblk1.reg_data_buffer [20:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">\genblk1.reg_data_buffer [20:0][7:0]</obj_property>
+         <obj_property name="Radix">ASCIIRADIX</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/string_to_char/\genblk1.reg_data_valid ">
+         <obj_property name="ElementShortName">\genblk1.reg_data_valid </obj_property>
+         <obj_property name="ObjectShortName">\genblk1.reg_data_valid </obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/string_to_char/\genblk1.reg_m_axis_tdata ">
+         <obj_property name="ElementShortName">\genblk1.reg_m_axis_tdata [7:0]</obj_property>
+         <obj_property name="ObjectShortName">\genblk1.reg_m_axis_tdata [7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/string_to_char/\genblk1.counter ">
+         <obj_property name="ElementShortName">\genblk1.counter [5:0]</obj_property>
+         <obj_property name="ObjectShortName">\genblk1.counter [5:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/string_to_char/\genblk1.index ">
+         <obj_property name="ElementShortName">\genblk1.index [5:0]</obj_property>
+         <obj_property name="ObjectShortName">\genblk1.index [5:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/string_to_char/\genblk1.split_s_axis_tdata ">
+         <obj_property name="ElementShortName">\genblk1.split_s_axis_tdata [20:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">\genblk1.split_s_axis_tdata [20:0][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/string_to_char/\genblk1.p_m_axis_tready ">
+         <obj_property name="ElementShortName">\genblk1.p_m_axis_tready </obj_property>
+         <obj_property name="ObjectShortName">\genblk1.p_m_axis_tready </obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/string_to_char/slave_width">
+         <obj_property name="ElementShortName">slave_width[31:0]</obj_property>
+         <obj_property name="ObjectShortName">slave_width[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/string_to_char/master_width">
+         <obj_property name="ElementShortName">master_width[31:0]</obj_property>
+         <obj_property name="ObjectShortName">master_width[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group95">
+      <obj_property name="label">outgoing_char_fifo</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/tb_core/dut/outgoing_char_fifo/aclk">
+         <obj_property name="ElementShortName">aclk</obj_property>
+         <obj_property name="ObjectShortName">aclk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/outgoing_char_fifo/arstn">
+         <obj_property name="ElementShortName">arstn</obj_property>
+         <obj_property name="ObjectShortName">arstn</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/outgoing_char_fifo/m_axis_tdata">
+         <obj_property name="ElementShortName">m_axis_tdata[7:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tdata[7:0]</obj_property>
+         <obj_property name="Radix">ASCIIRADIX</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/outgoing_char_fifo/m_axis_tvalid">
+         <obj_property name="ElementShortName">m_axis_tvalid</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tvalid</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/outgoing_char_fifo/m_axis_tready">
+         <obj_property name="ElementShortName">m_axis_tready</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tready</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/outgoing_char_fifo/s_axis_tdata">
+         <obj_property name="ElementShortName">s_axis_tdata[7:0]</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tdata[7:0]</obj_property>
+         <obj_property name="Radix">ASCIIRADIX</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/outgoing_char_fifo/s_axis_tvalid">
+         <obj_property name="ElementShortName">s_axis_tvalid</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tvalid</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/outgoing_char_fifo/s_axis_tready">
+         <obj_property name="ElementShortName">s_axis_tready</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tready</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/outgoing_char_fifo/index">
+         <obj_property name="ElementShortName">index[2:0]</obj_property>
+         <obj_property name="ObjectShortName">index[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/outgoing_char_fifo/index_shift">
+         <obj_property name="ElementShortName">index_shift[2:0]</obj_property>
+         <obj_property name="ObjectShortName">index_shift[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/outgoing_char_fifo/index_check">
+         <obj_property name="ElementShortName">index_check[2:0]</obj_property>
+         <obj_property name="ObjectShortName">index_check[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/outgoing_char_fifo/reg_data_buffer">
+         <obj_property name="ElementShortName">reg_data_buffer[3:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">reg_data_buffer[3:0][7:0]</obj_property>
+         <obj_property name="Radix">ASCIIRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/outgoing_char_fifo/reg_valid_buffer">
+         <obj_property name="ElementShortName">reg_valid_buffer[3:0]</obj_property>
+         <obj_property name="ObjectShortName">reg_valid_buffer[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/outgoing_char_fifo/depth">
+         <obj_property name="ElementShortName">depth[31:0]</obj_property>
+         <obj_property name="ObjectShortName">depth[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/outgoing_char_fifo/width">
+         <obj_property name="ElementShortName">width[31:0]</obj_property>
+         <obj_property name="ObjectShortName">width[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group111">
+      <obj_property name="label">axis_uart</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/tb_core/dut/axis_uart/aclk">
+         <obj_property name="ElementShortName">aclk</obj_property>
+         <obj_property name="ObjectShortName">aclk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/axis_uart/arstn">
+         <obj_property name="ElementShortName">arstn</obj_property>
+         <obj_property name="ObjectShortName">arstn</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/axis_uart/s_axis_tdata">
+         <obj_property name="ElementShortName">s_axis_tdata[7:0]</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tdata[7:0]</obj_property>
+         <obj_property name="Radix">ASCIIRADIX</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/axis_uart/s_axis_tvalid">
+         <obj_property name="ElementShortName">s_axis_tvalid</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tvalid</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/axis_uart/s_axis_tready">
+         <obj_property name="ElementShortName">s_axis_tready</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tready</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/axis_uart/m_axis_tdata">
+         <obj_property name="ElementShortName">m_axis_tdata[7:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tdata[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/axis_uart/m_axis_tvalid">
+         <obj_property name="ElementShortName">m_axis_tvalid</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tvalid</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/axis_uart/m_axis_tready">
+         <obj_property name="ElementShortName">m_axis_tready</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tready</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/axis_uart/uart_clk">
+         <obj_property name="ElementShortName">uart_clk</obj_property>
+         <obj_property name="ObjectShortName">uart_clk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/axis_uart/uart_rstn">
+         <obj_property name="ElementShortName">uart_rstn</obj_property>
+         <obj_property name="ObjectShortName">uart_rstn</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/axis_uart/tx">
+         <obj_property name="ElementShortName">tx</obj_property>
+         <obj_property name="ObjectShortName">tx</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/axis_uart/rx">
+         <obj_property name="ElementShortName">rx</obj_property>
+         <obj_property name="ObjectShortName">rx</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/axis_uart/uart_ena">
+         <obj_property name="ElementShortName">uart_ena</obj_property>
+         <obj_property name="ObjectShortName">uart_ena</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/axis_uart/baud_clock_speed">
+         <obj_property name="ElementShortName">baud_clock_speed[31:0]</obj_property>
+         <obj_property name="ObjectShortName">baud_clock_speed[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/axis_uart/baud_rate">
+         <obj_property name="ElementShortName">baud_rate[31:0]</obj_property>
+         <obj_property name="ObjectShortName">baud_rate[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/axis_uart/parity_ena">
+         <obj_property name="ElementShortName">parity_ena[31:0]</obj_property>
+         <obj_property name="ObjectShortName">parity_ena[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/axis_uart/parity_type">
+         <obj_property name="ElementShortName">parity_type[31:0]</obj_property>
+         <obj_property name="ObjectShortName">parity_type[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/axis_uart/stop_bits">
+         <obj_property name="ElementShortName">stop_bits[31:0]</obj_property>
+         <obj_property name="ObjectShortName">stop_bits[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/axis_uart/data_bits">
+         <obj_property name="ElementShortName">data_bits[31:0]</obj_property>
+         <obj_property name="ObjectShortName">data_bits[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/axis_uart/rx_delay">
+         <obj_property name="ElementShortName">rx_delay[31:0]</obj_property>
+         <obj_property name="ObjectShortName">rx_delay[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group132">
+      <obj_property name="label">uart_tx</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/tb_core/dut/axis_uart/uart_tx/aclk">
+         <obj_property name="ElementShortName">aclk</obj_property>
+         <obj_property name="ObjectShortName">aclk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/axis_uart/uart_tx/arstn">
+         <obj_property name="ElementShortName">arstn</obj_property>
+         <obj_property name="ObjectShortName">arstn</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/axis_uart/uart_tx/s_axis_tdata">
+         <obj_property name="ElementShortName">s_axis_tdata[7:0]</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tdata[7:0]</obj_property>
+         <obj_property name="Radix">ASCIIRADIX</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/axis_uart/uart_tx/s_axis_tvalid">
+         <obj_property name="ElementShortName">s_axis_tvalid</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tvalid</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/axis_uart/uart_tx/s_axis_tready">
+         <obj_property name="ElementShortName">s_axis_tready</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tready</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/axis_uart/uart_tx/uart_clk">
+         <obj_property name="ElementShortName">uart_clk</obj_property>
+         <obj_property name="ObjectShortName">uart_clk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/axis_uart/uart_tx/uart_rstn">
+         <obj_property name="ElementShortName">uart_rstn</obj_property>
+         <obj_property name="ObjectShortName">uart_rstn</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/axis_uart/uart_tx/uart_ena">
+         <obj_property name="ElementShortName">uart_ena</obj_property>
+         <obj_property name="ObjectShortName">uart_ena</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/axis_uart/uart_tx/txd">
+         <obj_property name="ElementShortName">txd</obj_property>
+         <obj_property name="ObjectShortName">txd</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/axis_uart/uart_tx/reg_data">
+         <obj_property name="ElementShortName">reg_data[9:0]</obj_property>
+         <obj_property name="ObjectShortName">reg_data[9:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/axis_uart/uart_tx/parity_bit">
+         <obj_property name="ElementShortName">parity_bit</obj_property>
+         <obj_property name="ObjectShortName">parity_bit</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/axis_uart/uart_tx/state">
+         <obj_property name="ElementShortName">state[2:0]</obj_property>
+         <obj_property name="ObjectShortName">state[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/axis_uart/uart_tx/data">
+         <obj_property name="ElementShortName">data[7:0]</obj_property>
+         <obj_property name="ObjectShortName">data[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/axis_uart/uart_tx/trans_counter">
+         <obj_property name="ElementShortName">trans_counter[3:0]</obj_property>
+         <obj_property name="ObjectShortName">trans_counter[3:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/axis_uart/uart_tx/prev_trans_counter">
+         <obj_property name="ElementShortName">prev_trans_counter[3:0]</obj_property>
+         <obj_property name="ObjectShortName">prev_trans_counter[3:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/axis_uart/uart_tx/trans_fin">
+         <obj_property name="ElementShortName">trans_fin</obj_property>
+         <obj_property name="ObjectShortName">trans_fin</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/axis_uart/uart_tx/parity_ena">
+         <obj_property name="ElementShortName">parity_ena[31:0]</obj_property>
+         <obj_property name="ObjectShortName">parity_ena[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/axis_uart/uart_tx/parity_type">
+         <obj_property name="ElementShortName">parity_type[31:0]</obj_property>
+         <obj_property name="ObjectShortName">parity_type[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/axis_uart/uart_tx/stop_bits">
+         <obj_property name="ElementShortName">stop_bits[31:0]</obj_property>
+         <obj_property name="ObjectShortName">stop_bits[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/axis_uart/uart_tx/data_bits">
+         <obj_property name="ElementShortName">data_bits[31:0]</obj_property>
+         <obj_property name="ObjectShortName">data_bits[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/axis_uart/uart_tx/start_bit">
+         <obj_property name="ElementShortName">start_bit[31:0]</obj_property>
+         <obj_property name="ObjectShortName">start_bit[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/axis_uart/uart_tx/bits_per_trans">
+         <obj_property name="ElementShortName">bits_per_trans[31:0]</obj_property>
+         <obj_property name="ObjectShortName">bits_per_trans[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/axis_uart/uart_tx/data_cap">
+         <obj_property name="ElementShortName">data_cap[2:0]</obj_property>
+         <obj_property name="ObjectShortName">data_cap[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/axis_uart/uart_tx/parity_gen">
+         <obj_property name="ElementShortName">parity_gen[2:0]</obj_property>
+         <obj_property name="ObjectShortName">parity_gen[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/axis_uart/uart_tx/process">
+         <obj_property name="ElementShortName">process[2:0]</obj_property>
+         <obj_property name="ObjectShortName">process[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/axis_uart/uart_tx/trans">
+         <obj_property name="ElementShortName">trans[2:0]</obj_property>
+         <obj_property name="ObjectShortName">trans[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/axis_uart/uart_tx/error">
+         <obj_property name="ElementShortName">error[2:0]</obj_property>
+         <obj_property name="ObjectShortName">error[2:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group160">
+      <obj_property name="label">uart_rx</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/tb_core/dut/axis_uart/uart_rx/aclk">
+         <obj_property name="ElementShortName">aclk</obj_property>
+         <obj_property name="ObjectShortName">aclk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/axis_uart/uart_rx/arstn">
+         <obj_property name="ElementShortName">arstn</obj_property>
+         <obj_property name="ObjectShortName">arstn</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/axis_uart/uart_rx/m_axis_tdata">
+         <obj_property name="ElementShortName">m_axis_tdata[7:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tdata[7:0]</obj_property>
+         <obj_property name="Radix">ASCIIRADIX</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/axis_uart/uart_rx/m_axis_tvalid">
+         <obj_property name="ElementShortName">m_axis_tvalid</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tvalid</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/axis_uart/uart_rx/m_axis_tready">
+         <obj_property name="ElementShortName">m_axis_tready</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tready</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/axis_uart/uart_rx/uart_clk">
+         <obj_property name="ElementShortName">uart_clk</obj_property>
+         <obj_property name="ObjectShortName">uart_clk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/axis_uart/uart_rx/uart_rstn">
+         <obj_property name="ElementShortName">uart_rstn</obj_property>
+         <obj_property name="ObjectShortName">uart_rstn</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/axis_uart/uart_rx/uart_ena">
+         <obj_property name="ElementShortName">uart_ena</obj_property>
+         <obj_property name="ObjectShortName">uart_ena</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/axis_uart/uart_rx/rxd">
+         <obj_property name="ElementShortName">rxd</obj_property>
+         <obj_property name="ObjectShortName">rxd</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/axis_uart/uart_rx/reg_data">
+         <obj_property name="ElementShortName">reg_data[9:0]</obj_property>
+         <obj_property name="ObjectShortName">reg_data[9:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/axis_uart/uart_rx/parity_bit">
+         <obj_property name="ElementShortName">parity_bit</obj_property>
+         <obj_property name="ObjectShortName">parity_bit</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/axis_uart/uart_rx/state">
+         <obj_property name="ElementShortName">state[2:0]</obj_property>
+         <obj_property name="ObjectShortName">state[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/axis_uart/uart_rx/uart_state">
+         <obj_property name="ElementShortName">uart_state[2:0]</obj_property>
+         <obj_property name="ObjectShortName">uart_state[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/axis_uart/uart_rx/data">
+         <obj_property name="ElementShortName">data[7:0]</obj_property>
+         <obj_property name="ObjectShortName">data[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/axis_uart/uart_rx/trans_counter">
+         <obj_property name="ElementShortName">trans_counter[3:0]</obj_property>
+         <obj_property name="ObjectShortName">trans_counter[3:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/axis_uart/uart_rx/prev_trans_counter">
+         <obj_property name="ElementShortName">prev_trans_counter[3:0]</obj_property>
+         <obj_property name="ObjectShortName">prev_trans_counter[3:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/axis_uart/uart_rx/p_rxd">
+         <obj_property name="ElementShortName">p_rxd</obj_property>
+         <obj_property name="ObjectShortName">p_rxd</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/axis_uart/uart_rx/parity_ena">
+         <obj_property name="ElementShortName">parity_ena[31:0]</obj_property>
+         <obj_property name="ObjectShortName">parity_ena[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/axis_uart/uart_rx/parity_type">
+         <obj_property name="ElementShortName">parity_type[31:0]</obj_property>
+         <obj_property name="ObjectShortName">parity_type[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/axis_uart/uart_rx/stop_bits">
+         <obj_property name="ElementShortName">stop_bits[31:0]</obj_property>
+         <obj_property name="ObjectShortName">stop_bits[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/axis_uart/uart_rx/data_bits">
+         <obj_property name="ElementShortName">data_bits[31:0]</obj_property>
+         <obj_property name="ObjectShortName">data_bits[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/axis_uart/uart_rx/delay">
+         <obj_property name="ElementShortName">delay[31:0]</obj_property>
+         <obj_property name="ObjectShortName">delay[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/axis_uart/uart_rx/start_bit">
+         <obj_property name="ElementShortName">start_bit[31:0]</obj_property>
+         <obj_property name="ObjectShortName">start_bit[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/axis_uart/uart_rx/bits_per_trans">
+         <obj_property name="ElementShortName">bits_per_trans[31:0]</obj_property>
+         <obj_property name="ObjectShortName">bits_per_trans[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/axis_uart/uart_rx/data_cap">
+         <obj_property name="ElementShortName">data_cap[2:0]</obj_property>
+         <obj_property name="ObjectShortName">data_cap[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/axis_uart/uart_rx/data_reduce">
+         <obj_property name="ElementShortName">data_reduce[2:0]</obj_property>
+         <obj_property name="ObjectShortName">data_reduce[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/axis_uart/uart_rx/parity_gen">
+         <obj_property name="ElementShortName">parity_gen[2:0]</obj_property>
+         <obj_property name="ObjectShortName">parity_gen[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/axis_uart/uart_rx/trans">
+         <obj_property name="ElementShortName">trans[2:0]</obj_property>
+         <obj_property name="ObjectShortName">trans[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/axis_uart/uart_rx/error">
+         <obj_property name="ElementShortName">error[2:0]</obj_property>
+         <obj_property name="ObjectShortName">error[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/axis_uart/uart_rx/start_wait">
+         <obj_property name="ElementShortName">start_wait[2:0]</obj_property>
+         <obj_property name="ObjectShortName">start_wait[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/axis_uart/uart_rx/data_at_baud">
+         <obj_property name="ElementShortName">data_at_baud[2:0]</obj_property>
+         <obj_property name="ObjectShortName">data_at_baud[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/axis_uart/uart_rx/delay_trigger">
+         <obj_property name="ElementShortName">delay_trigger</obj_property>
+         <obj_property name="ObjectShortName">delay_trigger</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group202">
+      <obj_property name="label">incoming_char_fifo</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/tb_core/dut/incomming_char_fifo/aclk">
+         <obj_property name="ElementShortName">aclk</obj_property>
+         <obj_property name="ObjectShortName">aclk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/incomming_char_fifo/arstn">
+         <obj_property name="ElementShortName">arstn</obj_property>
+         <obj_property name="ObjectShortName">arstn</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/incomming_char_fifo/m_axis_tdata">
+         <obj_property name="ElementShortName">m_axis_tdata[7:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tdata[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/incomming_char_fifo/m_axis_tvalid">
+         <obj_property name="ElementShortName">m_axis_tvalid</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tvalid</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/incomming_char_fifo/m_axis_tready">
+         <obj_property name="ElementShortName">m_axis_tready</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tready</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/incomming_char_fifo/s_axis_tdata">
+         <obj_property name="ElementShortName">s_axis_tdata[7:0]</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tdata[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/incomming_char_fifo/s_axis_tvalid">
+         <obj_property name="ElementShortName">s_axis_tvalid</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tvalid</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/incomming_char_fifo/s_axis_tready">
+         <obj_property name="ElementShortName">s_axis_tready</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tready</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/incomming_char_fifo/index">
+         <obj_property name="ElementShortName">index[2:0]</obj_property>
+         <obj_property name="ObjectShortName">index[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/incomming_char_fifo/index_shift">
+         <obj_property name="ElementShortName">index_shift[2:0]</obj_property>
+         <obj_property name="ObjectShortName">index_shift[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/incomming_char_fifo/index_check">
+         <obj_property name="ElementShortName">index_check[2:0]</obj_property>
+         <obj_property name="ObjectShortName">index_check[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/incomming_char_fifo/reg_data_buffer">
+         <obj_property name="ElementShortName">reg_data_buffer[3:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">reg_data_buffer[3:0][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/incomming_char_fifo/reg_valid_buffer">
+         <obj_property name="ElementShortName">reg_valid_buffer[3:0]</obj_property>
+         <obj_property name="ObjectShortName">reg_valid_buffer[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/incomming_char_fifo/depth">
+         <obj_property name="ElementShortName">depth[31:0]</obj_property>
+         <obj_property name="ObjectShortName">depth[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/incomming_char_fifo/width">
+         <obj_property name="ElementShortName">width[31:0]</obj_property>
+         <obj_property name="ObjectShortName">width[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group203">
+      <obj_property name="label">char_to_string</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/tb_core/dut/char_to_string/aclk">
+         <obj_property name="ElementShortName">aclk</obj_property>
+         <obj_property name="ObjectShortName">aclk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/char_to_string/arstn">
+         <obj_property name="ElementShortName">arstn</obj_property>
+         <obj_property name="ObjectShortName">arstn</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/char_to_string/s_axis_tdata">
+         <obj_property name="ElementShortName">s_axis_tdata[7:0]</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tdata[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/char_to_string/s_axis_tvalid">
+         <obj_property name="ElementShortName">s_axis_tvalid</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tvalid</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/char_to_string/s_axis_tready">
+         <obj_property name="ElementShortName">s_axis_tready</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tready</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/char_to_string/m_axis_tdata">
+         <obj_property name="ElementShortName">m_axis_tdata[167:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tdata[167:0]</obj_property>
+         <obj_property name="Radix">ASCIIRADIX</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/char_to_string/m_axis_tvalid">
+         <obj_property name="ElementShortName">m_axis_tvalid</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tvalid</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/char_to_string/m_axis_tready">
+         <obj_property name="ElementShortName">m_axis_tready</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tready</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/char_to_string/reg_data_buffer">
+         <obj_property name="ElementShortName">reg_data_buffer[20:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">reg_data_buffer[20:0][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/char_to_string/reg_data_valid">
+         <obj_property name="ElementShortName">reg_data_valid</obj_property>
+         <obj_property name="ObjectShortName">reg_data_valid</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/char_to_string/counter">
+         <obj_property name="ElementShortName">counter[5:0]</obj_property>
+         <obj_property name="ObjectShortName">counter[5:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/char_to_string/index">
+         <obj_property name="ElementShortName">index[5:0]</obj_property>
+         <obj_property name="ObjectShortName">index[5:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/char_to_string/p_m_axis_tready">
+         <obj_property name="ElementShortName">p_m_axis_tready</obj_property>
+         <obj_property name="ObjectShortName">p_m_axis_tready</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/char_to_string/master_width">
+         <obj_property name="ElementShortName">master_width[31:0]</obj_property>
+         <obj_property name="ObjectShortName">master_width[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group204">
+      <obj_property name="label">string_decoder</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="logic" fp_name="/tb_core/dut/string_decoder/aclk">
+         <obj_property name="ElementShortName">aclk</obj_property>
+         <obj_property name="ObjectShortName">aclk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/string_decoder/arstn">
+         <obj_property name="ElementShortName">arstn</obj_property>
+         <obj_property name="ObjectShortName">arstn</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/string_decoder/s_axis_tdata">
+         <obj_property name="ElementShortName">s_axis_tdata[167:0]</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tdata[167:0]</obj_property>
+         <obj_property name="Radix">ASCIIRADIX</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/string_decoder/s_axis_tvalid">
+         <obj_property name="ElementShortName">s_axis_tvalid</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tvalid</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/string_decoder/s_axis_tready">
+         <obj_property name="ElementShortName">s_axis_tready</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tready</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/string_decoder/m_axis_tdata">
+         <obj_property name="ElementShortName">m_axis_tdata[15:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tdata[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/string_decoder/m_axis_tvalid">
+         <obj_property name="ElementShortName">m_axis_tvalid</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tvalid</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/string_decoder/m_axis_tuser">
+         <obj_property name="ElementShortName">m_axis_tuser[7:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tuser[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/string_decoder/m_axis_tready">
+         <obj_property name="ElementShortName">m_axis_tready</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tready</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/string_decoder/p_m_axis_tready">
+         <obj_property name="ElementShortName">p_m_axis_tready</obj_property>
+         <obj_property name="ObjectShortName">p_m_axis_tready</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/string_decoder/force_s_axis_tready">
+         <obj_property name="ElementShortName">force_s_axis_tready</obj_property>
+         <obj_property name="ObjectShortName">force_s_axis_tready</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group282">
+      <obj_property name="label">encoder_fifo</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/tb_core/dut/encoder_fifo/m_axis_aclk">
+         <obj_property name="ElementShortName">m_axis_aclk</obj_property>
+         <obj_property name="ObjectShortName">m_axis_aclk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/encoder_fifo/m_axis_arstn">
+         <obj_property name="ElementShortName">m_axis_arstn</obj_property>
+         <obj_property name="ObjectShortName">m_axis_arstn</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/encoder_fifo/m_axis_tvalid">
+         <obj_property name="ElementShortName">m_axis_tvalid</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tvalid</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/encoder_fifo/m_axis_tready">
+         <obj_property name="ElementShortName">m_axis_tready</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tready</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/encoder_fifo/m_axis_tdata">
+         <obj_property name="ElementShortName">m_axis_tdata[15:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tdata[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/encoder_fifo/m_axis_tkeep">
+         <obj_property name="ElementShortName">m_axis_tkeep[1:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tkeep[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/encoder_fifo/m_axis_tlast">
+         <obj_property name="ElementShortName">m_axis_tlast</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tlast</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/encoder_fifo/m_axis_tuser">
+         <obj_property name="ElementShortName">m_axis_tuser[7:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tuser[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/encoder_fifo/m_axis_tdest">
+         <obj_property name="ElementShortName">m_axis_tdest[0:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tdest[0:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/encoder_fifo/s_axis_aclk">
+         <obj_property name="ElementShortName">s_axis_aclk</obj_property>
+         <obj_property name="ObjectShortName">s_axis_aclk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/encoder_fifo/s_axis_arstn">
+         <obj_property name="ElementShortName">s_axis_arstn</obj_property>
+         <obj_property name="ObjectShortName">s_axis_arstn</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/encoder_fifo/s_axis_tvalid">
+         <obj_property name="ElementShortName">s_axis_tvalid</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tvalid</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/encoder_fifo/s_axis_tready">
+         <obj_property name="ElementShortName">s_axis_tready</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tready</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/encoder_fifo/s_axis_tdata">
+         <obj_property name="ElementShortName">s_axis_tdata[15:0]</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tdata[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/encoder_fifo/s_axis_tkeep">
+         <obj_property name="ElementShortName">s_axis_tkeep[1:0]</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tkeep[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/encoder_fifo/s_axis_tlast">
+         <obj_property name="ElementShortName">s_axis_tlast</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tlast</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/encoder_fifo/s_axis_tuser">
+         <obj_property name="ElementShortName">s_axis_tuser[7:0]</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tuser[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/encoder_fifo/s_axis_tdest">
+         <obj_property name="ElementShortName">s_axis_tdest[0:0]</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tdest[0:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/encoder_fifo/data_count_aclk">
+         <obj_property name="ElementShortName">data_count_aclk</obj_property>
+         <obj_property name="ObjectShortName">data_count_aclk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/encoder_fifo/data_count_arstn">
+         <obj_property name="ElementShortName">data_count_arstn</obj_property>
+         <obj_property name="ObjectShortName">data_count_arstn</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/encoder_fifo/data_count">
+         <obj_property name="ElementShortName">data_count[0:0]</obj_property>
+         <obj_property name="ObjectShortName">data_count[0:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/encoder_fifo/s_axis_concat_data">
+         <obj_property name="ElementShortName">s_axis_concat_data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">s_axis_concat_data[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/encoder_fifo/s_wr_full">
+         <obj_property name="ElementShortName">s_wr_full</obj_property>
+         <obj_property name="ObjectShortName">s_wr_full</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/encoder_fifo/s_rd_valid">
+         <obj_property name="ElementShortName">s_rd_valid</obj_property>
+         <obj_property name="ObjectShortName">s_rd_valid</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/encoder_fifo/s_rd_empty">
+         <obj_property name="ElementShortName">s_rd_empty</obj_property>
+         <obj_property name="ObjectShortName">s_rd_empty</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/encoder_fifo/s_rd_en">
+         <obj_property name="ElementShortName">s_rd_en</obj_property>
+         <obj_property name="ObjectShortName">s_rd_en</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/encoder_fifo/s_rd_data">
+         <obj_property name="ElementShortName">s_rd_data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">s_rd_data[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/encoder_fifo/open">
+         <obj_property name="ElementShortName">open</obj_property>
+         <obj_property name="ObjectShortName">open</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/encoder_fifo/FIFO_DEPTH">
+         <obj_property name="ElementShortName">FIFO_DEPTH[31:0]</obj_property>
+         <obj_property name="ObjectShortName">FIFO_DEPTH[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/encoder_fifo/COUNT_WIDTH">
+         <obj_property name="ElementShortName">COUNT_WIDTH[31:0]</obj_property>
+         <obj_property name="ObjectShortName">COUNT_WIDTH[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/encoder_fifo/BUS_WIDTH">
+         <obj_property name="ElementShortName">BUS_WIDTH[31:0]</obj_property>
+         <obj_property name="ObjectShortName">BUS_WIDTH[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/encoder_fifo/USER_WIDTH">
+         <obj_property name="ElementShortName">USER_WIDTH[31:0]</obj_property>
+         <obj_property name="ObjectShortName">USER_WIDTH[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/encoder_fifo/DEST_WIDTH">
+         <obj_property name="ElementShortName">DEST_WIDTH[31:0]</obj_property>
+         <obj_property name="ObjectShortName">DEST_WIDTH[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/encoder_fifo/RAM_TYPE">
+         <obj_property name="ElementShortName">RAM_TYPE[39:0]</obj_property>
+         <obj_property name="ObjectShortName">RAM_TYPE[39:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/encoder_fifo/PACKET_MODE">
+         <obj_property name="ElementShortName">PACKET_MODE[31:0]</obj_property>
+         <obj_property name="ObjectShortName">PACKET_MODE[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/encoder_fifo/COUNT_DELAY">
+         <obj_property name="ElementShortName">COUNT_DELAY[31:0]</obj_property>
+         <obj_property name="ObjectShortName">COUNT_DELAY[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/encoder_fifo/COUNT_ENA">
+         <obj_property name="ElementShortName">COUNT_ENA[31:0]</obj_property>
+         <obj_property name="ObjectShortName">COUNT_ENA[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/encoder_fifo/c_ARRAY_LENGTH">
+         <obj_property name="ElementShortName">c_ARRAY_LENGTH[31:0]</obj_property>
+         <obj_property name="ObjectShortName">c_ARRAY_LENGTH[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/encoder_fifo/c_TDATA_OFFSET">
+         <obj_property name="ElementShortName">c_TDATA_OFFSET[31:0]</obj_property>
+         <obj_property name="ObjectShortName">c_TDATA_OFFSET[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/encoder_fifo/c_TKEEP_OFFSET">
+         <obj_property name="ElementShortName">c_TKEEP_OFFSET[31:0]</obj_property>
+         <obj_property name="ObjectShortName">c_TKEEP_OFFSET[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/encoder_fifo/c_TUSER_OFFSET">
+         <obj_property name="ElementShortName">c_TUSER_OFFSET[31:0]</obj_property>
+         <obj_property name="ObjectShortName">c_TUSER_OFFSET[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/encoder_fifo/c_TDEST_OFFSET">
+         <obj_property name="ElementShortName">c_TDEST_OFFSET[31:0]</obj_property>
+         <obj_property name="ObjectShortName">c_TDEST_OFFSET[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/encoder_fifo/c_TLAST_OFFSET">
+         <obj_property name="ElementShortName">c_TLAST_OFFSET[31:0]</obj_property>
+         <obj_property name="ObjectShortName">c_TLAST_OFFSET[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/encoder_fifo/c_PWR_FIFO">
+         <obj_property name="ElementShortName">c_PWR_FIFO[31:0]</obj_property>
+         <obj_property name="ObjectShortName">c_PWR_FIFO[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/encoder_fifo/c_FIFO_DEPTH">
+         <obj_property name="ElementShortName">c_FIFO_DEPTH[31:0]</obj_property>
+         <obj_property name="ObjectShortName">c_FIFO_DEPTH[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/encoder_fifo/c_FIFO_WIDTH">
+         <obj_property name="ElementShortName">c_FIFO_WIDTH[31:0]</obj_property>
+         <obj_property name="ObjectShortName">c_FIFO_WIDTH[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group205">
+      <obj_property name="label">mil1553_encoder</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/tb_core/dut/mil1553_encoder/aclk">
+         <obj_property name="ElementShortName">aclk</obj_property>
+         <obj_property name="ObjectShortName">aclk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/mil1553_encoder/arstn">
+         <obj_property name="ElementShortName">arstn</obj_property>
+         <obj_property name="ObjectShortName">arstn</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_encoder/s_axis_tdata">
+         <obj_property name="ElementShortName">s_axis_tdata[15:0]</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tdata[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/mil1553_encoder/s_axis_tvalid">
+         <obj_property name="ElementShortName">s_axis_tvalid</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tvalid</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_encoder/s_axis_tuser">
+         <obj_property name="ElementShortName">s_axis_tuser[7:0]</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tuser[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/mil1553_encoder/s_axis_tready">
+         <obj_property name="ElementShortName">s_axis_tready</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tready</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_encoder/diff">
+         <obj_property name="ElementShortName">diff[1:0]</obj_property>
+         <obj_property name="ObjectShortName">diff[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_encoder/xor_index">
+         <obj_property name="ElementShortName">xor_index[31:0]</obj_property>
+         <obj_property name="ObjectShortName">xor_index[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_encoder/cycle_index">
+         <obj_property name="ElementShortName">cycle_index[31:0]</obj_property>
+         <obj_property name="ObjectShortName">cycle_index[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_encoder/reg_data">
+         <obj_property name="ElementShortName">reg_data[39:0]</obj_property>
+         <obj_property name="ObjectShortName">reg_data[39:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_core/dut/mil1553_encoder/parity_bit">
+         <obj_property name="ElementShortName">parity_bit</obj_property>
+         <obj_property name="ObjectShortName">parity_bit</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_encoder/state">
+         <obj_property name="ElementShortName">state[2:0]</obj_property>
+         <obj_property name="ObjectShortName">state[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_encoder/data">
+         <obj_property name="ElementShortName">data[15:0]</obj_property>
+         <obj_property name="ObjectShortName">data[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_encoder/cmd">
+         <obj_property name="ElementShortName">cmd[7:0]</obj_property>
+         <obj_property name="ObjectShortName">cmd[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_encoder/skip_counter">
+         <obj_property name="ElementShortName">skip_counter[5:0]</obj_property>
+         <obj_property name="ObjectShortName">skip_counter[5:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_encoder/pause_counter">
+         <obj_property name="ElementShortName">pause_counter[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pause_counter[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_encoder/trans_counter">
+         <obj_property name="ElementShortName">trans_counter[5:0]</obj_property>
+         <obj_property name="ObjectShortName">trans_counter[5:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_encoder/prev_trans_counter">
+         <obj_property name="ElementShortName">prev_trans_counter[5:0]</obj_property>
+         <obj_property name="ObjectShortName">prev_trans_counter[5:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_encoder/clock_speed">
+         <obj_property name="ElementShortName">clock_speed[31:0]</obj_property>
+         <obj_property name="ObjectShortName">clock_speed[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_encoder/sample_rate">
+         <obj_property name="ElementShortName">sample_rate[31:0]</obj_property>
+         <obj_property name="ObjectShortName">sample_rate[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_encoder/base_1553_clock_rate">
+         <obj_property name="ElementShortName">base_1553_clock_rate[31:0]</obj_property>
+         <obj_property name="ObjectShortName">base_1553_clock_rate[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_encoder/samples_per_mhz">
+         <obj_property name="ElementShortName">samples_per_mhz[31:0]</obj_property>
+         <obj_property name="ObjectShortName">samples_per_mhz[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_encoder/cycles_per_mhz">
+         <obj_property name="ElementShortName">cycles_per_mhz[31:0]</obj_property>
+         <obj_property name="ObjectShortName">cycles_per_mhz[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_encoder/samples_to_skip">
+         <obj_property name="ElementShortName">samples_to_skip[31:0]</obj_property>
+         <obj_property name="ObjectShortName">samples_to_skip[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_encoder/bit_rate_per_mhz">
+         <obj_property name="ElementShortName">bit_rate_per_mhz[31:0]</obj_property>
+         <obj_property name="ObjectShortName">bit_rate_per_mhz[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_encoder/delay_time">
+         <obj_property name="ElementShortName">delay_time[31:0]</obj_property>
+         <obj_property name="ObjectShortName">delay_time[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_encoder/sync_pulse_len">
+         <obj_property name="ElementShortName">sync_pulse_len[31:0]</obj_property>
+         <obj_property name="ObjectShortName">sync_pulse_len[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_encoder/bits_per_trans">
+         <obj_property name="ElementShortName">bits_per_trans[31:0]</obj_property>
+         <obj_property name="ObjectShortName">bits_per_trans[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_encoder/synth_bits_per_trans">
+         <obj_property name="ElementShortName">synth_bits_per_trans[31:0]</obj_property>
+         <obj_property name="ObjectShortName">synth_bits_per_trans[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_encoder/bit_pattern">
+         <obj_property name="ElementShortName">bit_pattern[1:0]</obj_property>
+         <obj_property name="ObjectShortName">bit_pattern[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_encoder/synth_clk">
+         <obj_property name="ElementShortName">synth_clk[39:0]</obj_property>
+         <obj_property name="ObjectShortName">synth_clk[39:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_encoder/data_cap">
+         <obj_property name="ElementShortName">data_cap[2:0]</obj_property>
+         <obj_property name="ObjectShortName">data_cap[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_encoder/data_invert">
+         <obj_property name="ElementShortName">data_invert[2:0]</obj_property>
+         <obj_property name="ObjectShortName">data_invert[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_encoder/parity_gen">
+         <obj_property name="ElementShortName">parity_gen[2:0]</obj_property>
+         <obj_property name="ObjectShortName">parity_gen[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_encoder/process">
+         <obj_property name="ElementShortName">process[2:0]</obj_property>
+         <obj_property name="ObjectShortName">process[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_encoder/pause_ck">
+         <obj_property name="ElementShortName">pause_ck[2:0]</obj_property>
+         <obj_property name="ObjectShortName">pause_ck[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_encoder/trans">
+         <obj_property name="ElementShortName">trans[2:0]</obj_property>
+         <obj_property name="ObjectShortName">trans[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_encoder/error">
+         <obj_property name="ElementShortName">error[2:0]</obj_property>
+         <obj_property name="ObjectShortName">error[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_encoder/sync_cmd_stat">
+         <obj_property name="ElementShortName">sync_cmd_stat[5:0]</obj_property>
+         <obj_property name="ObjectShortName">sync_cmd_stat[5:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_encoder/sync_data">
+         <obj_property name="ElementShortName">sync_data[5:0]</obj_property>
+         <obj_property name="ObjectShortName">sync_data[5:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_encoder/cmd_data">
+         <obj_property name="ElementShortName">cmd_data[2:0]</obj_property>
+         <obj_property name="ObjectShortName">cmd_data[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_core/dut/mil1553_encoder/cmd_cmnd">
+         <obj_property name="ElementShortName">cmd_cmnd[2:0]</obj_property>
+         <obj_property name="ObjectShortName">cmd_cmnd[2:0]</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

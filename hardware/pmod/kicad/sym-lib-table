@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name Murata_Pulse_Transformers)(type Legacy)(uri ${KIPRJMOD}/../kicad_symbols/Murata_Pulse_Transformers.lib)(options "")(descr ""))
+  (lib (name TB001-500-02BE)(type Legacy)(uri ${KIPRJMOD}/../kicad_symbols/TB001-500-02BE.lib)(options "")(descr ""))
+  (lib (name TBA_1-0311)(type Legacy)(uri ${KIPRJMOD}/../kicad_symbols/TBA_1-0311.lib)(options "")(descr ""))
+)

@@ -1,0 +1,1 @@
+cmd_/mnt/data/Programming/STAGE/open_1553/linux/axisfifo/axis-fifo.ko := arm-linux-gnueabihf-ld -EL -r  -T ./scripts/module-common.lds --build-id  -o /mnt/data/Programming/STAGE/open_1553/linux/axisfifo/axis-fifo.ko /mnt/data/Programming/STAGE/open_1553/linux/axisfifo/axis-fifo.o /mnt/data/Programming/STAGE/open_1553/linux/axisfifo/axis-fifo.mod.o ;  true
