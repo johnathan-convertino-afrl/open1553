@@ -1,0 +1,2 @@
+# This file is automatically written.  Do not modify.
+proc gen_USERPARAMETER_COUNT_WIDTH_VALUE {FIFO_DEPTH } {expr [expr { ceil(log($FIFO_DEPTH)/log(2)) }]}

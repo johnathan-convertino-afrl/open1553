@@ -1,0 +1,6 @@
+*.bak
+*.log
+*.o
+*.ko
+*.*-bak
+*.bck
