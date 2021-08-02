@@ -38,7 +38,7 @@ icarus_sim: $(ICARUS_DEST_DIR)/$(OBJ)
 icarus_view: $(ICARUS_DEST_DIR)/$(ENTITY).vcd
 	$(VIEW) $(ICARUS_DEST_DIR)/$(ENTITY).vcd
 	
-$(ICARUS_DEST_DIR)/$(ENTITY).vcd: $(ICARUS_DEST_DIR)/$(OBJ)
+$(ICARUS_DEST_DIR)/$(ENTITY).vcd: icarus_sim
 
 $(ICARUS_DEST_DIR)/$(OBJ): $(ICARUS_SRC) $(ICARUS_TB)
 	mkdir -p sim

@@ -54,7 +54,7 @@ module util_axis_fifo_ctrl #(
     // read fifo
     output rd_en,
     input rd_valid,
-    input [(FIFO_WIDTH*8):0] rd_data,
+    input [(FIFO_WIDTH*8)-1:0] rd_data,
     input rd_empty,
     // write fifo
     input wr_full

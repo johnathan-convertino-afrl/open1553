@@ -27,20 +27,42 @@ module tb_fifo;
   localparam CLK_PERIOD = 500;
   localparam RST_PERIOD = 1000;
   
-  util_axis_tiny_fifo #(
-  ) dut (
-    //axi streaming clock and reset.
-    .aclk(tb_data_clk),
-    .arstn(~tb_rst),
-    //1553
-    //master data out interface
-    .m_axis_tdata(tb_dmaster),
+  util_axis_xfifo #(
+    .FIFO_DEPTH(256),
+    .COUNT_WIDTH(8),
+    .BUS_WIDTH(1),
+    .USER_WIDTH(1),
+    .DEST_WIDTH(1),
+    .RAM_TYPE("block"),
+    .PACKET_MODE(0),
+    .COUNT_DELAY(1),
+    .COUNT_ENA(1)
+  ) dut
+  (
+    // read
+    .m_axis_aclk(tb_data_clk),
+    .m_axis_arstn(~tb_rst),
     .m_axis_tvalid(tb_vmaster),
     .m_axis_tready(tb_rmaster),
-    //slave data in interface
-    .s_axis_tdata(tb_dslave),
+    .m_axis_tdata(tb_dmaster),
+    .m_axis_tkeep(),
+    .m_axis_tlast(),
+    .m_axis_tuser(),
+    .m_axis_tdest(),
+    // write
+    .s_axis_aclk(tb_data_clk),
+    .s_axis_arstn(~tb_rst),
     .s_axis_tvalid(tb_vslave),
-    .s_axis_tready(tb_rslave)
+    .s_axis_tready(tb_rslave),
+    .s_axis_tdata(tb_dslave),
+    .s_axis_tkeep(~0),
+    .s_axis_tlast(0),
+    .s_axis_tuser(0),
+    .s_axis_tdest(0),
+    // data count
+    .data_count_aclk(tb_data_clk),
+    .data_count_arstn(~tb_rst),
+    .data_count()
   );
     
   //reset
