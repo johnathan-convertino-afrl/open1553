@@ -35,6 +35,34 @@ clean:
 	$(MAKE) -C util_i2c_mixer clean
 	$(MAKE) -C util_cdc clean
 	$(MAKE) -C xilinx/util_clkdiv clean
+	$(MAKE) -C xilinx/axi_adxcvr clean
+	$(MAKE) -C xilinx/util_adxcvr clean
+	$(MAKE) -C jesd204/ad_ip_jesd204_tpl_adc clean
+	$(MAKE) -C jesd204/ad_ip_jesd204_tpl_dac clean
+	$(MAKE) -C jesd204/axi_jesd204_common clean
+	$(MAKE) -C jesd204/axi_jesd204_rx clean
+	$(MAKE) -C jesd204/axi_jesd204_tx clean
+	$(MAKE) -C jesd204/jesd204_common clean
+	$(MAKE) -C jesd204/jesd204_rx clean
+	$(MAKE) -C jesd204/jesd204_rx_static_config clean
+	$(MAKE) -C jesd204/jesd204_soft_pcs_rx clean
+	$(MAKE) -C jesd204/jesd204_soft_pcs_tx clean
+	$(MAKE) -C jesd204/jesd204_tx clean
+	$(MAKE) -C jesd204/jesd204_tx_static_config clean
+	$(MAKE) -C util_pack/util_cpack2 clean
+	$(MAKE) -C util_pack/util_upack2 clean
+	$(MAKE) -C axi_generic_lvds_dac clean
+	$(MAKE) -C intel/adi_jesd204 clean
+	$(MAKE) -C intel/avl_adxcfg clean
+	$(MAKE) -C intel/avl_adxcvr clean
+	$(MAKE) -C intel/avl_adxcvr_octet_swap clean
+	$(MAKE) -C intel/avl_adxphy clean
+	$(MAKE) -C intel/avl_dacfifo clean
+	$(MAKE) -C intel/axi_adxcvr clean
+	$(MAKE) -C intel/common/intel_mem_asym clean
+	$(MAKE) -C intel/common/intel_serdes clean
+	$(MAKE) -C intel/jesd204_phy clean
+	$(MAKE) -C intel/util_clkdiv clean
 	
 	$(MAKE) -C interfaces clean
 
@@ -64,6 +92,34 @@ lib:
 	$(MAKE) -C util_i2c_mixer
 	$(MAKE) -C util_cdc
 	$(MAKE) -C xilinx/util_clkdiv
+	$(MAKE) -C xilinx/axi_adxcvr
+	$(MAKE) -C xilinx/util_adxcvr
+	$(MAKE) -C jesd204/ad_ip_jesd204_tpl_adc
+	$(MAKE) -C jesd204/ad_ip_jesd204_tpl_dac
+	$(MAKE) -C jesd204/axi_jesd204_common
+	$(MAKE) -C jesd204/axi_jesd204_rx
+	$(MAKE) -C jesd204/axi_jesd204_tx
+	$(MAKE) -C jesd204/jesd204_common
+	$(MAKE) -C jesd204/jesd204_rx
+	$(MAKE) -C jesd204/jesd204_rx_static_config
+	$(MAKE) -C jesd204/jesd204_soft_pcs_rx
+	$(MAKE) -C jesd204/jesd204_soft_pcs_tx
+	$(MAKE) -C jesd204/jesd204_tx
+	$(MAKE) -C jesd204/jesd204_tx_static_config
+	$(MAKE) -C util_pack/util_cpack2
+	$(MAKE) -C util_pack/util_upack2
+	$(MAKE) -C axi_generic_lvds_dac
+	$(MAKE) -C intel/adi_jesd204
+	$(MAKE) -C intel/avl_adxcfg
+	$(MAKE) -C intel/avl_adxcvr
+	$(MAKE) -C intel/avl_adxcvr_octet_swap
+	$(MAKE) -C intel/avl_adxphy
+	$(MAKE) -C intel/avl_dacfifo
+	$(MAKE) -C intel/axi_adxcvr
+	$(MAKE) -C intel/common/intel_mem_asym
+	$(MAKE) -C intel/common/intel_serdes
+	$(MAKE) -C intel/jesd204_phy
+	$(MAKE) -C intel/util_clkdiv
 	
 	$(MAKE) -C interfaces
 ####################################################################################

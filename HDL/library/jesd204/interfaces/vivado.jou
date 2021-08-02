@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.3.1 (64-bit)
+# SW Build 2489853 on Tue Mar 26 04:18:30 MDT 2019
+# IP Build 2486929 on Tue Mar 26 06:44:21 MDT 2019
+# Start of session at: Thu Dec  3 09:19:16 2020
+# Process ID: 47249
+# Current directory: /mnt/data/Programming/FIRENET/ad_hdl/library/jesd204/interfaces
+# Command line: vivado -mode batch -source interfaces_ip.tcl
+# Log file: /mnt/data/Programming/FIRENET/ad_hdl/library/jesd204/interfaces/vivado.log
+# Journal file: /mnt/data/Programming/FIRENET/ad_hdl/library/jesd204/interfaces/vivado.jou
+#-----------------------------------------------------------
+source interfaces_ip.tcl
