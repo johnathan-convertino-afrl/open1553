@@ -27,20 +27,40 @@ module tb_fifo;
   localparam CLK_PERIOD = 500;
   localparam RST_PERIOD = 1000;
   
-  util_axis_tiny_fifo #(
-  ) dut (
-    //axi streaming clock and reset.
-    .aclk(tb_data_clk),
-    .arstn(~tb_rst),
-    //1553
-    //master data out interface
-    .m_axis_tdata(tb_dmaster),
-    .m_axis_tvalid(tb_vmaster),
-    .m_axis_tready(tb_rmaster),
-    //slave data in interface
-    .s_axis_tdata(tb_dslave),
-    .s_axis_tvalid(tb_vslave),
-    .s_axis_tready(tb_rslave)
+// FIFO that emulates Xilinx FIFO.
+  util_fifo #(
+    .FIFO_DEPTH(256),
+    .BYTE_WIDTH(1),
+    .COUNT_WIDTH(8),
+    .FWFT(1),
+    .RD_SYNC_DEPTH(0),
+    .WR_SYNC_DEPTH(0),
+    .DC_SYNC_DEPTH(0),
+    .COUNT_DELAY(1),
+    .COUNT_ENA(1),
+    .DATA_ZERO(0),
+    .ACK_ENA(1),
+    .RAM_TYPE("block")
+  ) dut
+  (
+    // read interface
+    .rd_clk(tb_data_clk),
+    .rd_rstn(~tb_rst),
+    .rd_en(tb_rmaster),
+    .rd_valid(tb_vmaster),
+    .rd_data(tb_dmaster),
+    .rd_empty(),
+    // write interface
+    .wr_clk(tb_data_clk),
+    .wr_rstn(~tb_rst),
+    .wr_en(tb_vslave),
+    .wr_ack(),
+    .wr_data(tb_dslave),
+    .wr_full(tb_rslave),
+    // data count interface
+    .data_count_clk(tb_data_clk),
+    .data_count_rstn(~tb_rst),
+    .data_count()
   );
     
   //reset
@@ -94,7 +114,7 @@ module tb_fifo;
       
       tb_dslave   <= tb_dslave;
       
-      if(tb_rslave == 1'b1) begin
+      if(tb_rslave == 1'b0) begin
         tb_dslave <= tb_dslave + 1;
       end
     end

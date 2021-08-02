@@ -10,7 +10,7 @@ PROJ_NAME := $(if $(LIBRARY_NAME),$(LIBRARY_NAME),$(notdir $(patsubst %/,%,$(CUR
 LIBRARY_NAME := $(PROJ_NAME)
 
 # GHDL generic make file
-ENTITY   = tb_axi
+ENTITY   = tb_fifo
 LIB_NAME = work
 STOP_TIME= 500ns
 

@@ -24,7 +24,6 @@ TB_ARCH := $(if $(TB_ARCH),$(TB_ARCH),$(ENTITY))
 
 #gtkwave
 VIEW = gtkwave
-WAVE = dump.vcd
 
 #xsim
 XSIM = vivado -nolog -nojournal
@@ -36,15 +35,15 @@ all: xsim
 
 xsim: $(XSIM_DEST_DIR)/$(PROJ_NAME).xpr
 
-xsim_sim: $(XSIM_SIM_DIR)/$(WAVE)
+xsim_sim: $(XSIM_SIM_DIR)/$(ENTITY).vcd
 
 xsim_view: $(XSIM_DEST_DIR)/$(PROJ_NAME).xpr
 	$(XSIM) -mode gui $(CURRENT_DIR)$(XSIM_DEST_DIR)/$(PROJ_NAME).xpr
 	
 xsim_gtkwave_view: xsim_sim
-	$(VIEW) $(XSIM_SIM_DIR)/$(WAVE)
+	$(VIEW) $(XSIM_SIM_DIR)/$(ENTITY).vcd
 	
-$(XSIM_SIM_DIR)/$(WAVE): $(XSIM_DEST_DIR)/$(PROJ_NAME).xpr
+$(XSIM_SIM_DIR)/$(ENTITY).vcd: $(XSIM_DEST_DIR)/$(PROJ_NAME).xpr
 	$(call build, $(XSIM) -mode batch -source $(CURRENT_DIR)../$(XSIM_SIM_TCL) -tclargs $(CURRENT_DIR)$(XSIM_DEST_DIR)/$(PROJ_NAME).xpr $(STOP_TIME) $(TB_ARCH), $(PROJ_NAME)_xsim_sim.log, $(HL)$(PROJ_NAME)$(NC) VIVADO XSIM SIM)
 
 $(XSIM_DEST_DIR)/$(PROJ_NAME).xpr: $(XSIM_SRC) $(XSIM_TB)
