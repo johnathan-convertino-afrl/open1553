@@ -19,7 +19,7 @@ FILTER_RES += Makefile
 
 LIBS := $(filter-out $(FILTER_RES), $(notdir $(wildcard $(LIBRARY_PATH)/*)))
 
-.PHONY: lib clean clean-all $(LIBS) $(SUBPROJECTS) all icarus xsim
+.PHONY: lib clean clean-all $(LIBS) $(SUBPROJECTS) all icarus xsim clean-ipcache
 
 
 help:
@@ -64,9 +64,12 @@ xsim:
 	
 clean:
 	$(MAKE) -C projects/ clean
-	
-	for file in $(LIBS); do\
-		$(MAKE) -C $(LIBRARY_PATH)/$$file clean;\
-	done
 
-clean-all:clean
+clean-ipcache:
+	$(call clean, \
+		ipcache, \
+		$(HL)IP Cache$(NC))
+
+clean-all:clean clean-ipcache
+	$(MAKE) -C projects/ clean
+	$(MAKE) -C library/ clean
