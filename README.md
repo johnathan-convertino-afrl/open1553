@@ -40,6 +40,8 @@ See IP core (library folder) for details on simulation and usage.
 
 #### linux
 
+Linux is for the zedboard pmod_fifo project only.
+
 axisfifo is a repository that contains the linux kernel driver source code for the   
 Xilinx Axis FIFO ip. This is only needed for the zedboard design. Build this against   
 the kernel from Analog Devices github repo tagged 2019_R1.   
@@ -50,6 +52,11 @@ used on the zedboard as is with the Analog Devices SDCARD image. The device thre
 included in the same folder.    
 
 The reference base image file is included for SDCARD imaging. (2019_R1-2020_06_22.img.xz)
+
+Tips: Build the axisfifo driver, then move it to your SDCARD in a folder of your choosing.   
+Boot said card and run 'insmod /path/to/axisfifo.ko'. If you have data being fed to the pmod   
+you can cat it out. Though the device returns a \r character and not \n. Just use tr to fix  
+this. Aka 'tr '\r' '\n'' this replaces returns with newline characters.  
 
 ### DIRECTORIES
 #### hardware
