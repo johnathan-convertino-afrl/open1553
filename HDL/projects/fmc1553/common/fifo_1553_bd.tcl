@@ -1,11 +1,6 @@
 # get clock frequency from pll/mcmm/ps
 set CLK_FREQ_HZ [get_property CONFIG.FREQ_HZ [get_bd_pins -of_objects $sys_cpu_clk -filter {DIR == "O"}]]
 
-# 1553 output
-create_bd_port -dir O -from 1 -to 0 diff_1553_out
-# 1553 input
-create_bd_port -dir I -from 1 -to 0 diff_1553_in
-
 # mil-std-1553 decoder
 ad_ip_instance util_axis_1553_decoder mil_1553_decoder
 
@@ -30,7 +25,6 @@ ad_connect $sys_cpu_clk util_axis_string_encoder_to_fifo/aclk
 ad_connect $sys_cpu_resetn util_axis_string_encoder_to_fifo/aresetn
 ad_connect mil_1553_decoder/m_axis string_encoder/s_axis
 ad_connect string_encoder/m_axis util_axis_string_encoder_to_fifo/S_AXIS
-ad_connect mil_1553_decoder/diff /diff_1553_in
 
 # mil-std-1553 encoder
 ad_ip_instance util_axis_1553_encoder mil_1553_encoder
@@ -56,7 +50,6 @@ ad_connect $sys_cpu_clk util_axis_fifo_to_string_decoder/aclk
 ad_connect $sys_cpu_resetn util_axis_fifo_to_string_decoder/aresetn
 ad_connect string_decoder/m_axis mil_1553_encoder/s_axis
 ad_connect util_axis_fifo_to_string_decoder/M_AXIS string_decoder/s_axis
-ad_connect mil_1553_encoder/diff /diff_1553_out
 
 # util axis to axi fifo
 ad_ip_instance axi_fifo_mm_s mil_1553_axi_fifo

@@ -18,6 +18,7 @@ set SAMPLE_WIDTH [expr $ADC_RESOLUTION > 8 ? 16 : 8]
 source $ad_hdl_dir/projects/common/zcu102/zcu102_system_bd.tcl
 source ../common/adc_fmc1553_bd.tcl
 source ../common/dac_fmc1553_bd.tcl
+source ../common/fifo_1553_bd.tcl
 
 #set_property strategy Performance_Explore [get_runs impl_1]
 #set_property strategy Flow_PerfOptimized_high [get_runs synth_1]

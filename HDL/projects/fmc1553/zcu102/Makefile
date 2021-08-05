@@ -23,5 +23,9 @@ LIB_DEPS += util_pack/util_cpack2
 LIB_DEPS += xilinx/axi_adxcvr
 LIB_DEPS += xilinx/util_adxcvr
 LIB_DEPS += axi_generic_lvds_dac
+LIB_DEPS += util_axis_1553_decoder
+LIB_DEPS += util_axis_1553_encoder
+LIB_DEPS += util_axis_1553_string_encoder
+LIB_DEPS += util_axis_1553_string_decoder
 
 include ../../scripts/project-xilinx.mk

@@ -13,6 +13,8 @@ all: lib
 
 
 clean:
+	$(MAKE) -C util_adc_diff clean
+	$(MAKE) -C util_dac_diff clean
 	$(MAKE) -C util_axis_1553_decoder clean
 	$(MAKE) -C util_axis_1553_encoder clean
 	$(MAKE) -C util_axis_1553_string_encoder clean
@@ -70,6 +72,8 @@ clean-all:clean
 
 
 lib:
+	$(MAKE) -C util_adc_diff
+	$(MAKE) -C util_dac_diff
 	$(MAKE) -C util_axis_1553_decoder
 	$(MAKE) -C util_axis_1553_encoder
 	$(MAKE) -C util_axis_1553_string_encoder
