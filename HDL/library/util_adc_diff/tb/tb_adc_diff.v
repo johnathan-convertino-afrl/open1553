@@ -36,9 +36,9 @@ module tb_adc_diff;
       // diff output
       .diff_out(),
       // write input
-      .wr_data(tb_data),
-      .wr_valid(tb_valid),
-      .wr_enable(tb_enable)
+      .rd_data(tb_data),
+      .rd_valid(tb_valid),
+      .rd_enable(tb_enable)
     );
     
   //reset

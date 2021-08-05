@@ -32,7 +32,7 @@
 
 // util_dac_diff
 module util_dac_diff #(
-    parameter WORD_WIDTH = 1,
+    parameter NUM_OF_BYTES = 1,
     parameter BYTE_WIDTH = 1,
     parameter ONEZERO_OUT = 127,
     parameter ZEROONE_OUT = 127,
@@ -43,36 +43,36 @@ module util_dac_diff #(
     input rstn,
     // diff input
     input [1:0] diff_in,
-    // read output
-    output reg [(BYTE_WIDTH*8)-1:0] rd_data,
-    output reg                      rd_valid,
-    output reg                      rd_enable
+    // write output
+    output reg [(BYTE_WIDTH*8)-1:0] wr_data,
+    output reg                      wr_valid,
+    output reg                      wr_enable
   );
   
   integer index;
   
   always @(posedge clk) begin
     if(rstn == 1'b0) begin
-      rd_data <= 0;
-      rd_valid <= 0;
-      rd_enable <= 0;
+      wr_data <= 0;
+      wr_valid <= 0;
+      wr_enable <= 0;
     end else begin
-      rd_valid  <= 1'b1;
-      rd_enable <= 1'b1;
+      wr_valid  <= 1'b1;
+      wr_enable <= 1'b1;
     
       for(index = 0; index < BYTE_WIDTH/NUM_OF_BYTES; index = index + 1) begin
-        rd_data[8*(NUM_OF_BYTES)*(index) +:8*(NUM_OF_BYTES)] <= SAME_OUT;
+        wr_data[8*(NUM_OF_BYTES)*(index) +:8*(NUM_OF_BYTES)] <= SAME_OUT;
       end
     
       if(diff_in == 2'b10) begin
         for(index = 0; index < BYTE_WIDTH/NUM_OF_BYTES; index = index + 1) begin
-          rd_data[8*(NUM_OF_BYTES)*(index) +:8*(NUM_OF_BYTES)] <= ONEZERO_OUT;
+          wr_data[8*(NUM_OF_BYTES)*(index) +:8*(NUM_OF_BYTES)] <= ONEZERO_OUT;
         end
       end
       
       if(diff_in == 2'b01) begin
         for(index = 0; index < BYTE_WIDTH/NUM_OF_BYTES; index = index + 1) begin
-          rd_data[8*(NUM_OF_BYTES)*(index) +:8*(NUM_OF_BYTES)] <= ZEROONE_OUT;
+          wr_data[8*(NUM_OF_BYTES)*(index) +:8*(NUM_OF_BYTES)] <= ZEROONE_OUT;
         end
       end
     end
