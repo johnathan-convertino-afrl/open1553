@@ -27,5 +27,8 @@ LIB_DEPS += util_axis_1553_decoder
 LIB_DEPS += util_axis_1553_encoder
 LIB_DEPS += util_axis_1553_string_encoder
 LIB_DEPS += util_axis_1553_string_decoder
+LIB_DEPS += util_adc_diff
+LIB_DEPS += util_dac_diff
+LIB_DEPS += util_dac_switch
 
 include ../../scripts/project-xilinx.mk
