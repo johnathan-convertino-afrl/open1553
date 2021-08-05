@@ -51,6 +51,12 @@ module util_dac_diff #(
   
   integer index;
   
+  reg [1:0] r_diff_in;
+  
+  always @(posedge clk) begin
+    r_diff_in <= diff_in;
+  end
+  
   always @(posedge clk) begin
     if(rstn == 1'b0) begin
       wr_data <= 0;
@@ -64,13 +70,13 @@ module util_dac_diff #(
         wr_data[8*(NUM_OF_BYTES)*(index) +:8*(NUM_OF_BYTES)] <= SAME_OUT;
       end
     
-      if(diff_in == 2'b10) begin
+      if(r_diff_in == 2'b10) begin
         for(index = 0; index < BYTE_WIDTH/NUM_OF_BYTES; index = index + 1) begin
           wr_data[8*(NUM_OF_BYTES)*(index) +:8*(NUM_OF_BYTES)] <= ONEZERO_OUT;
         end
       end
       
-      if(diff_in == 2'b01) begin
+      if(r_diff_in == 2'b01) begin
         for(index = 0; index < BYTE_WIDTH/NUM_OF_BYTES; index = index + 1) begin
           wr_data[8*(NUM_OF_BYTES)*(index) +:8*(NUM_OF_BYTES)] <= ZEROONE_OUT;
         end

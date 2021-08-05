@@ -47,13 +47,19 @@
 * tb_fifo.vhd
   * Test bench for fifo, this tb sucks, but that's on purpose. It doesn't operate the fifo as it should which is what I want to see.
   
-#### Makefile
+### Makefile
 
-* Capable of generating simulation projects for GHDL and Xsim(Vivado).
+* Capable of generating simulations and ip cores for the project.
 
-##### Usage
+#### Usage
 
-###### XSim (Vivado)
+##### Icarus
+
+* make icarus      - Generate project using Icarus.
+* make icarus_sim  - Simulate project using Icarus.
+* make icarus_view - Open GTKwave to view simulation.
+
+##### XSim (Vivado)
 
 * make xsim      - Generate Vivado project for simulation.
 * make xsim_view - Open Vivado to run simulation.
@@ -62,3 +68,6 @@
   * TB_ARCH ... argument can be passed to change the target configuration for simulation.
 * make xsim_gtkwave_view - Use gtkwave to view vcd dump file.
 
+##### IP Core (Vivado)
+
+* make - Create Packaged IP core for Vivado, also builds all sims.

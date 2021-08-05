@@ -122,5 +122,5 @@ ad_mem_hp2_interconnect $sys_dma_clk ad9694_dma/m_dest_axi
 
 # interrupts
 
-ad_cpu_interrupt ps-11 mb-14 ad9694_jesd/irq
+ad_cpu_interrupt ps-11 mb-11 ad9694_jesd/irq
 ad_cpu_interrupt ps-13 mb-13 ad9694_dma/irq
