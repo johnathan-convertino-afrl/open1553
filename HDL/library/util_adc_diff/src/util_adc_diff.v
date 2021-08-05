@@ -43,10 +43,10 @@ module util_adc_diff #(
     input rstn,
     // diff output
     output reg [1:0] diff_out,
-    // write input
-    input [(BYTE_WIDTH*8)-1:0] wr_data,
-    input                      wr_valid,
-    input                      wr_enable
+    // read input
+    input [(BYTE_WIDTH*8)-1:0] rd_data,
+    input                      rd_valid,
+    input                      rd_enable
   );
 
   integer index;
@@ -57,13 +57,13 @@ module util_adc_diff #(
       diff_out <= 0;
       counter  <= 0;
     end else begin
-      if(wr_enable == 1'b1) begin
+      if(rd_enable == 1'b1) begin
         counter <= 0;
         
         for(index = 0; index < BYTE_WIDTH/NUM_OF_BYTES; index = index + 1) begin
-          if(($signed(UP_THRESH) < $signed(wr_data[8*(NUM_OF_BYTES)*(index) +:8*(NUM_OF_BYTES)])) && (wr_valid == 1'b1)) begin
+          if(($signed(UP_THRESH) < $signed(rd_data[8*(NUM_OF_BYTES)*(index) +:8*(NUM_OF_BYTES)])) && (rd_valid == 1'b1)) begin
             diff_out = 2'b10;
-          end else if(($signed(LOW_THRESH) > $signed(wr_data[8*(NUM_OF_BYTES)*(index) +:8*(NUM_OF_BYTES)])) && (wr_valid == 1'b1)) begin
+          end else if(($signed(LOW_THRESH) > $signed(rd_data[8*(NUM_OF_BYTES)*(index) +:8*(NUM_OF_BYTES)])) && (rd_valid == 1'b1)) begin
             diff_out = 2'b01;
           end else begin
             counter <= counter + 1;

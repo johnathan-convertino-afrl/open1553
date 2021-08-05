@@ -13,7 +13,7 @@ set descript "Take one word of adc data and test it against the threshold."
 
 adi_ip_create $design
 adi_ip_files  $design [list \
-  "src/util_adc_diff.v" ]
+  "src/util_dac_diff.v" ]
   
 adi_ip_properties_lite $design
 
