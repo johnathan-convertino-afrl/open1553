@@ -1,0 +1,11 @@
+kernel_image=Image
+kernel_load_address=0x3000000
+devicetree_image=devicetree.dtb
+devicetree_load_address=0x2A00000
+bitfile=system_top.bit
+bitfile_load_address=0x5000000
+
+uenvcmd=run adi_sdboot
+adi_sdboot=echo Starting Linux... && fatload mmc 0 ${bitfile_load_address} ${bitfile} && fpga loadb 0 ${bitfile_load_address} $filesize && fatload mmc 0 ${kernel_load_address} ${kernel_image} && fatload mmc 0 ${devicetree_load_address} ${devicetree_image} && gpio set 116 || gpio clear 117 && gpio clear 118 && booti ${kernel_load_address} - ${devicetree_load_address}
+
+bootargs=console=ttyPS0,115200 root=/dev/mmcblk0p2 rw earlycon rootfstype=ext4 rootwait cpuidle.off=1
