@@ -37,7 +37,9 @@
   - make uart_pmod1553.arty-a7-35
   - make uart_pmod1553.cmod-s7-25
   - make fifo_pmod1553.zedboard
-4. Once completed you may use Vivado to open the project (xpr will be in the project folder root). To program your development board.
+4. Once completed you may use Vivado to open the project (xpr will be in the project folder root). To program your development board via JTAG.
+  - You will need to add a memory configuration device to write the bitstream to the flash of the cmod/arty.
+  - cmod example at: https://reference.digilentinc.com/learn/programmable-logic/tutorials/cmod-a7-programming-guide/start?_ga=2.262285964.1885041324.1628539712-1298016575.1609856716
   
 ### USAGE
 #### hardware directory
