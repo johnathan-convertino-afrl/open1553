@@ -100,6 +100,6 @@ ad_connect $sys_cpu_resetn mil_1553_axi_fifo/s_axi_aresetn
 ad_connect mil_1553_axi_fifo/AXI_STR_TXD util_axis_fifo_to_string_decoder/S_AXIS
 ad_connect util_axis_string_encoder_to_fifo/M_AXIS mil_1553_axi_fifo/AXI_STR_RXD
 
-ad_cpu_interconnect 0x43C00000 mil_1553_axi_fifo
+ad_cpu_interconnect 0x83C00000 mil_1553_axi_fifo
 
 ad_cpu_interrupt ps-14 mb-14 mil_1553_axi_fifo/interrupt
