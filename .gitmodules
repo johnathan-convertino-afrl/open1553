@@ -1,0 +1,3 @@
+[submodule "linux/linux_kernel"]
+	path = linux/linux_kernel
+	url = git@github.com:johnathan-convertino-afrl/linux.git
