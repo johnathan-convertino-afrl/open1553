@@ -27,11 +27,11 @@ module tb_dac_switch;
       .fifo_valid(tb_data),
       .fifo_data("FIFO_DATA"),
       .fifo_dunf(1),
-      .fifo_rden(),
+      .fifo_wren(),
     // dac diff input
-      .rd_data("DAC_DIFF_DATA"),
-      .rd_valid(1'b1),
-      .rd_enable(1'b1),
+      .wr_data("DAC_DIFF_DATA"),
+      .wr_valid(1'b1),
+      .wr_dunf(1'b1),
     // dac output
       .dac_data(),
       .dac_dunf(),

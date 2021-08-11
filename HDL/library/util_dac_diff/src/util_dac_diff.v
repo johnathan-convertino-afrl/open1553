@@ -32,10 +32,10 @@
 
 // util_dac_diff
 module util_dac_diff #(
-    parameter NUM_OF_BYTES = 1,
+    parameter WORD_WIDTH = 1,
     parameter BYTE_WIDTH = 1,
     parameter ONEZERO_OUT = 127,
-    parameter ZEROONE_OUT = 127,
+    parameter ZEROONE_OUT = -127,
     parameter SAME_OUT = 0
   )
   (
@@ -43,42 +43,45 @@ module util_dac_diff #(
     input rstn,
     // diff input
     input [1:0] diff_in,
-    // write output
-    output reg [(BYTE_WIDTH*8)-1:0] wr_data,
-    output reg                      wr_valid,
-    output reg                      wr_enable
+    // read output
+    output reg [(BYTE_WIDTH*8)-1:0] rd_data,
+    output reg                      rd_valid,
+    output reg                      rd_dunf
   );
   
   integer index;
   
+  //just being lazy at the moment, should be a loop and flexable.
   reg [1:0] r_diff_in;
+  reg [1:0] rr_diff_in;
   
   always @(posedge clk) begin
     r_diff_in <= diff_in;
+    rr_diff_in <= r_diff_in;
   end
   
   always @(posedge clk) begin
     if(rstn == 1'b0) begin
-      wr_data <= 0;
-      wr_valid <= 0;
-      wr_enable <= 0;
+      rd_data   <= 0;
+      rd_valid  <= 0;
+      rd_dunf   <= 1;
     end else begin
-      wr_valid  <= 1'b1;
-      wr_enable <= 1'b1;
+      rd_dunf   <= 0;
+      rd_valid  <= 1'b1;
     
-      for(index = 0; index < BYTE_WIDTH/NUM_OF_BYTES; index = index + 1) begin
-        wr_data[8*(NUM_OF_BYTES)*(index) +:8*(NUM_OF_BYTES)] <= SAME_OUT;
+      for(index = 0; index < BYTE_WIDTH/WORD_WIDTH; index = index + 1) begin
+        rd_data[8*(WORD_WIDTH)*(index) +:8*(WORD_WIDTH)] <= SAME_OUT;
       end
     
-      if(r_diff_in == 2'b10) begin
-        for(index = 0; index < BYTE_WIDTH/NUM_OF_BYTES; index = index + 1) begin
-          wr_data[8*(NUM_OF_BYTES)*(index) +:8*(NUM_OF_BYTES)] <= ONEZERO_OUT;
+      if(rr_diff_in == 2'b10) begin
+        for(index = 0; index < BYTE_WIDTH/WORD_WIDTH; index = index + 1) begin
+          rd_data[8*(WORD_WIDTH)*(index) +:8*(WORD_WIDTH)] <= ONEZERO_OUT;
         end
       end
       
-      if(r_diff_in == 2'b01) begin
-        for(index = 0; index < BYTE_WIDTH/NUM_OF_BYTES; index = index + 1) begin
-          wr_data[8*(NUM_OF_BYTES)*(index) +:8*(NUM_OF_BYTES)] <= ZEROONE_OUT;
+      if(rr_diff_in == 2'b01) begin
+        for(index = 0; index < BYTE_WIDTH/WORD_WIDTH; index = index + 1) begin
+          rd_data[8*(WORD_WIDTH)*(index) +:8*(WORD_WIDTH)] <= ZEROONE_OUT;
         end
       end
     end

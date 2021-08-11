@@ -30,9 +30,9 @@ ad_connect $sys_cpu_clk util_axis_string_encoder_to_fifo/aclk
 ad_connect $sys_cpu_resetn util_axis_string_encoder_to_fifo/aresetn
 ad_connect sys_device_clk adc_to_diff/clk
 ad_connect sys_device_resetn adc_to_diff/rstn
-ad_connect adc_to_diff/rd_valid  ad9694_tpl_core/adc_valid_0
-ad_connect adc_to_diff/rd_data   ad9694_tpl_core/adc_data_0
-ad_connect adc_to_diff/rd_enable ad9694_tpl_core/adc_enable_0
+ad_connect adc_to_diff/wr_valid  ad9694_tpl_core/adc_valid_0
+ad_connect adc_to_diff/wr_data   ad9694_tpl_core/adc_data_0
+ad_connect adc_to_diff/wr_enable ad9694_tpl_core/adc_enable_0
 ad_connect adc_to_diff/diff_out mil_1553_decoder/diff
 ad_connect mil_1553_decoder/m_axis string_encoder/s_axis
 ad_connect string_encoder/m_axis util_axis_string_encoder_to_fifo/S_AXIS
@@ -45,8 +45,11 @@ ad_ip_parameter dac_switch CONFIG.BYTE_WIDTH {16}
 # dac interface
 ad_ip_instance util_dac_diff diff_to_dac
 
-ad_ip_parameter diff_to_dac CONFIG.NUM_OF_BYTES {2}
+ad_ip_parameter diff_to_dac CONFIG.WORD_WIDTH {2}
 ad_ip_parameter diff_to_dac CONFIG.BYTE_WIDTH {16}
+ad_ip_parameter diff_to_dac CONFIG.ONEZERO_OUT {32767}
+ad_ip_parameter diff_to_dac CONFIG.ZEROONE_OUT {-32768}
+ad_ip_parameter diff_to_dac CONFIG.SAME_OUT {0}
 
 # mil-std-1553 encoder
 ad_ip_instance util_axis_1553_encoder mil_1553_encoder
@@ -77,11 +80,11 @@ ad_disconnect axi_generic_lvds_dac_dma/fifo_rd_dout axi_generic_lvds_dac/dac_dda
 ad_disconnect axi_generic_lvds_dac_dma/fifo_rd_underflow axi_generic_lvds_dac/dac_dunf
 ad_connect axi_generic_lvds_dac_dma/fifo_rd_valid dac_switch/fifo_valid
 ad_connect axi_generic_lvds_dac_dma/fifo_rd_dout  dac_switch/fifo_data
-ad_connect axi_generic_lvds_dac_dma/fifo_rd_en    dac_switch/fifo_rden
+ad_connect axi_generic_lvds_dac_dma/fifo_rd_en    dac_switch/fifo_wren
 ad_connect axi_generic_lvds_dac_dma/fifo_rd_underflow dac_switch/fifo_dunf
-ad_connect diff_to_dac/wr_data   dac_switch/rd_data
-ad_connect diff_to_dac/wr_valid  dac_switch/rd_valid
-ad_connect diff_to_dac/wr_enable dac_switch/rd_enable
+ad_connect diff_to_dac/rd_data   dac_switch/wr_data
+ad_connect diff_to_dac/rd_valid  dac_switch/wr_valid
+ad_connect diff_to_dac/rd_dunf   dac_switch/wr_dunf
 ad_connect dac_switch/dac_data axi_generic_lvds_dac/dac_ddata
 ad_connect dac_switch/dac_dunf axi_generic_lvds_dac/dac_dunf
 ad_connect axi_generic_lvds_dac/dac_valid dac_switch/dac_valid

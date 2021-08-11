@@ -21,10 +21,10 @@ module tb_dac_diff;
   
   // util_adc_diff
   util_dac_diff #(
-      .WORD_WIDTH(1),
-      .BYTE_WIDTH(1),
-      .ONEZERO_OUT(64),
-      .ZEROONE_OUT(-64),
+      .WORD_WIDTH(2),
+      .BYTE_WIDTH(16),
+      .ONEZERO_OUT(16'h7FFF),
+      .ZEROONE_OUT(16'h8000),
       .SAME_OUT(0)
     ) dut (
       .clk(tb_data_clk),
@@ -32,9 +32,9 @@ module tb_dac_diff;
       // diff input
       .diff_in(tb_data),
       // write output
-      .wr_data(),
-      .wr_valid(),
-      .wr_enable()
+      .rd_data(),
+      .rd_valid(),
+      .rd_dunf()
     );
     
   //reset

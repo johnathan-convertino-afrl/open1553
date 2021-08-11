@@ -32,7 +32,7 @@
 
 // util_adc_diff
 module util_adc_diff #(
-    parameter NUM_OF_BYTES = 1,
+    parameter WORD_WIDTH = 1,
     parameter BYTE_WIDTH = 1,
     parameter UP_THRESH  = 64,
     parameter LOW_THRESH = -64,
@@ -44,9 +44,9 @@ module util_adc_diff #(
     // diff output
     output reg [1:0] diff_out,
     // read input
-    input [(BYTE_WIDTH*8)-1:0] rd_data,
-    input                      rd_valid,
-    input                      rd_enable
+    input [(BYTE_WIDTH*8)-1:0] wr_data,
+    input                      wr_valid,
+    input                      wr_enable
   );
 
   integer index;
@@ -57,13 +57,13 @@ module util_adc_diff #(
       diff_out <= 0;
       counter  <= 0;
     end else begin
-      if(rd_enable == 1'b1) begin
+      if(wr_enable == 1'b1) begin
         counter <= 0;
         
-        for(index = 0; index < BYTE_WIDTH/NUM_OF_BYTES; index = index + 1) begin
-          if(($signed(UP_THRESH) < $signed(rd_data[8*(NUM_OF_BYTES)*(index) +:8*(NUM_OF_BYTES)])) && (rd_valid == 1'b1)) begin
+        for(index = 0; index < BYTE_WIDTH/WORD_WIDTH; index = index + 1) begin
+          if(($signed(UP_THRESH) < $signed(wr_data[8*(WORD_WIDTH)*(index) +:8*(WORD_WIDTH)])) && (wr_valid == 1'b1)) begin
             diff_out = 2'b10;
-          end else if(($signed(LOW_THRESH) > $signed(rd_data[8*(NUM_OF_BYTES)*(index) +:8*(NUM_OF_BYTES)])) && (rd_valid == 1'b1)) begin
+          end else if(($signed(LOW_THRESH) > $signed(wr_data[8*(WORD_WIDTH)*(index) +:8*(WORD_WIDTH)])) && (wr_valid == 1'b1)) begin
             diff_out = 2'b01;
           end else begin
             counter <= counter + 1;
