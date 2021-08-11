@@ -51,20 +51,19 @@ needed for your PCB manufacturing process.
 #### HDL
 
 The HDL build systems requires both Vivado and Icarus if you run a make all.   
-If you make individual projects or cores you do may not need icarus. Vivado is a  
+If you make individual projects or cores you or may not need icarus. Vivado is a  
 hard requirement.
 
-Example... make uart_pmod1553.arty-a7-35... will run only vivado to generate the target.   
+Example... make uart_pmod1553.arty-a7-35... will only run vivado to generate the target.   
 
 See IP core (library folder) for details on simulation and usage.
-fifo_pmod1553
+
 #### linux
 
 Linux is for Xilinx AXIS FIFO projects, or any future Linux based designes.
 
 axisfifo is a repository that contains the linux kernel driver source code for the   
-Xilinx Axis FIFO ip. Build this against the kernel from Analog Devices github   
-repo tagged 2019_R1. This has been included in the linux_kernel dev_fmc1553 branch   
+Xilinx Axis FIFO ip. This has been included in the linux_kernel dev_fmc1553 branch   
 
 zed/zcu102 is a folder of files to generate the boot binary. You may use the bootgen_files   
 to create a new BOOT.bin. BOOT.bin is a complete build for the 2019_R1 release that can be  
@@ -74,6 +73,10 @@ included in the same folder.
 The reference base image file is included for SDCARD imaging. (2019_R1-2020_06_22.img.xz)
 
 ### DIRECTORIES
+#### docs
+
+Build documents for Linux on the Zedboard, ZCU102, and other targets.
+
 #### hardware
 
 Contains hardware design and information for the pmod_1553 device.   
@@ -103,8 +106,3 @@ Contains code for Xilinx FIFO projects. This project uses the
 Analog Devices HDL base and its SDCARD image. The axisfifo folder contains the  
 opensource driver for the xilinx axis fifo ip core. Zed contains the folder with   
 needed files for generating boot files, and a device tree with the correct settings.  
-
-
-#### docs
-
-Build documents for Linux on the Zedboard, ZCU102, and other targets.
