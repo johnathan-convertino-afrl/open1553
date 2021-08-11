@@ -23,8 +23,9 @@ set_property name $design [ipx::current_core]
 set_property vendor_display_name $ven_name [ipx::current_core]
 set_property company_url $ven_url [ipx::current_core]
 
-ipx::remove_bus_interface rd [ipx::current_core]
-ipx::remove_bus_interface wr [ipx::current_core]
+ipx::remove_bus_interface rd   [ipx::current_core]
+ipx::remove_bus_interface wr   [ipx::current_core]
+ipx::remove_bus_interface dac  [ipx::current_core]
 
 ipx::save_core [ipx::current_core]
 

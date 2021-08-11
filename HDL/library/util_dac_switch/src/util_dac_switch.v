@@ -39,21 +39,21 @@ module util_dac_switch #(
     input fifo_valid,
     input [(BYTE_WIDTH*8)-1:0] fifo_data,
     input fifo_dunf,
-    output fifo_rden,
+    output fifo_wren,
     // dac diff input
-    input [(BYTE_WIDTH*8)-1:0] rd_data,
-    input rd_valid,
-    input rd_enable,
+    input [(BYTE_WIDTH*8)-1:0] wr_data,
+    input wr_valid,
+    input wr_dunf,
     // dac output
     output [(BYTE_WIDTH*8)-1:0] dac_data,
     output                      dac_dunf,
     input                       dac_valid
   );
   
-  assign dac_data = (fifo_valid == 1'b1 ? fifo_data : rd_data);
+  assign dac_data = (fifo_valid == 1'b1 ? fifo_data : wr_data);
   
-  assign fifo_rden = (fifo_valid == 1'b1 ? dac_valid : 0);
+  assign fifo_wren = dac_valid;
   
-  assign dac_dunf  = (fifo_valid == 1'b1 ? fifo_dunf : ~rd_valid);
+  assign dac_dunf  = (fifo_valid == 1'b1 ? fifo_dunf : wr_dunf);
   
 endmodule
