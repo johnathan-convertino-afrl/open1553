@@ -37,9 +37,11 @@
   - make uart_pmod1553.arty-a7-35
   - make uart_pmod1553.cmod-s7-25
   - make fifo_pmod1553.zedboard
+  - make fifo_pmod1553.zcu102
 4. Once completed you may use Vivado to open the project (xpr will be in the project folder root). To program your development board via JTAG.
   - You will need to add a memory configuration device to write the bitstream to the flash of the cmod/arty.
   - cmod example at: https://reference.digilentinc.com/learn/programmable-logic/tutorials/cmod-a7-programming-guide/start?_ga=2.262285964.1885041324.1628539712-1298016575.1609856716
+  - Again, for the fifo/fmc projects you oned to build the linux system. See the docs folder for instructions.
   
 ### USAGE
 #### hardware directory
@@ -90,8 +92,9 @@ Currently Supported:
 
   * Digilent Arty 35T (UART DEVICE)
   * Digilent CMOD S7  (UART DEVICE)
-  * Zedboard (Xilinx FIFO)
+  * Zedboard (Xilinx FIFO pmod1553)
   * ZCU102 (Xilinx FIFO fmc1553)
+  * ZCU102 (Xilinx FIFO pmod1553)
 
 The original source for the HDL build system is from Analog Devices, all copyrights   
 are there own and I claim no ownership of their code.
