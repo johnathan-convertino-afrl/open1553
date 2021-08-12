@@ -86,7 +86,8 @@ Requirements:
 3. Checkout the HDL repo that matches your version of vivado (see root readme for release to vivado versioning).
     - git checkout release_1553_v1
 4. Build the project needed using make.
-    - make fmc1553.zcu102
+    - make fmc1553.zcu102 (for fmc1553 board)
+    - make fifo_pmod1553.zcu102 (for pmod1553 board)
 5. Wait for make to finish executing the build.
 6. Open the HDL project with Vivado.
     - This isn't really needed, the bit file already exits, we do this for GUI usage only.
@@ -240,7 +241,8 @@ Requirements:
 
 1. If you haven't built the kernel yet, follow the directions above in Build Linux Kernel.
 2. Generate the device tree binary.
-    - make xilinx/zynqmp-zcu102-fmc1553.dtb
+    - make xilinx/zynqmp-zcu102-fmc1553.dtb (for fmc1553 board)
+    - make xilinx/zynqmp-zcu102-pmod1553.dtb (for pmod1553 board)
 3. Copy and rename the device tree binary to the bootfs folder.
     - cp arch/arm/boot/dts/zynqmp-zcu102-fmc1553.dtb path/to/your/bootfs/devicetree.dtb
 
