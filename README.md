@@ -1,5 +1,5 @@
-# open_1553
-## Respository of open source 1553 designs for the pmod_1553 device.
+# open1553
+## Respository of open source 1553 designs for the pmod1553 device.
 ---
 
    author: Jay Convertino   
@@ -33,15 +33,15 @@
 1. Install Vivado 2018.3.1
 2. Install build essentials package for Ubuntu.
 3. From the root of the HDL directory you may run the following build commands.
-  - make fmc1553.zcu102
-  - make uart_pmod1553.arty-a7-35
-  - make uart_pmod1553.cmod-s7-25
-  - make fifo_pmod1553.zedboard
-  - make fifo_pmod1553.zcu102
+    - make fmc1553.zcu102
+    - make uart_pmod1553.arty-a7-35
+    - make uart_pmod1553.cmod-s7-25
+    - make fifo_pmod1553.zedboard
+    - make fifo_pmod1553.zcu102
 4. Once completed you may use Vivado to open the project (xpr will be in the project folder root). To program your development board via JTAG.
-  - You will need to add a memory configuration device to write the bitstream to the flash of the cmod/arty.
-  - cmod example at: https://reference.digilentinc.com/learn/programmable-logic/tutorials/cmod-a7-programming-guide/start?_ga=2.262285964.1885041324.1628539712-1298016575.1609856716
-  - Again, for the fifo/fmc projects you oned to build the linux system. See the docs folder for instructions.
+    - You will need to add a memory configuration device to write the bitstream to the flash of the cmod/arty.
+    - cmod example at: https://reference.digilentinc.com/learn/programmable-logic/tutorials/cmod-a7-programming-guide/start?_ga=2.262285964.1885041324.1628539712-1298016575.1609856716
+    - Again, for the fifo/fmc projects you oned to build the linux system. See the docs folder for instructions.
   
 ### USAGE
 #### hardware directory
@@ -77,7 +77,12 @@ The reference base image file is included for SDCARD imaging. (2019_R1-2020_06_2
 ### DIRECTORIES
 #### docs
 
-Build documents for Linux on the Zedboard, ZCU102, and other targets.
+Contains helpful documents for the open1553 systems.
+
+The subfolder diagrams contains high level block diagrams of the 1553 data flow.
+
+The subfolder linux_build contrains documents for Linux on the Zedboard, ZCU102,   
+and other targets.
 
 #### hardware
 
