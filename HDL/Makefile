@@ -28,11 +28,12 @@ help:
 	@echo ""
 	@echo "To make all projects:"
 	@echo "    make all"
+	@echo "    make all REQUIRES Vivado and icarus"
 	@echo ""
 	@echo "To build a specific project:"
 	@echo "    make proj.board"
 	@echo "e.g.,"
-	@echo "    make adv7511.zed"
+	@echo "    make fifo_pmod1553.zed"
 
 
 PROJECTS := $(filter-out $(NO_PROJ), $(notdir $(wildcard projects/*)))
