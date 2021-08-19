@@ -74,24 +74,33 @@ included in the same folder.
 
 The reference base image file is included for SDCARD imaging. (2019_R1-2020_06_22.img.xz)
 
+#### apps
+
+Python2 seems to be the best for fifo1553, python3 seems to be the best for the uart1553.  
+
 ### DIRECTORIES
 #### docs
 
-Contains helpful documents for the open1553 systems.
+Helpful documents for the open1553 systems.
 
 The subfolder diagrams contains high level block diagrams of the 1553 data flow.
 
 The subfolder linux_build contrains documents for Linux on the Zedboard, ZCU102,   
 and other targets.
 
+#### apps
+
+Example applications for using the uart/fifo1553 in with python. Won't set the world   
+on fire performance wise, but shows how quickly something can be put together.
+
 #### hardware
 
-Contains hardware design and information for the pmod_1553 device.   
+Hardware design and information for the pmod_1553 device.   
 This design is done in KiCAD version 5.x.   
 
 #### HDL
 
-Contains FPGA files for pmod_1553 projects. It contains libraries that are the  
+FPGA files for pmod_1553 projects. It contains libraries that are the  
 actual code for IP cores, and projects that generate for target boards.  
 Currently Supported:   
 
@@ -110,7 +119,7 @@ HDL code built with Vivado 2018.3.1
 
 #### linux
 
-Contains code for Xilinx FIFO projects. This project uses the    
+Code for Xilinx FIFO projects. This project uses the    
 Analog Devices HDL base and its SDCARD image. The axisfifo folder contains the  
 opensource driver for the xilinx axis fifo ip core. Zed contains the folder with   
 needed files for generating boot files, and a device tree with the correct settings.  
