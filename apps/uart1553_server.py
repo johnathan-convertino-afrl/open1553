@@ -52,11 +52,11 @@ while True:
   commands = serialDev.read_until('\r'.encode('utf-8'))
   cmdsString = commands.decode("utf-8")
   
-  #print(serialDev.read())
-  
   if("CMDS;" in cmdsString and "HxBEEF" in cmdsString and "P1" in cmdsString):
-    print("Receiver connected, transferring data.")
+    print("Receiver connected, waiting for FEED.")
     serialDev.write(('CMDS;D1;P1;I0;HxBABE\r').encode('utf-8'))
+
+  if("CMDS;" in cmdsString and "HxFEED" in cmdsString and "P1" in cmdsString):
     break
 
 print("Sending data to " + args.port)
