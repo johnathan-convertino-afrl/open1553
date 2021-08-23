@@ -40,14 +40,14 @@ set_property -dict {PACKAGE_PIN B9 IOSTANDARD LVCMOS33} [get_ports {push_buttons
 set_property -dict {PACKAGE_PIN B8 IOSTANDARD LVCMOS33} [get_ports {push_buttons[3]}]
 
 ## slide_switches
-set_property -dict {PACKAGE_PIN A8  IOSTANDARD LVCMOS33} [get_ports {slide_switches[0]}]
+set_property -dict {PACKAGE_PIN A8 IOSTANDARD LVCMOS33} [get_ports {slide_switches[0]}]
 set_property -dict {PACKAGE_PIN C11 IOSTANDARD LVCMOS33} [get_ports {slide_switches[1]}]
 set_property -dict {PACKAGE_PIN C10 IOSTANDARD LVCMOS33} [get_ports {slide_switches[2]}]
 set_property -dict {PACKAGE_PIN A10 IOSTANDARD LVCMOS33} [get_ports {slide_switches[3]}]
 
 ## uart
 set_property -dict {PACKAGE_PIN D10 IOSTANDARD LVCMOS33} [get_ports uart_tx]
-set_property -dict {PACKAGE_PIN A9  IOSTANDARD LVCMOS33} [get_ports uart_rx]
+set_property -dict {PACKAGE_PIN A9 IOSTANDARD LVCMOS33} [get_ports uart_rx]
 
 ## pmod
 ## pmoda
@@ -89,4 +89,7 @@ set_property -dict {PACKAGE_PIN E2 IOSTANDARD LVCMOS33} [get_ports {pmod_jd[4]}]
 set_property -dict {PACKAGE_PIN D2 IOSTANDARD LVCMOS33} [get_ports {pmod_jd[5]}]
 set_property -dict {PACKAGE_PIN H2 IOSTANDARD LVCMOS33} [get_ports {pmod_jd[6]}]
 set_property -dict {PACKAGE_PIN G2 IOSTANDARD LVCMOS33} [get_ports {pmod_jd[7]}]
+
+
+
 

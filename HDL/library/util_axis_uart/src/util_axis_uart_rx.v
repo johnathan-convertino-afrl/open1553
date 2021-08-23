@@ -43,14 +43,15 @@ module util_axis_uart_rx #(
     input aclk,
     input arstn,
     //master output
-    output  reg[data_bits-1:0]  m_axis_tdata,
-    output  reg                 m_axis_tvalid,
-    input                       m_axis_tready,
+    (* mark_debug = "true", keep = "true" *)output  reg[data_bits-1:0]  m_axis_tdata,
+    (* mark_debug = "true", keep = "true" *)output  reg                 m_axis_tvalid,
+    (* mark_debug = "true", keep = "true" *)input                       m_axis_tready,
     //uart input
-    input         uart_clk,
-    input         uart_rstn,
-    input         uart_ena,
-    input         rxd
+    (* mark_debug = "true", keep = "true" *)input         uart_clk,
+    (* mark_debug = "true", keep = "true" *)input         uart_rstn,
+    (* mark_debug = "true", keep = "true" *)input         uart_ena,
+    (* mark_debug = "true", keep = "true" *)output  reg   uart_hold,
+    (* mark_debug = "true", keep = "true" *)input         rxd
   );
   
   //start bit size... :)
@@ -75,23 +76,23 @@ module util_axis_uart_rx #(
   localparam [delay:0] delay_trigger = {1'b1, {delay{1'b0}}};
   
   //data reg
-  reg [bits_per_trans-1:0]reg_data;
+  (* mark_debug = "true", keep = "true" *)reg [bits_per_trans-1:0]reg_data;
   //parity bit storage
-  reg parity_bit;
+  (* mark_debug = "true", keep = "true" *)reg parity_bit;
   //state machine
-  reg [2:0]  state = error;
-  reg [2:0]  uart_state = error;
+  (* mark_debug = "true", keep = "true" *)reg [2:0]  state = error;
+  (* mark_debug = "true", keep = "true" *)reg [2:0]  uart_state = error;
   //data to transmit
-  reg [data_bits-1:0] data;
+  (* mark_debug = "true", keep = "true" *)reg [data_bits-1:0] data;
   //counters
-  reg [clogb2(bits_per_trans)-1:0]  trans_counter;
-  reg [clogb2(bits_per_trans)-1:0]  prev_trans_counter;
+  (* mark_debug = "true", keep = "true" *)reg [clogb2(bits_per_trans)-1:0]  trans_counter;
+  (* mark_debug = "true", keep = "true" *)reg [clogb2(bits_per_trans)-1:0]  prev_trans_counter;
   //previous states
-  reg p_rxd;
+  (* mark_debug = "true", keep = "true" *)reg p_rxd;
   //delay wire
-  wire [delay:0] wire_delay_uart_ena;
+  (* mark_debug = "true", keep = "true" *)wire [delay:0] wire_delay_uart_ena;
   //transmit done
-  reg trans_fin;
+  (* mark_debug = "true", keep = "true" *)reg trans_fin;
   
   //axis data output
   always @(posedge aclk) begin
@@ -207,9 +208,10 @@ module util_axis_uart_rx #(
       trans_counter       <= 0;
       prev_trans_counter  <= 0;
       trans_fin           <= 0;
+      uart_hold           <= 1;
     end else begin
-      prev_trans_counter <= trans_counter;
       p_rxd <= rxd;
+      uart_hold <= 1'b1;
       
       case (state)
         //once the state machine is in data caputre state, begin data capture when a diff in the line is sampled.
@@ -222,11 +224,13 @@ module util_axis_uart_rx #(
               //falling edge of rxd is start bit (1 to 0).
               if((p_rxd == 1'b1) && (rxd == 1'b0)) begin
                 uart_state <= data_at_baud;
+                uart_hold  <= 1'b0;
               end
             end
             //once sync'd, caputre data at baud rate
             data_at_baud: begin
               uart_state <= data_at_baud;
+              uart_hold  <= 1'b0;
               
               //on uart enable, capture data... delay added if need be.
               if(wire_delay_uart_ena == delay_trigger) begin
@@ -234,10 +238,12 @@ module util_axis_uart_rx #(
             
                 trans_counter <= trans_counter + 1;
                 
-                //once we hit bits_per_trans-1, we can goto data combine.
-                if((trans_counter == bits_per_trans-1) && (prev_trans_counter == bits_per_trans-1)) begin
-                  trans_fin <= 1'b1;
-                end
+                prev_trans_counter <= trans_counter;
+              end
+              
+              //once we hit bits_per_trans-1, we can goto data combine.
+              if((trans_counter == bits_per_trans-1) && (prev_trans_counter == bits_per_trans-1)) begin
+                trans_fin <= 1'b1;
               end
               
               //once bits_per_trans-1 hold counter

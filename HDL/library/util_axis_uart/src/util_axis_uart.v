@@ -61,16 +61,29 @@ module util_axis_uart #(
     input   rx
   );
   
-  wire uart_ena;
+  wire uart_ena_tx;
+  wire uart_ena_rx;
+  wire uart_hold_rx;
   
-  //baud enable generator, enable blocks when data i/o is needed at set rate.
+  //baud enable generator for tx, enable blocks when data i/o is needed at set rate.
   util_uart_baud_gen #(
     .baud_clock_speed(baud_clock_speed),
     .baud_rate(baud_rate)
-  ) uart_baud_gen (
+  ) uart_baud_gen_tx (
     .uart_clk(uart_clk),
     .uart_rstn(uart_rstn),
-    .uart_ena(uart_ena)
+    .uart_hold(1'b0),
+    .uart_ena(uart_ena_tx)
+  );
+  
+  util_uart_baud_gen #(
+    .baud_clock_speed(baud_clock_speed),
+    .baud_rate(baud_rate)
+  ) uart_baud_gen_rx (
+    .uart_clk(uart_clk),
+    .uart_rstn(uart_rstn),
+    .uart_hold(uart_hold_rx),
+    .uart_ena(uart_ena_rx)
   );
   
   util_axis_uart_tx #(
@@ -89,7 +102,7 @@ module util_axis_uart #(
     //UART
     .uart_clk(uart_clk),
     .uart_rstn(uart_rstn),
-    .uart_ena(uart_ena),
+    .uart_ena(uart_ena_tx),
     .txd(tx)
   );
   
@@ -110,7 +123,8 @@ module util_axis_uart #(
     //UART
     .uart_clk(uart_clk),
     .uart_rstn(uart_rstn),
-    .uart_ena(uart_ena),
+    .uart_ena(uart_ena_rx),
+    .uart_hold(uart_hold_rx),
     .rxd(rx)
   );
  

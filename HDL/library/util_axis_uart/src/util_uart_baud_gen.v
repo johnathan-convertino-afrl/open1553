@@ -40,18 +40,19 @@ module util_uart_baud_gen #(
     //clock and reset
     input   uart_clk,
     input   uart_rstn,
-    output  reg uart_ena
+    input   uart_hold,
+    (* mark_debug = "true", keep = "true" *)output  reg uart_ena
   );
   
-  reg [clogb2(baud_clock_speed):0] counter;
+  (* mark_debug = "true", keep = "true" *)reg [clogb2(baud_clock_speed):0] counter;
   
   //baud enable generator
   always @(posedge uart_clk) begin
     if(uart_rstn == 1'b0) begin
-      counter   <= (baud_clock_speed-baud_rate);
+      counter   <= 0;
       uart_ena  <= 0;
     end else begin
-      counter   <= counter + baud_rate;
+      counter   <= (uart_hold == 1'b1 ? baud_clock_speed/2 : counter + baud_rate);
       uart_ena  <= 1'b0;
       
       if(counter >= (baud_clock_speed-baud_rate)) begin
