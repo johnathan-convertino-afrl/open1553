@@ -21,7 +21,7 @@ module tb_uart;
   wire        tb_s_tready;
   wire        tb_uart_loop;
   //1ns
-  localparam CLK_PERIOD = 100;
+  localparam CLK_PERIOD = 20;
 //   localparam BAUD_PERIOD = 10000;
   localparam RST_PERIOD = 500;
   localparam CLK_SPEED_HZ = 1000000000/CLK_PERIOD;
@@ -37,9 +37,9 @@ module tb_uart;
   //device under test
   util_axis_uart #(
     .baud_clock_speed(CLK_SPEED_HZ),
-    .baud_rate(115200),
-    .parity_ena(1),
-    .parity_type(1),
+    .baud_rate(2000000),
+    .parity_ena(0),
+    .parity_type(0),
     .stop_bits(1),
     .data_bits(8),
     .rx_delay(0)

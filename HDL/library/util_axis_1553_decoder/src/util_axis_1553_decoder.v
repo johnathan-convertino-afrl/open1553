@@ -64,12 +64,12 @@ module util_axis_1553_decoder #(
     input aclk,
     input arstn,
     //master output
-    output  reg[15:0] m_axis_tdata,
-    output  reg       m_axis_tvalid,
-    output  reg[7:0]  m_axis_tuser,
-    input             m_axis_tready,
+    (* mark_debug = "true", keep = "true" *)output  reg[15:0] m_axis_tdata,
+    (* mark_debug = "true", keep = "true" *)output  reg       m_axis_tvalid,
+    (* mark_debug = "true", keep = "true" *)output  reg[7:0]  m_axis_tuser,
+    (* mark_debug = "true", keep = "true" *)input             m_axis_tready,
     //diff input
-    input  [1:0] diff
+    (* mark_debug = "true", keep = "true" *)input  [1:0] diff
   );
   
   //1553 base clock rate
@@ -123,23 +123,23 @@ module util_axis_1553_decoder #(
   //for loop indexs
   integer bit_slice_index;
   //data reg
-  reg [synth_bits_per_trans-1:0] reg_data;
+  (* mark_debug = "true", keep = "true" *)reg [synth_bits_per_trans-1:0] reg_data;
   //parity bit storage
-  reg parity_bit;
+  (* mark_debug = "true", keep = "true" *)reg parity_bit;
   //delay detection bit storage
-  reg delay_bit;
+  (* mark_debug = "true", keep = "true" *)reg delay_bit;
   //state machine
-  reg [4:0]  state = error;
+  (* mark_debug = "true", keep = "true" *)reg [4:0]  state = error;
   //data to transmit
-  reg [15:0] data;
+  (* mark_debug = "true", keep = "true" *)reg [15:0] data;
   //cmd data
-  reg [7:0]  cmd;
+  (* mark_debug = "true", keep = "true" *)reg [7:0]  cmd;
   //previous diff for edge detection
-  reg [1:0]  p_diff;
+  (* mark_debug = "true", keep = "true" *)reg [1:0]  p_diff;
   //counters
-  reg [clogb2(samples_to_skip):0]        skip_counter;
-  reg [clogb2(delay_time)-1:0]           pause_counter;
-  reg [clogb2(synth_bits_per_trans)-1:0] trans_counter;
+  (* mark_debug = "true", keep = "true" *)reg [clogb2(samples_to_skip):0]        skip_counter;
+  (* mark_debug = "true", keep = "true" *)reg [clogb2(delay_time)-1:0]           pause_counter;
+  (* mark_debug = "true", keep = "true" *)reg [clogb2(synth_bits_per_trans)-1:0] trans_counter;
   
   //pause_counter(must be 4us or more between transmit)
   always @(posedge aclk) begin

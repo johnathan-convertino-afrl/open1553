@@ -82,7 +82,7 @@ module util_axis_xfifo #(
   //ROUND UP FIXXXXX MEEE
   localparam c_FIFO_WIDTH = c_ARRAY_LENGTH/8 + ((c_ARRAY_LENGTH % 8) != 0 ? 1 : 0);
   
-  (* mark_debug = "true", keep = "true" *) wire [(c_FIFO_WIDTH*8)-1:0] s_axis_concat_data;
+  wire [(c_FIFO_WIDTH*8)-1:0] s_axis_concat_data;
   
   //write signals
   wire s_wr_full;

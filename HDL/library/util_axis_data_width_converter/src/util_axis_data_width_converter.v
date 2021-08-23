@@ -42,9 +42,9 @@ module util_axis_data_width_converter #(
     input                   aclk,
     input                   arstn,
     //master output axis
-    output [(master_width*8)-1:0] m_axis_tdata,
-    output                        m_axis_tvalid,
-    input                         m_axis_tready,
+    (* mark_debug = "true", keep = "true" *)output [(master_width*8)-1:0] m_axis_tdata,
+    (* mark_debug = "true", keep = "true" *)output                        m_axis_tvalid,
+    (* mark_debug = "true", keep = "true" *)input                         m_axis_tready,
     //slave input axis
     input  [(slave_width*8)-1:0]  s_axis_tdata,
     input                         s_axis_tvalid,

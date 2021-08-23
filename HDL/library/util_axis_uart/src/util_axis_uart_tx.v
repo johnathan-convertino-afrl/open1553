@@ -43,14 +43,14 @@ module util_axis_uart_tx #(
     input aclk,
     input arstn,
     //slave input
-    input   [data_bits-1:0] s_axis_tdata,
-    input                   s_axis_tvalid,
-    output                  s_axis_tready,
+    (* mark_debug = "true", keep = "true" *)input   [data_bits-1:0] s_axis_tdata,
+    (* mark_debug = "true", keep = "true" *)input                   s_axis_tvalid,
+    (* mark_debug = "true", keep = "true" *)output                  s_axis_tready,
     //uart
-    input           uart_clk,
-    input           uart_rstn,
-    input           uart_ena,
-    output  reg     txd
+    (* mark_debug = "true", keep = "true" *)input           uart_clk,
+    (* mark_debug = "true", keep = "true" *)input           uart_rstn,
+    (* mark_debug = "true", keep = "true" *)input           uart_ena,
+    (* mark_debug = "true", keep = "true" *)output  reg     txd
   );
   
   //start bit size... :)
@@ -70,18 +70,18 @@ module util_axis_uart_tx #(
   localparam error        = 3'd0;
 
   //data reg
-  reg [bits_per_trans-1:0]reg_data;
+  (* mark_debug = "true", keep = "true" *)reg [bits_per_trans-1:0]reg_data;
   //parity bit storage
-  reg parity_bit;
+  (* mark_debug = "true", keep = "true" *)reg parity_bit;
   //state machine
-  reg [2:0]  state = error;
+  (* mark_debug = "true", keep = "true" *)reg [2:0]  state = error;
   //incoming data to transmit
-  reg [data_bits-1:0] data;
+  (* mark_debug = "true", keep = "true" *)reg [data_bits-1:0] data;
   //counters
-  reg [clogb2(bits_per_trans)-1:0]  trans_counter;
-  reg [clogb2(bits_per_trans)-1:0]  prev_trans_counter;
+  (* mark_debug = "true", keep = "true" *)reg [clogb2(bits_per_trans)-1:0]  trans_counter;
+  (* mark_debug = "true", keep = "true" *)reg [clogb2(bits_per_trans)-1:0]  prev_trans_counter;
   //transmit done
-  reg trans_fin;
+  (* mark_debug = "true", keep = "true" *)reg trans_fin;
   
   assign s_axis_tready = (state == data_cap ? arstn : 0);
   
@@ -186,10 +186,10 @@ module util_axis_uart_tx #(
             trans_counter <= trans_counter + 1;
             
             prev_trans_counter  <= trans_counter;
+          end
             
-            if((trans_counter == bits_per_trans-1) && (prev_trans_counter == bits_per_trans-1)) begin
-              trans_fin <= 1'b1;
-            end
+          if((trans_counter == bits_per_trans-1) && (prev_trans_counter == bits_per_trans-1)) begin
+            trans_fin <= 1'b1;
           end
           
           //once bits_per_trans-1 hold counter
