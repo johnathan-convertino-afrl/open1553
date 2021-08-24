@@ -28,7 +28,10 @@ or sampling. Baud clock and aclk can be the same clock.
 * parity_type : DEFAULT = 1 : Set the parity type, 0 = even, 1 = odd, 2 = mark, 3 = space.
 * stop_bits : DEFAULT = 1 : Number of stop bits, 0 to crazy non-standard amounts.
 * data_bits : DEFAULT = 8 : Number of data bits, 1 to crazy non-standard amounts.
-* rx_delay : DEFAULT = 3 : Delay in rx read. Should be middle of input data (baud_clock_speed/baud_rate/2).
+* rx_delay : DEFAULT = 0 : Delay in rx data input.
+* rx_baud_delay : DEFAULT = 0 : Delay in rx baud enable. This will delay when we sample a bit (default is midpoint when rx delay is 0).
+* tx_delay : DEFAULT = 0 : Delay in tx data output. Delays the time to output of the data.
+* tx_baud_delay : DEFAULT = 0 : Delay in tx baud enable. This will delay the time the bit output starts.
 
 ### COMPONENTS
 #### SRC
