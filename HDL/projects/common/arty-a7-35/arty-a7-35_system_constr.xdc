@@ -46,7 +46,10 @@ set_property -dict {PACKAGE_PIN C10 IOSTANDARD LVCMOS33} [get_ports {slide_switc
 set_property -dict {PACKAGE_PIN A10 IOSTANDARD LVCMOS33} [get_ports {slide_switches[3]}]
 
 ## uart
-set_property -dict {PACKAGE_PIN D10 IOSTANDARD LVCMOS33} [get_ports uart_tx]
+set_property PACKAGE_PIN D10 [get_ports uart_tx]
+set_property IOSTANDARD LVCMOS33 [get_ports uart_tx]
+set_property SLEW FAST [get_ports uart_tx]
+set_property DRIVE 4 [get_ports uart_tx]
 set_property -dict {PACKAGE_PIN A9 IOSTANDARD LVCMOS33} [get_ports uart_rx]
 
 ## pmod
@@ -89,6 +92,8 @@ set_property -dict {PACKAGE_PIN E2 IOSTANDARD LVCMOS33} [get_ports {pmod_jd[4]}]
 set_property -dict {PACKAGE_PIN D2 IOSTANDARD LVCMOS33} [get_ports {pmod_jd[5]}]
 set_property -dict {PACKAGE_PIN H2 IOSTANDARD LVCMOS33} [get_ports {pmod_jd[6]}]
 set_property -dict {PACKAGE_PIN G2 IOSTANDARD LVCMOS33} [get_ports {pmod_jd[7]}]
+
+
 
 
 
