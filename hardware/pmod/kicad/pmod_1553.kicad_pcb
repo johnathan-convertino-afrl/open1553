@@ -1080,7 +1080,7 @@
       (net 2 "Net-(C1-Pad1)"))
     (pad 1 thru_hole circle (at 0 0) (size 1.303 1.303) (drill 0.76) (layers *.Cu *.Mask)
       (net 1 GNDD))
-    (model /home/jconvertino/Documents/Programming/STAGE/open_1553/hardware/pmod/kicad_symbols/traco.3dshapes/TBA_1-0311.stp
+    (model ${KIPRJMOD}/../kicad_symbols/traco.3dshapes/TBA_1-0311.stp
       (offset (xyz -36.83 -30.988 -10.668))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 180))
@@ -1267,7 +1267,7 @@
       (net 23 "Net-(IC2-Pad2)"))
     (pad 1 thru_hole circle (at 0 0 90) (size 1.95 1.95) (drill 1.3) (layers *.Cu *.Mask)
       (net 24 "Net-(IC2-Pad1)"))
-    (model /home/jconvertino/Documents/Programming/STAGE/open_1553/hardware/pmod/kicad_symbols/cui.3dshapes/TB001-500-02BE.stp
+    (model ${KIPRJMOD}/../kicad_symbols/cui.3dshapes/TB001-500-02BE.stp
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -1304,7 +1304,7 @@
       (net 21 "Net-(IC1-Pad2)"))
     (pad 1 thru_hole circle (at 0 0 90) (size 1.95 1.95) (drill 1.3) (layers *.Cu *.Mask)
       (net 22 "Net-(IC1-Pad1)"))
-    (model /home/jconvertino/Documents/Programming/STAGE/open_1553/hardware/pmod/kicad_symbols/cui.3dshapes/TB001-500-02BE.stp
+    (model ${KIPRJMOD}/../kicad_symbols/cui.3dshapes/TB001-500-02BE.stp
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
