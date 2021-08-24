@@ -37,13 +37,15 @@ module tb_uart;
   //device under test
   util_axis_uart #(
     .baud_clock_speed(CLK_SPEED_HZ),
-    .baud_rate(1000000),
+    .baud_rate(4000000),
     .parity_ena(0),
     .parity_type(0),
     .stop_bits(1),
     .data_bits(8),
-    .rx_delay(10),
-    .tx_delay(0)
+    .rx_delay(6),
+    .rx_uart_delay(2),
+    .tx_delay(2),
+    .tx_uart_delay(0)
   ) dut (
     //clock and reset
     .aclk(tb_data_clk),
