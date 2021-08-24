@@ -44,14 +44,14 @@ module util_axis_uart_tx #(
     input aclk,
     input arstn,
     //slave input
-    (* mark_debug = "true", keep = "true" *)input   [data_bits-1:0] s_axis_tdata,
-    (* mark_debug = "true", keep = "true" *)input                   s_axis_tvalid,
-    (* mark_debug = "true", keep = "true" *)output                  s_axis_tready,
+    input   [data_bits-1:0] s_axis_tdata,
+    input                   s_axis_tvalid,
+    output                  s_axis_tready,
     //uart
     input           uart_clk,
     input           uart_rstn,
-    (* mark_debug = "true", keep = "true" *)input           uart_ena,
-    (* mark_debug = "true", keep = "true" *)output          txd
+    input           uart_ena,
+    output          txd
   );
   
   //start bit size... :)
@@ -71,20 +71,20 @@ module util_axis_uart_tx #(
   localparam error        = 3'd0;
 
   //data reg
-  (* mark_debug = "true", keep = "true" *)reg [bits_per_trans-1:0]reg_data;
+  reg [bits_per_trans-1:0]reg_data;
   //parity bit storage
-  (* mark_debug = "true", keep = "true" *)reg parity_bit;
+  reg parity_bit;
   //state machine
-  (* mark_debug = "true", keep = "true" *)reg [2:0]  state = error;
+  reg [2:0]  state = error;
   //incoming data to transmit
-  (* mark_debug = "true", keep = "true" *)reg [data_bits-1:0] data;
+  reg [data_bits-1:0] data;
   //counters
-  (* mark_debug = "true", keep = "true" *)reg [clogb2(bits_per_trans)-1:0]  trans_counter;
-  (* mark_debug = "true", keep = "true" *)reg [clogb2(bits_per_trans)-1:0]  prev_trans_counter;
+  reg [clogb2(bits_per_trans)-1:0]  trans_counter;
+  reg [clogb2(bits_per_trans)-1:0]  prev_trans_counter;
   //transmit done
-  (* mark_debug = "true", keep = "true" *)reg trans_fin;
+  reg trans_fin;
   //Tx 
-  (* mark_debug = "true", keep = "true" *)reg reg_txd;
+  reg reg_txd;
 
   
   assign s_axis_tready = (state == data_cap ? arstn : 0);
@@ -176,7 +176,7 @@ module util_axis_uart_tx #(
   generate
     if(delay > 0) begin
       //delay tx data
-      (* mark_debug = "true", keep = "true" *)reg [delay:0] delay_data = 0;
+      reg [delay:0] delay_data = 0;
       
       assign txd = delay_data[delay];
       

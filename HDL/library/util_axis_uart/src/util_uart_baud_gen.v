@@ -42,10 +42,10 @@ module util_uart_baud_gen #(
     input   uart_clk,
     input   uart_rstn,
     input   uart_hold,
-    (* mark_debug = "true", keep = "true" *)output uart_ena
+    output uart_ena
   );
   
-  (* mark_debug = "true", keep = "true" *)reg [clogb2(baud_clock_speed):0] counter;
+  reg [clogb2(baud_clock_speed):0] counter;
   
   reg r_uart_ena;
   
@@ -69,7 +69,7 @@ module util_uart_baud_gen #(
   generate
     if(delay > 0) begin
       //delays
-      (* mark_debug = "true", keep = "true" *)reg [delay:0] delay_uart_ena;
+      reg [delay:0] delay_uart_ena;
       
       assign uart_ena = delay_uart_ena[delay];
       

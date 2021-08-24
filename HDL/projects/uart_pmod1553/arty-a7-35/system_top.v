@@ -34,8 +34,6 @@ module system_top (
   input            uart_rx
   );
   
-//   assign uart_tx = uart_rx;
-  
   system_wrapper i_system_wrapper (
     .clk_100mhz(clk_100mhz),
     .four_leds(four_leds),
@@ -45,10 +43,10 @@ module system_top (
     .rgb_led3(rgb_led3),
     .push_buttons(push_buttons),
     .slide_switches(slide_switches),
-//     .pmod_ja_pin1_i(pmod_ja[0]),
-//     .pmod_ja_pin2_i(pmod_ja[1]),
-//     .pmod_ja_pin3_o(pmod_ja[2]),
-//     .pmod_ja_pin4_o(pmod_ja[3]),
+    .pmod_ja_pin1_i(pmod_ja[0]),
+    .pmod_ja_pin2_i(pmod_ja[1]),
+    .pmod_ja_pin3_o(pmod_ja[2]),
+    .pmod_ja_pin4_o(pmod_ja[3]),
     .resetn(resetn),
     .uart_rxd(uart_rx),
     .uart_txd(uart_tx)

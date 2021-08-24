@@ -42,7 +42,7 @@ module util_axis_uart #(
     parameter data_bits   = 8,
     parameter rx_delay    = 0,
     parameter rx_baud_delay = 0,
-    parameter tx_delay    = 5,
+    parameter tx_delay    = 0,
     parameter tx_baud_delay = 0
   ) 
   (
