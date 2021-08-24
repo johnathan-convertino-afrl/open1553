@@ -34,33 +34,56 @@
 //UART
 module util_uart_baud_gen #(
     parameter baud_clock_speed = 2000000,
-    parameter baud_rate   = 115200
+    parameter baud_rate   = 115200,
+    parameter delay       = 0
   ) 
   (
     //clock and reset
     input   uart_clk,
     input   uart_rstn,
     input   uart_hold,
-    (* mark_debug = "true", keep = "true" *)output  reg uart_ena
+    (* mark_debug = "true", keep = "true" *)output uart_ena
   );
   
   (* mark_debug = "true", keep = "true" *)reg [clogb2(baud_clock_speed):0] counter;
   
+  reg r_uart_ena;
+  
   //baud enable generator
   always @(posedge uart_clk) begin
     if(uart_rstn == 1'b0) begin
-      counter   <= 0;
-      uart_ena  <= 0;
+      counter   <= (baud_clock_speed-baud_rate);
+      r_uart_ena  <= 0;
     end else begin
       counter   <= (uart_hold == 1'b1 ? baud_clock_speed/2 : counter + baud_rate);
-      uart_ena  <= 1'b0;
+      r_uart_ena  <= 1'b0;
       
       if(counter >= (baud_clock_speed-baud_rate)) begin
-        counter   <= counter % (baud_clock_speed-baud_rate);
-        uart_ena  <= 1'b1;
+        counter   <= counter % ((baud_clock_speed-baud_rate) == 0 ? 1 : (baud_clock_speed-baud_rate));
+        r_uart_ena  <= 1'b1;
       end
     end
   end
+  
+  //delay output of uart_ena
+  generate
+    if(delay > 0) begin
+      //delays
+      (* mark_debug = "true", keep = "true" *)reg [delay:0] delay_uart_ena;
+      
+      assign uart_ena = delay_uart_ena[delay];
+      
+      always @(posedge uart_clk) begin
+        if(uart_rstn == 1'b0) begin
+          delay_uart_ena <= 0;
+        end else begin
+          delay_uart_ena <= {delay_uart_ena[delay-1:0], r_uart_ena};
+        end
+      end
+    end else begin
+      assign uart_ena = r_uart_ena;
+    end
+  endgenerate
  
   //copied from the IEEE 1364-2001 Standard
   function integer clogb2;

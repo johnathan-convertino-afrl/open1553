@@ -36,7 +36,8 @@ module util_axis_uart_tx #(
     parameter parity_ena  = 0,
     parameter parity_type = 1,
     parameter stop_bits   = 1,
-    parameter data_bits   = 8
+    parameter data_bits   = 8,
+    parameter delay       = 0
   ) 
   (
     //clock and reset
@@ -47,10 +48,10 @@ module util_axis_uart_tx #(
     (* mark_debug = "true", keep = "true" *)input                   s_axis_tvalid,
     (* mark_debug = "true", keep = "true" *)output                  s_axis_tready,
     //uart
-    (* mark_debug = "true", keep = "true" *)input           uart_clk,
-    (* mark_debug = "true", keep = "true" *)input           uart_rstn,
+    input           uart_clk,
+    input           uart_rstn,
     (* mark_debug = "true", keep = "true" *)input           uart_ena,
-    (* mark_debug = "true", keep = "true" *)output  reg     txd
+    (* mark_debug = "true", keep = "true" *)output          txd
   );
   
   //start bit size... :)
@@ -82,6 +83,9 @@ module util_axis_uart_tx #(
   (* mark_debug = "true", keep = "true" *)reg [clogb2(bits_per_trans)-1:0]  prev_trans_counter;
   //transmit done
   (* mark_debug = "true", keep = "true" *)reg trans_fin;
+  //Tx 
+  (* mark_debug = "true", keep = "true" *)reg reg_txd;
+
   
   assign s_axis_tready = (state == data_cap ? arstn : 0);
   
@@ -168,11 +172,32 @@ module util_axis_uart_tx #(
     end
   end
   
+  //delay output of data
+  generate
+    if(delay > 0) begin
+      //delay tx data
+      (* mark_debug = "true", keep = "true" *)reg [delay:0] delay_data = 0;
+      
+      assign txd = delay_data[delay];
+      
+      always @(posedge uart_clk) begin
+        if(uart_rstn == 1'b0) begin
+          delay_data <= 0;
+        end else begin
+          delay_data <= {delay_data[delay-1:0], reg_txd};
+        end
+      end
+    end else begin
+      assign txd = reg_txd;
+    end
+  endgenerate
+  
+  
   //uart data output positive edge
   always @(posedge uart_clk) begin
     if(uart_rstn == 1'b0) begin
       trans_fin           <= 0;
-      txd                 <= 1;
+      reg_txd             <= 1;
       trans_counter       <= 0;
       prev_trans_counter  <= 0;
     end else begin
@@ -181,7 +206,7 @@ module util_axis_uart_tx #(
         trans: begin
           //on uart enable, send out data.
           if(uart_ena == 1'b1) begin
-            txd <= reg_data[trans_counter];
+            reg_txd <= reg_data[trans_counter];
           
             trans_counter <= trans_counter + 1;
             
@@ -199,7 +224,7 @@ module util_axis_uart_tx #(
         end
         default: begin
           //default state of counters and data output.
-          txd                 <= 1;
+          reg_txd             <= 1;
           trans_fin           <= 0;
           trans_counter       <= 0;
           prev_trans_counter  <= 0;

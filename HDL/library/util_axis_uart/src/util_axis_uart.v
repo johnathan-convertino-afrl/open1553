@@ -36,11 +36,14 @@
 module util_axis_uart #(
     parameter baud_clock_speed  = 2000000,
     parameter baud_rate   = 2000000,
-    parameter parity_ena  = 1,
-    parameter parity_type = 1,
+    parameter parity_ena  = 0,
+    parameter parity_type = 0,
     parameter stop_bits   = 1,
     parameter data_bits   = 8,
-    parameter rx_delay    = 3
+    parameter rx_delay    = 0,
+    parameter rx_baud_delay = 0,
+    parameter tx_delay    = 5,
+    parameter tx_baud_delay = 0
   ) 
   (
     //axis clock and reset
@@ -68,7 +71,8 @@ module util_axis_uart #(
   //baud enable generator for tx, enable blocks when data i/o is needed at set rate.
   util_uart_baud_gen #(
     .baud_clock_speed(baud_clock_speed),
-    .baud_rate(baud_rate)
+    .baud_rate(baud_rate),
+    .delay(tx_baud_delay)
   ) uart_baud_gen_tx (
     .uart_clk(uart_clk),
     .uart_rstn(uart_rstn),
@@ -78,7 +82,8 @@ module util_axis_uart #(
   
   util_uart_baud_gen #(
     .baud_clock_speed(baud_clock_speed),
-    .baud_rate(baud_rate)
+    .baud_rate(baud_rate),
+    .delay(rx_baud_delay)
   ) uart_baud_gen_rx (
     .uart_clk(uart_clk),
     .uart_rstn(uart_rstn),
@@ -90,7 +95,8 @@ module util_axis_uart #(
     .parity_ena(parity_ena),
     .parity_type(parity_type),
     .stop_bits(stop_bits),
-    .data_bits(data_bits)
+    .data_bits(data_bits),
+    .delay(tx_delay)
   ) uart_tx (
     //clock and reset
     .aclk(aclk),
