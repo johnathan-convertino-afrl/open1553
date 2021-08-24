@@ -34,6 +34,8 @@ module system_top (
   input            uart_rx
   );
   
+//   assign uart_tx = uart_rx;
+  
   system_wrapper i_system_wrapper (
     .clk_100mhz(clk_100mhz),
     .four_leds(four_leds),
