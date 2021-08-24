@@ -88,7 +88,7 @@ ad_connect  sys_clk     sys_rstgen/slowest_sync_clk
 
 set_property CONFIG.POLARITY ACTIVE_LOW [get_bd_ports resetn]
 
-ad_connect sys_rstgen/peripheral_aresetn clk_wiz_48mhz/resetn
+ad_connect /resetn clk_wiz_48mhz/resetn
 
 # generic reset/clock pointers
 
