@@ -32,11 +32,11 @@
 
 //uart
 module util_axis_uart_rx #(
-    parameter parity_ena  = 1,
-    parameter parity_type = 1,
+    parameter parity_ena  = 0,
+    parameter parity_type = 0,
     parameter stop_bits   = 1,
     parameter data_bits   = 8,
-    parameter delay       = 3
+    parameter delay       = 0
   ) 
   (
     //clock and reset
@@ -47,8 +47,8 @@ module util_axis_uart_rx #(
     (* mark_debug = "true", keep = "true" *)output  reg                 m_axis_tvalid,
     (* mark_debug = "true", keep = "true" *)input                       m_axis_tready,
     //uart input
-    (* mark_debug = "true", keep = "true" *)input         uart_clk,
-    (* mark_debug = "true", keep = "true" *)input         uart_rstn,
+    input         uart_clk,
+    input         uart_rstn,
     (* mark_debug = "true", keep = "true" *)input         uart_ena,
     (* mark_debug = "true", keep = "true" *)output  reg   uart_hold,
     (* mark_debug = "true", keep = "true" *)input         rxd
@@ -68,12 +68,10 @@ module util_axis_uart_rx #(
   // transmit data
   localparam trans        = 3'd4;
   // someone made a whoops
-  localparam error        = 3'd0;
+  localparam error        = 0;
   //uart_states
-  localparam start_wait   = 3'd1;
-  localparam data_at_baud = 3'd2;
-  //delay trigger
-  localparam [delay:0] delay_trigger = {1'b1, {delay{1'b0}}};
+  localparam start_wait   = 2'd1;
+  localparam data_at_baud = 2'd3;
   
   //data reg
   (* mark_debug = "true", keep = "true" *)reg [bits_per_trans-1:0]reg_data;
@@ -81,7 +79,7 @@ module util_axis_uart_rx #(
   (* mark_debug = "true", keep = "true" *)reg parity_bit;
   //state machine
   (* mark_debug = "true", keep = "true" *)reg [2:0]  state = error;
-  (* mark_debug = "true", keep = "true" *)reg [2:0]  uart_state = error;
+  (* mark_debug = "true", keep = "true" *)reg [1:0]  uart_state = error;
   //data to transmit
   (* mark_debug = "true", keep = "true" *)reg [data_bits-1:0] data;
   //counters
@@ -89,10 +87,10 @@ module util_axis_uart_rx #(
   (* mark_debug = "true", keep = "true" *)reg [clogb2(bits_per_trans)-1:0]  prev_trans_counter;
   //previous states
   (* mark_debug = "true", keep = "true" *)reg p_rxd;
-  //delay wire
-  (* mark_debug = "true", keep = "true" *)wire [delay:0] wire_delay_uart_ena;
   //transmit done
   (* mark_debug = "true", keep = "true" *)reg trans_fin;
+  //wire_rxd
+  wire wire_rxd;
   
   //axis data output
   always @(posedge aclk) begin
@@ -179,23 +177,23 @@ module util_axis_uart_rx #(
     end
   end
   
-  //delay sampling of data if need be.
+  //delay input of data
   generate
-    if(delay >= 1) begin
+    if(delay > 0) begin
       //delays
-      reg [delay:0] delay_uart_ena;
+      (* mark_debug = "true", keep = "true" *)reg [delay:0] delay_rx;
       
-      assign wire_delay_uart_ena = delay_uart_ena;
+      assign wire_rxd = delay_rx[delay];
       
-      always @(posedge aclk) begin
-        if(arstn == 1'b0) begin
-          delay_uart_ena <= 0;
+      always @(posedge uart_clk) begin
+        if(uart_rstn == 1'b0) begin
+          delay_rx <= 0;
         end else begin
-          delay_uart_ena <= {delay_uart_ena[delay-1:0], uart_ena};
+          delay_rx <= {delay_rx[delay-1:0], rxd};
         end
       end
     end else begin
-      assign wire_delay_uart_ena[delay] = uart_ena;
+      assign wire_rxd = rxd;
     end
   endgenerate
   
@@ -203,14 +201,14 @@ module util_axis_uart_rx #(
   always @(posedge uart_clk) begin
     if(uart_rstn == 1'b0) begin
       reg_data            <= 0;
-      uart_state          <= start_wait;
+      uart_state          <= error;
       p_rxd               <= 1;
       trans_counter       <= 0;
       prev_trans_counter  <= 0;
       trans_fin           <= 0;
       uart_hold           <= 1;
     end else begin
-      p_rxd <= rxd;
+      p_rxd <= wire_rxd;
       uart_hold <= 1'b1;
       
       case (state)
@@ -221,8 +219,8 @@ module util_axis_uart_rx #(
             start_wait: begin
               uart_state <= start_wait;
               
-              //falling edge of rxd is start bit (1 to 0).
-              if((p_rxd == 1'b1) && (rxd == 1'b0)) begin
+              //falling edge of wire_rxd is start bit (1 to 0).
+              if((p_rxd == 1'b1) && (wire_rxd == 1'b0)) begin
                 uart_state <= data_at_baud;
                 uart_hold  <= 1'b0;
               end
@@ -233,8 +231,8 @@ module util_axis_uart_rx #(
               uart_hold  <= 1'b0;
               
               //on uart enable, capture data... delay added if need be.
-              if(wire_delay_uart_ena == delay_trigger) begin
-                reg_data[trans_counter] <= rxd;
+              if(uart_ena == 1'b1) begin
+                reg_data[trans_counter] <= wire_rxd;
             
                 trans_counter <= trans_counter + 1;
                 
