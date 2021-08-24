@@ -95,6 +95,8 @@ on fire performance wise, but shows how quickly something can be put together.
 
 #### hardware
 
+![pmod_img](./pmod1553.png)
+
 Hardware design and information for the pmod_1553 device.   
 This design is done in KiCAD version 5.x.   
 
