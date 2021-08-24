@@ -50,13 +50,13 @@ module util_axis_uart #(
     input aclk,
     input arstn,
     //slave input
-    input  [data_bits-1:0]     s_axis_tdata,
-    input             s_axis_tvalid,
-    output            s_axis_tready,
+    input  [data_bits-1:0]  s_axis_tdata,
+    input                   s_axis_tvalid,
+    output                  s_axis_tready,
     //master output
-    output [data_bits-1:0]     m_axis_tdata,
-    output            m_axis_tvalid,
-    input             m_axis_tready,
+    output [data_bits-1:0]  m_axis_tdata,
+    output                  m_axis_tvalid,
+    input                   m_axis_tready,
     //UART
     input   uart_clk,
     input   uart_rstn,
