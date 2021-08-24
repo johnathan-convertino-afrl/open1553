@@ -41,6 +41,7 @@ module util_uart_1553_core #(
     parameter uart_stop_bits   = 1,
     parameter uart_data_bits   = 8,
     parameter uart_rx_delay    = 0,
+    parameter uart_tx_delay    = 0,
     parameter mil1553_sample_rate         = 2000000,
     parameter mil1553_rx_bit_slice_offset = 0,
     parameter mil1553_rx_invert_data      = 0,
@@ -244,7 +245,8 @@ module util_uart_1553_core #(
     .parity_type(uart_parity_type),
     .stop_bits(uart_stop_bits),
     .data_bits(uart_data_bits),
-    .rx_delay(uart_rx_delay)
+    .rx_delay(uart_rx_delay),
+    .tx_delay(uart_tx_delay)
   ) axis_uart (
     //clock and reset
     .aclk(aclk),
