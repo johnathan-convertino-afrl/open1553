@@ -41,16 +41,16 @@ module util_axis_1553_string_encoder #(
     input        aclk,
     input        arstn,
     //axis slave interface (input)
-    (* mark_debug = "true", keep = "true" *)input   [15:0]  s_axis_tdata,
-    (* mark_debug = "true", keep = "true" *)input           s_axis_tvalid,
-    (* mark_debug = "true", keep = "true" *)input   [ 7:0]  s_axis_tuser,
-    (* mark_debug = "true", keep = "true" *)output          s_axis_tready,
+    input   [15:0]  s_axis_tdata,
+    input           s_axis_tvalid,
+    input   [ 7:0]  s_axis_tuser,
+    output          s_axis_tready,
     //axis master interface (out)
-    (* mark_debug = "true", keep = "true" *)output      [167:0] m_axis_tdata,
-    (* mark_debug = "true", keep = "true" *)output  reg         m_axis_tvalid,
-    (* mark_debug = "true", keep = "true" *)output  reg         m_axis_tlast,
-    (* mark_debug = "true", keep = "true" *)output  reg [ 20:0] m_axis_tkeep,
-    (* mark_debug = "true", keep = "true" *)input               m_axis_tready
+    output      [167:0] m_axis_tdata,
+    output  reg         m_axis_tvalid,
+    output  reg         m_axis_tlast,
+    output  reg [ 20:0] m_axis_tkeep,
+    input               m_axis_tready
   );
   
   reg p_m_axis_tready;

@@ -55,12 +55,12 @@ module util_axis_1553_encoder #(
     input aclk,
     input arstn,
     //slave input
-    (* mark_debug = "true", keep = "true" *)input   [15:0]  s_axis_tdata,
-    (* mark_debug = "true", keep = "true" *)input           s_axis_tvalid,
-    (* mark_debug = "true", keep = "true" *)input   [7:0]   s_axis_tuser,
-    (* mark_debug = "true", keep = "true" *)output          s_axis_tready,
+    input   [15:0]  s_axis_tdata,
+    input           s_axis_tvalid,
+    input   [7:0]   s_axis_tuser,
+    output          s_axis_tready,
     //diff output
-    (* mark_debug = "true", keep = "true" *)output  reg [1:0]   diff
+    output  reg [1:0]   diff
   );
   
   //1553 base clock rate
@@ -113,21 +113,21 @@ module util_axis_1553_encoder #(
   integer xor_index;
   integer cycle_index;
   //data reg
-  (* mark_debug = "true", keep = "true" *)reg [synth_bits_per_trans-1:0]reg_data;
+  reg [synth_bits_per_trans-1:0]reg_data;
   //parity bit storage
-  (* mark_debug = "true", keep = "true" *)reg parity_bit;
+  reg parity_bit;
   //state machine
-  (* mark_debug = "true", keep = "true" *)reg [2:0]  state = error;
+  reg [2:0]  state = error;
   //incoming data to transmit
-  (* mark_debug = "true", keep = "true" *)reg [15:0] data;
-  (* mark_debug = "true", keep = "true" *)reg [15:0] r_data;
+  reg [15:0] data;
+  reg [15:0] r_data;
   //incoming cmd to parse
-  (* mark_debug = "true", keep = "true" *)reg [7:0]  cmd;
+  reg [7:0]  cmd;
   //counters
-  (* mark_debug = "true", keep = "true" *)reg [clogb2(samples_to_skip):0]         skip_counter;
-  (* mark_debug = "true", keep = "true" *)reg [clogb2(delay_time)-1:0]            pause_counter;
-  (* mark_debug = "true", keep = "true" *)reg [clogb2(synth_bits_per_trans)-1:0]  trans_counter;
-  (* mark_debug = "true", keep = "true" *)reg [clogb2(synth_bits_per_trans)-1:0]  prev_trans_counter;
+  reg [clogb2(samples_to_skip):0]         skip_counter;
+  reg [clogb2(delay_time)-1:0]            pause_counter;
+  reg [clogb2(synth_bits_per_trans)-1:0]  trans_counter;
+  reg [clogb2(synth_bits_per_trans)-1:0]  prev_trans_counter;
   
   assign s_axis_tready = (state == data_cap ? arstn : 0);
 

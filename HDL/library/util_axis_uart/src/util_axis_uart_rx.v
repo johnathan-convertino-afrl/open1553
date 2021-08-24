@@ -43,15 +43,15 @@ module util_axis_uart_rx #(
     input aclk,
     input arstn,
     //master output
-    (* mark_debug = "true", keep = "true" *)output  reg[data_bits-1:0]  m_axis_tdata,
-    (* mark_debug = "true", keep = "true" *)output  reg                 m_axis_tvalid,
-    (* mark_debug = "true", keep = "true" *)input                       m_axis_tready,
+    output  reg[data_bits-1:0]  m_axis_tdata,
+    output  reg                 m_axis_tvalid,
+    input                       m_axis_tready,
     //uart input
     input         uart_clk,
     input         uart_rstn,
-    (* mark_debug = "true", keep = "true" *)input         uart_ena,
-    (* mark_debug = "true", keep = "true" *)output  reg   uart_hold,
-    (* mark_debug = "true", keep = "true" *)input         rxd
+    input         uart_ena,
+    output  reg   uart_hold,
+    input         rxd
   );
   
   //start bit size... :)
@@ -74,21 +74,21 @@ module util_axis_uart_rx #(
   localparam data_at_baud = 2'd3;
   
   //data reg
-  (* mark_debug = "true", keep = "true" *)reg [bits_per_trans-1:0]reg_data;
+  reg [bits_per_trans-1:0]reg_data;
   //parity bit storage
-  (* mark_debug = "true", keep = "true" *)reg parity_bit;
+  reg parity_bit;
   //state machine
-  (* mark_debug = "true", keep = "true" *)reg [2:0]  state = error;
-  (* mark_debug = "true", keep = "true" *)reg [1:0]  uart_state = error;
+  reg [2:0]  state = error;
+  reg [1:0]  uart_state = error;
   //data to transmit
-  (* mark_debug = "true", keep = "true" *)reg [data_bits-1:0] data;
+  reg [data_bits-1:0] data;
   //counters
-  (* mark_debug = "true", keep = "true" *)reg [clogb2(bits_per_trans)-1:0]  trans_counter;
-  (* mark_debug = "true", keep = "true" *)reg [clogb2(bits_per_trans)-1:0]  prev_trans_counter;
+  reg [clogb2(bits_per_trans)-1:0]  trans_counter;
+  reg [clogb2(bits_per_trans)-1:0]  prev_trans_counter;
   //previous states
-  (* mark_debug = "true", keep = "true" *)reg p_rxd;
+  reg p_rxd;
   //transmit done
-  (* mark_debug = "true", keep = "true" *)reg trans_fin;
+  reg trans_fin;
   //wire_rxd
   wire wire_rxd;
   
@@ -181,7 +181,7 @@ module util_axis_uart_rx #(
   generate
     if(delay > 0) begin
       //delays
-      (* mark_debug = "true", keep = "true" *)reg [delay:0] delay_rx;
+      reg [delay:0] delay_rx;
       
       assign wire_rxd = delay_rx[delay];
       
