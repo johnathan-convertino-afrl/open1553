@@ -1,0 +1,851 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>/mnt/data/Programming/open1553/hardware/pmod/kicad/pmod_1553.sch</source>
+    <date>Tue 24 Aug 2021 09:33:48 PM EDT</date>
+    <tool>Eeschema 5.1.5+dfsg1-2build2</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>pmod_1553.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="J1">
+      <value>Conn_02x06_Top_Bottom</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_2x06_P2.54mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/Amphenol-FCI/10129382-912001BLF?qs=%2Fha2pyFadug32m4xOB2%252BmVXU3aKMd9PcTrSHZ%252BY316jfSjjQJuKTrO0vID2tiybT</field>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_02x06_Odd_Even" description="Generic connector, double row, 02x06, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60C24DC1</tstamp>
+    </comp>
+    <comp ref="PS1">
+      <value>TBA_1-0311</value>
+      <footprint>traco:TBA10311</footprint>
+      <datasheet>https://componentsearchengine.com/Datasheets/1/TBA 1-0511.pdf</datasheet>
+      <fields>
+        <field name="Description">TRACO POWER - TBA 1-0311 - Isolated Board Mount DC/DC Converter, ITE, 1 Output, 1 W, 5 V, 200 mA</field>
+        <field name="Height">10.5</field>
+        <field name="Manufacturer_Name">Traco Power</field>
+        <field name="Manufacturer_Part_Number">TBA 1-0311</field>
+        <field name="Mouser Part Number">495-TBA1-0311</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/TRACO-Power/TBA-1-0311?qs=byeeYqUIh0OdVWzHzjZFAA%3D%3D</field>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/TRACO-Power/TBA-1-0311?qs=%2Fha2pyFadugnngzec2Cb1SIugpFyxv1FnkCjen6frhWN8ksDQuRpwA%3D%3D</field>
+      </fields>
+      <libsource lib="TBA_1-0311" part="TBA_1-0311" description="TRACO POWER - TBA 1-0311 - Isolated Board Mount DC/DC Converter, ITE, 1 Output, 1 W, 5 V, 200 mA"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60CFB813</tstamp>
+    </comp>
+    <comp ref="C1">
+      <value>22uF</value>
+      <footprint>Capacitor_THT:CP_Radial_D5.0mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/647-UPW1A220MDD</field>
+      </fields>
+      <libsource lib="Device" part="CP" description="Polarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60D04146</tstamp>
+    </comp>
+    <comp ref="IC2">
+      <value>TB001-500-02BE</value>
+      <footprint>cui:TB00150002BE</footprint>
+      <datasheet>https://br.mouser.com/datasheet/2/670/tb001-500-1550615.pdf</datasheet>
+      <fields>
+        <field name="Arrow Part Number">TB001-500-02BE</field>
+        <field name="Arrow Price/Stock">https://www.arrow.com/en/products/tb001-500-02be/cui-devices</field>
+        <field name="Description">Fixed Terminal Blocks screw type, 5.00, horizontal, 2 poles, CUI Blue, slotted screw, PCB mount</field>
+        <field name="Height">12.9</field>
+        <field name="Manufacturer_Name">CUI Inc.</field>
+        <field name="Manufacturer_Part_Number">TB001-500-02BE</field>
+        <field name="Mouser Part Number">490-TB001-500-02BE</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/CUI-Devices/TB001-500-02BE?qs=vLWxofP3U2zBBnHgU5u3DA%3D%3D</field>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/CUI-Devices/TB001-500-02BE?qs=%2Fha2pyFadujMdv6PiXeNZkSsm5Qkxr1FY4D5p2i4LtbuG6HS8Lj7%2Fg%3D%3D</field>
+      </fields>
+      <libsource lib="TB001-500-02BE" part="TB001-500-02BE" description="Fixed Terminal Blocks screw type, 5.00, horizontal, 2 poles, CUI Blue, slotted screw, PCB mount"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60CC3999</tstamp>
+    </comp>
+    <comp ref="IC1">
+      <value>TB001-500-02BE</value>
+      <footprint>cui:TB00150002BE</footprint>
+      <datasheet>https://br.mouser.com/datasheet/2/670/tb001-500-1550615.pdf</datasheet>
+      <fields>
+        <field name="Arrow Part Number">TB001-500-02BE</field>
+        <field name="Arrow Price/Stock">https://www.arrow.com/en/products/tb001-500-02be/cui-devices</field>
+        <field name="Description">Fixed Terminal Blocks screw type, 5.00, horizontal, 2 poles, CUI Blue, slotted screw, PCB mount</field>
+        <field name="Height">12.9</field>
+        <field name="Manufacturer_Name">CUI Inc.</field>
+        <field name="Manufacturer_Part_Number">TB001-500-02BE</field>
+        <field name="Mouser Part Number">490-TB001-500-02BE</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/CUI-Devices/TB001-500-02BE?qs=vLWxofP3U2zBBnHgU5u3DA%3D%3D</field>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/CUI-Devices/TB001-500-02BE?qs=%2Fha2pyFadujMdv6PiXeNZkSsm5Qkxr1FY4D5p2i4LtbuG6HS8Lj7%2Fg%3D%3D</field>
+      </fields>
+      <libsource lib="TB001-500-02BE" part="TB001-500-02BE" description="Fixed Terminal Blocks screw type, 5.00, horizontal, 2 poles, CUI Blue, slotted screw, PCB mount"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60CC3436</tstamp>
+    </comp>
+    <comp ref="P2">
+      <value>78604-9JC</value>
+      <footprint>murata_pulse_transformers:78604-9JC</footprint>
+      <fields>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/Murata-Power-Solutions/78604-9JC?qs=f4NXQ36d%252BdAJuzG35nIgNw%3D%3D</field>
+      </fields>
+      <libsource lib="Murata_Pulse_Transformers" part="78604-9JC" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60C7B5E2</tstamp>
+    </comp>
+    <comp ref="C7">
+      <value>100NF</value>
+      <footprint>Capacitor_THT:C_Disc_D4.7mm_W2.5mm_P5.00mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60D395EB</tstamp>
+    </comp>
+    <comp ref="C8">
+      <value>100NF</value>
+      <footprint>Capacitor_THT:C_Disc_D4.7mm_W2.5mm_P5.00mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60D39087</tstamp>
+    </comp>
+    <comp ref="R8">
+      <value>49R9</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/TE-Connectivity-Holsworthy/YR1B49R9CC?qs=%2Fha2pyFaduj9DVYKP1mQ5I6cbHeSbqcRTxxAPrgoG9nIERwP%252BGOgJQ%3D%3D</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60CBA98E</tstamp>
+    </comp>
+    <comp ref="R7">
+      <value>49R9</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/TE-Connectivity-Holsworthy/YR1B49R9CC?qs=%2Fha2pyFaduj9DVYKP1mQ5I6cbHeSbqcRTxxAPrgoG9nIERwP%252BGOgJQ%3D%3D</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60CBA57F</tstamp>
+    </comp>
+    <comp ref="R6">
+      <value>49R9</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/TE-Connectivity-Holsworthy/YR1B49R9CC?qs=%2Fha2pyFaduj9DVYKP1mQ5I6cbHeSbqcRTxxAPrgoG9nIERwP%252BGOgJQ%3D%3D</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60CBA1CB</tstamp>
+    </comp>
+    <comp ref="R5">
+      <value>49R9</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/TE-Connectivity-Holsworthy/YR1B49R9CC?qs=%2Fha2pyFaduj9DVYKP1mQ5I6cbHeSbqcRTxxAPrgoG9nIERwP%252BGOgJQ%3D%3D</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60CB9C9F</tstamp>
+    </comp>
+    <comp ref="C4">
+      <value>10pF</value>
+      <footprint>Capacitor_THT:C_Disc_D4.7mm_W2.5mm_P5.00mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/TDK/FK18C0G1H100D?qs=kMGq28SsF%252BkXk%252BchLEATyA%3D%3D</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60C656CB</tstamp>
+    </comp>
+    <comp ref="C3">
+      <value>10pF</value>
+      <footprint>Capacitor_THT:C_Disc_D4.7mm_W2.5mm_P5.00mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/TDK/FK18C0G1H100D?qs=kMGq28SsF%252BkXk%252BchLEATyA%3D%3D</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60C651BD</tstamp>
+    </comp>
+    <comp ref="R3">
+      <value>100</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/TE-Connectivity-Holsworthy/YR1B100RCC?qs=%2Fha2pyFadujfkjl%2Fw2CT8wH4dU44PFFTyZyFDkshbTA0fGbLwSa2EA%3D%3D</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60C63E75</tstamp>
+    </comp>
+    <comp ref="R2">
+      <value>100</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/TE-Connectivity-Holsworthy/YR1B100RCC?qs=%2Fha2pyFadujfkjl%2Fw2CT8wH4dU44PFFTyZyFDkshbTA0fGbLwSa2EA%3D%3D</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60C63B3C</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>100</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/TE-Connectivity-Holsworthy/YR1B100RCC?qs=%2Fha2pyFadujfkjl%2Fw2CT8wH4dU44PFFTyZyFDkshbTA0fGbLwSa2EA%3D%3D</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60C63662</tstamp>
+    </comp>
+    <comp ref="U3">
+      <value>VO2630</value>
+      <footprint>Package_DIP:DIP-8_W7.62mm</footprint>
+      <datasheet>https://www.vishay.com/doc?84732</datasheet>
+      <fields>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/Vishay-Semiconductors/VO2630?qs=xCMk%252BIHWTZOuc1EdsOwr1g%3D%3D</field>
+      </fields>
+      <libsource lib="Isolator" part="VO2630" description="Dual High Speed CMOS Compatible Optocoupler, dV/dt 1000/us, VCM 10, max 7V VCC, DIP-8"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60C25854</tstamp>
+    </comp>
+    <comp ref="U2">
+      <value>VO2630</value>
+      <footprint>Package_DIP:DIP-8_W7.62mm</footprint>
+      <datasheet>https://www.vishay.com/doc?84732</datasheet>
+      <fields>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/Vishay-Semiconductors/VO2630?qs=xCMk%252BIHWTZOuc1EdsOwr1g%3D%3D</field>
+      </fields>
+      <libsource lib="Isolator" part="VO2630" description="Dual High Speed CMOS Compatible Optocoupler, dV/dt 1000/us, VCM 10, max 7V VCC, DIP-8"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60C251B0</tstamp>
+    </comp>
+    <comp ref="R11">
+      <value>100</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/TE-Connectivity-Holsworthy/YR1B100RCC?qs=%2Fha2pyFadujfkjl%2Fw2CT8wH4dU44PFFTyZyFDkshbTA0fGbLwSa2EA%3D%3D</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60CBBDD4</tstamp>
+    </comp>
+    <comp ref="R12">
+      <value>100</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/TE-Connectivity-Holsworthy/YR1B100RCC?qs=%2Fha2pyFadujfkjl%2Fw2CT8wH4dU44PFFTyZyFDkshbTA0fGbLwSa2EA%3D%3D</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60CBC3DF</tstamp>
+    </comp>
+    <comp ref="R10">
+      <value>332_2K2-DNP</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/TE-Connectivity-Holsworthy/YR1B332RCC?qs=%2Fha2pyFadug6BvjU2YViCydgO3v3mIlvjAYlexUPMTr57zwxvr%252B3rg%3D%3D</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60CBC868</tstamp>
+    </comp>
+    <comp ref="R9">
+      <value>332_2K2-DNP</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/TE-Connectivity-Holsworthy/YR1B332RCC?qs=%2Fha2pyFadug6BvjU2YViCydgO3v3mIlvjAYlexUPMTr57zwxvr%252B3rg%3D%3D</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60CBD27F</tstamp>
+    </comp>
+    <comp ref="P1">
+      <value>78604-9JC</value>
+      <footprint>murata_pulse_transformers:78604-9JC</footprint>
+      <fields>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/Murata-Power-Solutions/78604-9JC?qs=f4NXQ36d%252BdAJuzG35nIgNw%3D%3D</field>
+      </fields>
+      <libsource lib="Murata_Pulse_Transformers" part="78604-9JC" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60C7C036</tstamp>
+    </comp>
+    <comp ref="R4">
+      <value>100</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/TE-Connectivity-Holsworthy/YR1B100RCC?qs=%2Fha2pyFadujfkjl%2Fw2CT8wH4dU44PFFTyZyFDkshbTA0fGbLwSa2EA%3D%3D</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60C64394</tstamp>
+    </comp>
+    <comp ref="H1">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_2.2mm_M2_DIN965</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60CCB657</tstamp>
+    </comp>
+    <comp ref="H2">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_2.2mm_M2_DIN965</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60CCBB54</tstamp>
+    </comp>
+    <comp ref="C2">
+      <value>1NF</value>
+      <footprint>Capacitor_THT:C_Disc_D4.7mm_W2.5mm_P5.00mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/TDK/CK45-B3AD102KYNNA?qs=%2Fha2pyFadujNF1rR3x4c0siltWlJvDviXGaReNpdvw4ctPBfayLyKEG1JFLLGqeR</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60CDE55C</tstamp>
+    </comp>
+    <comp ref="J2">
+      <value>Conn_01x02</value>
+      <footprint>Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/Molex/22-29-2021?qs=5gBG3L055oM6MLYs649kIA%3D%3D</field>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60CE0D1D</tstamp>
+    </comp>
+    <comp ref="J3">
+      <value>Conn_01x02</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/Molex/22-29-2021?qs=5gBG3L055oM6MLYs649kIA%3D%3D</field>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60DD4A71</tstamp>
+    </comp>
+    <comp ref="L1">
+      <value>afrl</value>
+      <footprint>logos:afrl</footprint>
+      <libsource lib="logo" part="afrl" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6108267E</tstamp>
+    </comp>
+    <comp ref="U1">
+      <value>74HC14</value>
+      <footprint>Package_DIP:DIP-14_W7.62mm_LongPads</footprint>
+      <datasheet>http://www.ti.com/lit/gpn/sn74HC14</datasheet>
+      <fields>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/Texas-Instruments/SN74HC14AN?qs=byeeYqUIh0NMy3GLE70Pnw%3D%3D</field>
+      </fields>
+      <libsource lib="74xx" part="74HC14" description="Hex inverter schmitt trigger"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6109BA4C</tstamp>
+    </comp>
+    <comp ref="C5">
+      <value>100NF</value>
+      <footprint>Capacitor_THT:C_Disc_D4.7mm_W2.5mm_P5.00mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/TDK/FK26C0G1H104J?qs=zLBlM7QTTNq9rTkG%2Fo4Low%3D%3D</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>610E2A33</tstamp>
+    </comp>
+    <comp ref="C9">
+      <value>22pF_DNP</value>
+      <footprint>Capacitor_THT:C_Disc_D4.7mm_W2.5mm_P5.00mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/TDK/FK18C0G1H220J?qs=kMGq28SsF%252BmBRUAncjs6VQ%3D%3D</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>610CA7A8</tstamp>
+    </comp>
+    <comp ref="C6">
+      <value>22pF_DNP</value>
+      <footprint>Capacitor_THT:C_Disc_D4.7mm_W2.5mm_P5.00mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/TDK/FK18C0G1H220J?qs=kMGq28SsF%252BmBRUAncjs6VQ%3D%3D</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>610CB109</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="74xx" part="74HC14">
+      <aliases>
+        <alias>74LS14</alias>
+      </aliases>
+      <description>Hex inverter schmitt trigger</description>
+      <docs>http://www.ti.com/lit/gpn/sn74HC14</docs>
+      <footprints>
+        <fp>DIP*W7.62mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">74HC14</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="input"/>
+        <pin num="2" name="~" type="output"/>
+        <pin num="3" name="~" type="input"/>
+        <pin num="4" name="~" type="output"/>
+        <pin num="5" name="~" type="input"/>
+        <pin num="6" name="~" type="output"/>
+        <pin num="7" name="GND" type="power_in"/>
+        <pin num="8" name="~" type="output"/>
+        <pin num="9" name="~" type="input"/>
+        <pin num="10" name="~" type="output"/>
+        <pin num="11" name="~" type="input"/>
+        <pin num="12" name="~" type="output"/>
+        <pin num="13" name="~" type="input"/>
+        <pin num="14" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x02">
+      <description>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x02</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_02x06_Odd_Even">
+      <description>Generic connector, double row, 02x06, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_2x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_02x06_Odd_Even</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+        <pin num="8" name="Pin_8" type="passive"/>
+        <pin num="9" name="Pin_9" type="passive"/>
+        <pin num="10" name="Pin_10" type="passive"/>
+        <pin num="11" name="Pin_11" type="passive"/>
+        <pin num="12" name="Pin_12" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="CP">
+      <description>Polarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>CP_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">CP</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Isolator" part="HCPL-263A">
+      <aliases>
+        <alias>HCPL-263N</alias>
+        <alias>HCPL-2630</alias>
+        <alias>HCPL-2631</alias>
+        <alias>HCPL-4661</alias>
+        <alias>VO2630</alias>
+        <alias>VO2631</alias>
+        <alias>VO4661</alias>
+        <alias>CPC-5002</alias>
+      </aliases>
+      <description>Dual High Speed HCMOS/LSTTL/TTL Compatible Optocoupler, dV/dt 1000/us, VCM 50, -0.5V to 7V VCC, DIP-8</description>
+      <docs>http://docs.avagotech.com/docs/AV02-0391EN</docs>
+      <footprints>
+        <fp>DIP*W7.62mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">HCPL-263A</field>
+        <field name="Footprint">Package_DIP:DIP-8_W7.62mm</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A1" type="passive"/>
+        <pin num="2" name="C1" type="passive"/>
+        <pin num="3" name="C2" type="passive"/>
+        <pin num="4" name="A2" type="passive"/>
+        <pin num="5" name="GND" type="power_in"/>
+        <pin num="6" name="VO2" type="openCol"/>
+        <pin num="7" name="VO1" type="openCol"/>
+        <pin num="8" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Mechanical" part="MountingHole">
+      <description>Mounting Hole without connection</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>MountingHole*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">H</field>
+        <field name="Value">MountingHole</field>
+      </fields>
+    </libpart>
+    <libpart lib="Murata_Pulse_Transformers" part="78604-9JC">
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">78604-9JC</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="NotConnected"/>
+        <pin num="3" name="~" type="passive"/>
+        <pin num="4" name="~" type="passive"/>
+        <pin num="5" name="~" type="NotConnected"/>
+        <pin num="6" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="TB001-500-02BE" part="TB001-500-02BE">
+      <description>Fixed Terminal Blocks screw type, 5.00, horizontal, 2 poles, CUI Blue, slotted screw, PCB mount</description>
+      <docs>https://br.mouser.com/datasheet/2/670/tb001-500-1550615.pdf</docs>
+      <fields>
+        <field name="Reference">IC</field>
+        <field name="Value">TB001-500-02BE</field>
+        <field name="Footprint">TB00150002BE</field>
+        <field name="Datasheet">https://br.mouser.com/datasheet/2/670/tb001-500-1550615.pdf</field>
+        <field name="Description">Fixed Terminal Blocks screw type, 5.00, horizontal, 2 poles, CUI Blue, slotted screw, PCB mount</field>
+        <field name="Height">12.9</field>
+        <field name="Manufacturer_Name">CUI Inc.</field>
+        <field name="Manufacturer_Part_Number">TB001-500-02BE</field>
+        <field name="Mouser Part Number">490-TB001-500-02BE</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/CUI-Devices/TB001-500-02BE?qs=vLWxofP3U2zBBnHgU5u3DA%3D%3D</field>
+        <field name="Arrow Part Number">TB001-500-02BE</field>
+        <field name="Arrow Price/Stock">https://www.arrow.com/en/products/tb001-500-02be/cui-devices</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="TBA_1-0311" part="TBA_1-0311">
+      <description>TRACO POWER - TBA 1-0311 - Isolated Board Mount DC/DC Converter, ITE, 1 Output, 1 W, 5 V, 200 mA</description>
+      <docs>https://componentsearchengine.com/Datasheets/1/TBA 1-0511.pdf</docs>
+      <fields>
+        <field name="Reference">PS</field>
+        <field name="Value">TBA_1-0311</field>
+        <field name="Footprint">TBA10311</field>
+        <field name="Datasheet">https://componentsearchengine.com/Datasheets/1/TBA 1-0511.pdf</field>
+        <field name="Description">TRACO POWER - TBA 1-0311 - Isolated Board Mount DC/DC Converter, ITE, 1 Output, 1 W, 5 V, 200 mA</field>
+        <field name="Height">10.5</field>
+        <field name="Manufacturer_Name">Traco Power</field>
+        <field name="Manufacturer_Part_Number">TBA 1-0311</field>
+        <field name="Mouser Part Number">495-TBA1-0311</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/TRACO-Power/TBA-1-0311?qs=byeeYqUIh0OdVWzHzjZFAA%3D%3D</field>
+      </fields>
+      <pins>
+        <pin num="1" name="-VIN_(GND)" type="passive"/>
+        <pin num="2" name="+VIN_(VCC)" type="passive"/>
+        <pin num="4" name="-VOUT" type="passive"/>
+        <pin num="5" name="+VOUT" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="logo" part="afrl">
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">afrl</field>
+      </fields>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="74xx">
+      <uri>/usr/share/kicad/library/74xx.lib</uri>
+    </library>
+    <library logical="Connector_Generic">
+      <uri>/usr/share/kicad/library/Connector_Generic.lib</uri>
+    </library>
+    <library logical="Device">
+      <uri>/usr/share/kicad/library/Device.lib</uri>
+    </library>
+    <library logical="Isolator">
+      <uri>/usr/share/kicad/library/Isolator.lib</uri>
+    </library>
+    <library logical="Mechanical">
+      <uri>/usr/share/kicad/library/Mechanical.lib</uri>
+    </library>
+    <library logical="Murata_Pulse_Transformers">
+      <uri>/mnt/data/Programming/open1553/hardware/pmod/kicad/../kicad_symbols/Murata_Pulse_Transformers.lib</uri>
+    </library>
+    <library logical="TB001-500-02BE">
+      <uri>/mnt/data/Programming/open1553/hardware/pmod/kicad/../kicad_symbols/TB001-500-02BE.lib</uri>
+    </library>
+    <library logical="TBA_1-0311">
+      <uri>/mnt/data/Programming/open1553/hardware/pmod/kicad/../kicad_symbols/TBA_1-0311.lib</uri>
+    </library>
+    <library logical="logo">
+      <uri>/mnt/data/Programming/open1553/hardware/pmod/kicad/../kicad_symbols/logo.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="GNDD">
+      <node ref="C5" pin="1"/>
+      <node ref="C8" pin="2"/>
+      <node ref="C7" pin="1"/>
+      <node ref="U1" pin="1"/>
+      <node ref="U1" pin="3"/>
+      <node ref="C6" pin="2"/>
+      <node ref="U1" pin="5"/>
+      <node ref="C9" pin="2"/>
+      <node ref="C3" pin="1"/>
+      <node ref="U3" pin="5"/>
+      <node ref="C4" pin="2"/>
+      <node ref="U2" pin="2"/>
+      <node ref="U2" pin="3"/>
+      <node ref="U2" pin="5"/>
+      <node ref="U1" pin="7"/>
+      <node ref="PS1" pin="1"/>
+      <node ref="PS1" pin="4"/>
+      <node ref="C1" pin="2"/>
+      <node ref="J1" pin="3"/>
+      <node ref="J1" pin="4"/>
+      <node ref="C2" pin="2"/>
+    </net>
+    <net code="2" name="GNDA">
+      <node ref="J2" pin="2"/>
+      <node ref="J2" pin="1"/>
+      <node ref="C2" pin="1"/>
+    </net>
+    <net code="3" name="Net-(P2-Pad6)">
+      <node ref="P2" pin="6"/>
+      <node ref="R4" pin="1"/>
+    </net>
+    <net code="4" name="Net-(R4-Pad2)">
+      <node ref="U3" pin="3"/>
+      <node ref="R4" pin="2"/>
+      <node ref="U3" pin="1"/>
+    </net>
+    <net code="5" name="Net-(IC1-Pad2)">
+      <node ref="IC1" pin="2"/>
+      <node ref="R5" pin="1"/>
+    </net>
+    <net code="6" name="Net-(R3-Pad2)">
+      <node ref="U3" pin="2"/>
+      <node ref="R3" pin="2"/>
+      <node ref="U3" pin="4"/>
+    </net>
+    <net code="7" name="Net-(IC2-Pad1)">
+      <node ref="IC2" pin="1"/>
+      <node ref="R8" pin="1"/>
+      <node ref="J3" pin="1"/>
+    </net>
+    <net code="8" name="Net-(IC2-Pad2)">
+      <node ref="IC2" pin="2"/>
+      <node ref="R7" pin="1"/>
+      <node ref="J3" pin="2"/>
+    </net>
+    <net code="9" name="Net-(IC1-Pad1)">
+      <node ref="IC1" pin="1"/>
+      <node ref="R6" pin="2"/>
+    </net>
+    <net code="10" name="Net-(P1-Pad2)">
+      <node ref="P1" pin="2"/>
+    </net>
+    <net code="11" name="Net-(C6-Pad1)">
+      <node ref="U3" pin="6"/>
+      <node ref="R9" pin="1"/>
+      <node ref="U1" pin="9"/>
+      <node ref="C6" pin="1"/>
+    </net>
+    <net code="12" name="Net-(C4-Pad1)">
+      <node ref="P1" pin="6"/>
+      <node ref="C4" pin="1"/>
+      <node ref="U2" pin="6"/>
+      <node ref="R12" pin="2"/>
+    </net>
+    <net code="13" name="Net-(C3-Pad2)">
+      <node ref="R11" pin="1"/>
+      <node ref="P1" pin="4"/>
+      <node ref="C3" pin="2"/>
+      <node ref="U2" pin="7"/>
+    </net>
+    <net code="14" name="Net-(P2-Pad4)">
+      <node ref="P2" pin="4"/>
+      <node ref="R3" pin="1"/>
+    </net>
+    <net code="15" name="Net-(P1-Pad5)">
+      <node ref="P1" pin="5"/>
+    </net>
+    <net code="16" name="Net-(P1-Pad3)">
+      <node ref="P1" pin="3"/>
+      <node ref="R6" pin="1"/>
+    </net>
+    <net code="17" name="Net-(C9-Pad1)">
+      <node ref="U1" pin="11"/>
+      <node ref="U3" pin="7"/>
+      <node ref="R10" pin="2"/>
+      <node ref="C9" pin="1"/>
+    </net>
+    <net code="18" name="Net-(U1-Pad6)">
+      <node ref="U1" pin="6"/>
+    </net>
+    <net code="19" name="Net-(J1-Pad11)">
+      <node ref="U1" pin="8"/>
+      <node ref="J1" pin="11"/>
+    </net>
+    <net code="20" name="Net-(J1-Pad9)">
+      <node ref="U1" pin="10"/>
+      <node ref="J1" pin="9"/>
+    </net>
+    <net code="21" name="Net-(U1-Pad4)">
+      <node ref="U1" pin="4"/>
+    </net>
+    <net code="22" name="Net-(U1-Pad2)">
+      <node ref="U1" pin="2"/>
+    </net>
+    <net code="23" name="Net-(U1-Pad12)">
+      <node ref="U1" pin="12"/>
+    </net>
+    <net code="24" name="Net-(P2-Pad3)">
+      <node ref="R8" pin="2"/>
+      <node ref="P2" pin="3"/>
+    </net>
+    <net code="25" name="Net-(P2-Pad5)">
+      <node ref="P2" pin="5"/>
+    </net>
+    <net code="26" name="Net-(P2-Pad2)">
+      <node ref="P2" pin="2"/>
+    </net>
+    <net code="27" name="Net-(P2-Pad1)">
+      <node ref="P2" pin="1"/>
+      <node ref="R7" pin="2"/>
+    </net>
+    <net code="28" name="Net-(R1-Pad1)">
+      <node ref="R1" pin="1"/>
+      <node ref="U2" pin="4"/>
+    </net>
+    <net code="29" name="Net-(R2-Pad1)">
+      <node ref="R2" pin="1"/>
+      <node ref="U2" pin="1"/>
+    </net>
+    <net code="30" name="Net-(P1-Pad1)">
+      <node ref="P1" pin="1"/>
+      <node ref="R5" pin="2"/>
+    </net>
+    <net code="31" name="Net-(J1-Pad6)">
+      <node ref="J1" pin="6"/>
+    </net>
+    <net code="32" name="Net-(J1-Pad8)">
+      <node ref="J1" pin="8"/>
+    </net>
+    <net code="33" name="Net-(J1-Pad12)">
+      <node ref="J1" pin="12"/>
+    </net>
+    <net code="34" name="Net-(J1-Pad10)">
+      <node ref="J1" pin="10"/>
+    </net>
+    <net code="35" name="Net-(C1-Pad1)">
+      <node ref="J1" pin="1"/>
+      <node ref="J1" pin="2"/>
+      <node ref="C1" pin="1"/>
+      <node ref="R10" pin="1"/>
+      <node ref="PS1" pin="2"/>
+      <node ref="U1" pin="14"/>
+      <node ref="U1" pin="13"/>
+      <node ref="R9" pin="2"/>
+      <node ref="C5" pin="2"/>
+    </net>
+    <net code="36" name="Net-(J1-Pad7)">
+      <node ref="J1" pin="7"/>
+      <node ref="R2" pin="2"/>
+    </net>
+    <net code="37" name="Net-(J1-Pad5)">
+      <node ref="J1" pin="5"/>
+      <node ref="R1" pin="2"/>
+    </net>
+    <net code="38" name="Net-(C7-Pad2)">
+      <node ref="C7" pin="2"/>
+      <node ref="PS1" pin="5"/>
+      <node ref="C8" pin="1"/>
+      <node ref="R12" pin="1"/>
+      <node ref="U3" pin="8"/>
+      <node ref="R11" pin="2"/>
+      <node ref="U2" pin="8"/>
+    </net>
+  </nets>
+</export>

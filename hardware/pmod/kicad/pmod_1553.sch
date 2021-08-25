@@ -21,6 +21,7 @@ F 0 "J1" H 3175 3100 50  0000 C CNN
 F 1 "Conn_02x06_Top_Bottom" H 3175 3200 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x06_P2.54mm_Horizontal" H 3125 3650 50  0001 C CNN
 F 3 "~" H 3125 3650 50  0001 C CNN
+F 4 "https://www.mouser.com/ProductDetail/Amphenol-FCI/10129382-912001BLF?qs=%2Fha2pyFadug32m4xOB2%252BmVXU3aKMd9PcTrSHZ%252BY316jfSjjQJuKTrO0vID2tiybT" H 3125 3650 50  0001 C CNN "Vendor"
 	1    3125 3650
 	-1   0    0    1   
 $EndComp
@@ -68,6 +69,7 @@ F 8 "495-TBA1-0311" H 4425 3950 50  0001 L CNN "Mouser Part Number"
 F 9 "https://www.mouser.co.uk/ProductDetail/TRACO-Power/TBA-1-0311?qs=byeeYqUIh0OdVWzHzjZFAA%3D%3D" H 4425 3850 50  0001 L CNN "Mouser Price/Stock"
 F 10 "" H 4425 3750 50  0001 L CNN "Arrow Part Number"
 F 11 "" H 4425 3650 50  0001 L CNN "Arrow Price/Stock"
+F 12 "https://www.mouser.com/ProductDetail/TRACO-Power/TBA-1-0311?qs=%2Fha2pyFadugnngzec2Cb1SIugpFyxv1FnkCjen6frhWN8ksDQuRpwA%3D%3D" V 3375 4450 50  0001 C CNN "Vendor"
 	1    3375 4450
 	-1   0    0    -1  
 $EndComp
@@ -99,6 +101,7 @@ F 0 "C1" H 3332 4346 50  0000 R CNN
 F 1 "22uF" H 3325 4425 50  0000 R CNN
 F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 3488 4150 50  0001 C CNN
 F 3 "~" H 3450 4300 50  0001 C CNN
+F 4 "https://www.mouser.com/ProductDetail/647-UPW1A220MDD" H 3450 4300 50  0001 C CNN "Vendor"
 	1    3450 4300
 	-1   0    0    -1  
 $EndComp
@@ -124,6 +127,7 @@ F 8 "490-TB001-500-02BE" H 8950 2700 50  0001 L CNN "Mouser Part Number"
 F 9 "https://www.mouser.co.uk/ProductDetail/CUI-Devices/TB001-500-02BE?qs=vLWxofP3U2zBBnHgU5u3DA%3D%3D" H 8950 2600 50  0001 L CNN "Mouser Price/Stock"
 F 10 "TB001-500-02BE" H 8950 2500 50  0001 L CNN "Arrow Part Number"
 F 11 "https://www.arrow.com/en/products/tb001-500-02be/cui-devices" H 8950 2400 50  0001 L CNN "Arrow Price/Stock"
+F 12 "https://www.mouser.com/ProductDetail/CUI-Devices/TB001-500-02BE?qs=%2Fha2pyFadujMdv6PiXeNZkSsm5Qkxr1FY4D5p2i4LtbuG6HS8Lj7%2Fg%3D%3D" H 8300 3200 50  0001 C CNN "Vendor"
 	1    8300 3200
 	1    0    0    1   
 $EndComp
@@ -143,6 +147,7 @@ F 8 "490-TB001-500-02BE" H 8950 4425 50  0001 L CNN "Mouser Part Number"
 F 9 "https://www.mouser.co.uk/ProductDetail/CUI-Devices/TB001-500-02BE?qs=vLWxofP3U2zBBnHgU5u3DA%3D%3D" H 8950 4325 50  0001 L CNN "Mouser Price/Stock"
 F 10 "TB001-500-02BE" H 8950 4225 50  0001 L CNN "Arrow Part Number"
 F 11 "https://www.arrow.com/en/products/tb001-500-02be/cui-devices" H 8950 4125 50  0001 L CNN "Arrow Price/Stock"
+F 12 "https://www.mouser.com/ProductDetail/CUI-Devices/TB001-500-02BE?qs=%2Fha2pyFadujMdv6PiXeNZkSsm5Qkxr1FY4D5p2i4LtbuG6HS8Lj7%2Fg%3D%3D" H 8300 4925 50  0001 C CNN "Vendor"
 	1    8300 4925
 	1    0    0    1   
 $EndComp
@@ -170,6 +175,7 @@ F 0 "P2" H 7550 3475 50  0000 C CNN
 F 1 "78604-9JC" H 7550 3400 50  0000 C CNN
 F 2 "murata_pulse_transformers:78604-9JC" H 7550 3150 50  0001 C CNN
 F 3 "" H 7550 3150 50  0001 C CNN
+F 4 "https://www.mouser.com/ProductDetail/Murata-Power-Solutions/78604-9JC?qs=f4NXQ36d%252BdAJuzG35nIgNw%3D%3D" H 7550 3150 50  0001 C CNN "Vendor"
 	1    7550 3150
 	-1   0    0    -1  
 $EndComp
@@ -255,6 +261,7 @@ F 0 "R8" V 8240 3200 50  0000 C CNN
 F 1 "49R9" V 8331 3200 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 8055 3200 50  0001 C CNN
 F 3 "~" H 8125 3200 50  0001 C CNN
+F 4 "https://www.mouser.com/ProductDetail/TE-Connectivity-Holsworthy/YR1B49R9CC?qs=%2Fha2pyFaduj9DVYKP1mQ5I6cbHeSbqcRTxxAPrgoG9nIERwP%252BGOgJQ%3D%3D" V 8125 3200 50  0001 C CNN "Vendor"
 	1    8125 3200
 	0    1    1    0   
 $EndComp
@@ -266,6 +273,7 @@ F 0 "R7" V 7918 3100 50  0000 C CNN
 F 1 "49R9" V 8009 3100 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 8055 3100 50  0001 C CNN
 F 3 "~" H 8125 3100 50  0001 C CNN
+F 4 "https://www.mouser.com/ProductDetail/TE-Connectivity-Holsworthy/YR1B49R9CC?qs=%2Fha2pyFaduj9DVYKP1mQ5I6cbHeSbqcRTxxAPrgoG9nIERwP%252BGOgJQ%3D%3D" V 8125 3100 50  0001 C CNN "Vendor"
 	1    8125 3100
 	0    1    1    0   
 $EndComp
@@ -277,6 +285,7 @@ F 0 "R6" V 8240 4925 50  0000 C CNN
 F 1 "49R9" V 8331 4925 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 8055 4925 50  0001 C CNN
 F 3 "~" H 8125 4925 50  0001 C CNN
+F 4 "https://www.mouser.com/ProductDetail/TE-Connectivity-Holsworthy/YR1B49R9CC?qs=%2Fha2pyFaduj9DVYKP1mQ5I6cbHeSbqcRTxxAPrgoG9nIERwP%252BGOgJQ%3D%3D" V 8125 4925 50  0001 C CNN "Vendor"
 	1    8125 4925
 	0    -1   1    0   
 $EndComp
@@ -288,6 +297,7 @@ F 0 "R5" V 7918 4825 50  0000 C CNN
 F 1 "49R9" V 8009 4825 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 8055 4825 50  0001 C CNN
 F 3 "~" H 8125 4825 50  0001 C CNN
+F 4 "https://www.mouser.com/ProductDetail/TE-Connectivity-Holsworthy/YR1B49R9CC?qs=%2Fha2pyFaduj9DVYKP1mQ5I6cbHeSbqcRTxxAPrgoG9nIERwP%252BGOgJQ%3D%3D" V 8125 4825 50  0001 C CNN "Vendor"
 	1    8125 4825
 	0    1    1    0   
 $EndComp
@@ -307,6 +317,7 @@ F 0 "C4" H 6700 5225 50  0000 L CNN
 F 1 "10pF" H 7050 5225 50  0000 L CNN
 F 2 "Capacitor_THT:C_Disc_D4.7mm_W2.5mm_P5.00mm" H 6963 5075 50  0001 C CNN
 F 3 "~" H 6925 5225 50  0001 C CNN
+F 4 "https://www.mouser.com/ProductDetail/TDK/FK18C0G1H100D?qs=kMGq28SsF%252BkXk%252BchLEATyA%3D%3D" H 6925 5225 50  0001 C CNN "Vendor"
 	1    6925 5225
 	1    0    0    -1  
 $EndComp
@@ -318,6 +329,7 @@ F 0 "C3" H 6725 4525 50  0000 L CNN
 F 1 "10pF" H 7025 4525 50  0000 L CNN
 F 2 "Capacitor_THT:C_Disc_D4.7mm_W2.5mm_P5.00mm" H 6963 4375 50  0001 C CNN
 F 3 "~" H 6925 4525 50  0001 C CNN
+F 4 "https://www.mouser.com/ProductDetail/TDK/FK18C0G1H100D?qs=kMGq28SsF%252BkXk%252BchLEATyA%3D%3D" H 6925 4525 50  0001 C CNN "Vendor"
 	1    6925 4525
 	1    0    0    -1  
 $EndComp
@@ -329,6 +341,7 @@ F 0 "R3" V 6518 2950 50  0000 C CNN
 F 1 "100" V 6609 2950 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 6655 2950 50  0001 C CNN
 F 3 "~" H 6725 2950 50  0001 C CNN
+F 4 "https://www.mouser.com/ProductDetail/TE-Connectivity-Holsworthy/YR1B100RCC?qs=%2Fha2pyFadujfkjl%2Fw2CT8wH4dU44PFFTyZyFDkshbTA0fGbLwSa2EA%3D%3D" V 6725 2950 50  0001 C CNN "Vendor"
 	1    6725 2950
 	0    1    1    0   
 $EndComp
@@ -340,6 +353,7 @@ F 0 "R2" V 4875 5075 50  0000 C CNN
 F 1 "100" V 4950 5075 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 4980 5075 50  0001 C CNN
 F 3 "~" H 5050 5075 50  0001 C CNN
+F 4 "https://www.mouser.com/ProductDetail/TE-Connectivity-Holsworthy/YR1B100RCC?qs=%2Fha2pyFadujfkjl%2Fw2CT8wH4dU44PFFTyZyFDkshbTA0fGbLwSa2EA%3D%3D" V 5050 5075 50  0001 C CNN "Vendor"
 	1    5050 5075
 	0    1    1    0   
 $EndComp
@@ -351,6 +365,7 @@ F 0 "R1" V 5225 5175 50  0000 C CNN
 F 1 "100" V 5125 5175 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 4980 5175 50  0001 C CNN
 F 3 "~" H 5050 5175 50  0001 C CNN
+F 4 "https://www.mouser.com/ProductDetail/TE-Connectivity-Holsworthy/YR1B100RCC?qs=%2Fha2pyFadujfkjl%2Fw2CT8wH4dU44PFFTyZyFDkshbTA0fGbLwSa2EA%3D%3D" V 5050 5175 50  0001 C CNN "Vendor"
 	1    5050 5175
 	0    1    1    0   
 $EndComp
@@ -362,6 +377,7 @@ F 0 "U3" H 5575 2575 50  0000 C CNN
 F 1 "VO2630" H 5575 2675 50  0000 C CNN
 F 2 "Package_DIP:DIP-8_W7.62mm" H 5900 2430 50  0001 C CNN
 F 3 "https://www.vishay.com/doc?84732" H 5400 3500 50  0001 C CNN
+F 4 "https://www.mouser.com/ProductDetail/Vishay-Semiconductors/VO2630?qs=xCMk%252BIHWTZOuc1EdsOwr1g%3D%3D" H 5800 3150 50  0001 C CNN "Vendor"
 	1    5800 3150
 	-1   0    0    1   
 $EndComp
@@ -373,6 +389,7 @@ F 0 "U2" H 6075 5275 50  0000 C CNN
 F 1 "VO2630" H 5425 5275 50  0000 C CNN
 F 2 "Package_DIP:DIP-8_W7.62mm" H 5900 4155 50  0001 C CNN
 F 3 "https://www.vishay.com/doc?84732" H 5400 5225 50  0001 C CNN
+F 4 "https://www.mouser.com/ProductDetail/Vishay-Semiconductors/VO2630?qs=xCMk%252BIHWTZOuc1EdsOwr1g%3D%3D" H 5800 4875 50  0001 C CNN "Vendor"
 	1    5800 4875
 	1    0    0    -1  
 $EndComp
@@ -451,6 +468,7 @@ F 0 "R11" V 6050 4525 50  0000 C CNN
 F 1 "100" V 6125 4525 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 6155 4525 50  0001 C CNN
 F 3 "~" H 6225 4525 50  0001 C CNN
+F 4 "https://www.mouser.com/ProductDetail/TE-Connectivity-Holsworthy/YR1B100RCC?qs=%2Fha2pyFadujfkjl%2Fw2CT8wH4dU44PFFTyZyFDkshbTA0fGbLwSa2EA%3D%3D" V 6225 4525 50  0001 C CNN "Vendor"
 	1    6225 4525
 	-1   0    0    1   
 $EndComp
@@ -462,6 +480,7 @@ F 0 "R12" V 6050 5225 50  0000 C CNN
 F 1 "100" V 6125 5225 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 6155 5225 50  0001 C CNN
 F 3 "~" H 6225 5225 50  0001 C CNN
+F 4 "https://www.mouser.com/ProductDetail/TE-Connectivity-Holsworthy/YR1B100RCC?qs=%2Fha2pyFadujfkjl%2Fw2CT8wH4dU44PFFTyZyFDkshbTA0fGbLwSa2EA%3D%3D" V 6225 5225 50  0001 C CNN "Vendor"
 	1    6225 5225
 	-1   0    0    1   
 $EndComp
@@ -470,9 +489,10 @@ L Device:R R10
 U 1 1 60CBC868
 P 5325 3500
 F 0 "R10" V 5118 3500 50  0000 C CNN
-F 1 "330_2K2-DNP" V 5225 3650 50  0000 C CNN
+F 1 "332_2K2-DNP" V 5225 3650 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 5255 3500 50  0001 C CNN
 F 3 "~" H 5325 3500 50  0001 C CNN
+F 4 "https://www.mouser.com/ProductDetail/TE-Connectivity-Holsworthy/YR1B332RCC?qs=%2Fha2pyFadug6BvjU2YViCydgO3v3mIlvjAYlexUPMTr57zwxvr%252B3rg%3D%3D" V 5325 3500 50  0001 C CNN "Vendor"
 	1    5325 3500
 	-1   0    0    1   
 $EndComp
@@ -482,9 +502,10 @@ L Device:R R9
 U 1 1 60CBD27F
 P 5325 2800
 F 0 "R9" V 5118 2800 50  0000 C CNN
-F 1 "330_2K2-DNP" V 5225 2675 50  0000 C CNN
+F 1 "332_2K2-DNP" V 5225 2675 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 5255 2800 50  0001 C CNN
 F 3 "~" H 5325 2800 50  0001 C CNN
+F 4 "https://www.mouser.com/ProductDetail/TE-Connectivity-Holsworthy/YR1B332RCC?qs=%2Fha2pyFadug6BvjU2YViCydgO3v3mIlvjAYlexUPMTr57zwxvr%252B3rg%3D%3D" V 5325 2800 50  0001 C CNN "Vendor"
 	1    5325 2800
 	-1   0    0    1   
 $EndComp
@@ -512,6 +533,7 @@ F 0 "P1" H 7537 5215 50  0000 C CNN
 F 1 "78604-9JC" H 7537 5124 50  0000 C CNN
 F 2 "murata_pulse_transformers:78604-9JC" H 7550 4875 50  0001 C CNN
 F 3 "" H 7550 4875 50  0001 C CNN
+F 4 "https://www.mouser.com/ProductDetail/Murata-Power-Solutions/78604-9JC?qs=f4NXQ36d%252BdAJuzG35nIgNw%3D%3D" H 7550 4875 50  0001 C CNN "Vendor"
 	1    7550 4875
 	-1   0    0    -1  
 $EndComp
@@ -553,6 +575,7 @@ F 0 "R4" V 6518 3350 50  0000 C CNN
 F 1 "100" V 6609 3350 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 6655 3350 50  0001 C CNN
 F 3 "~" H 6725 3350 50  0001 C CNN
+F 4 "https://www.mouser.com/ProductDetail/TE-Connectivity-Holsworthy/YR1B100RCC?qs=%2Fha2pyFadujfkjl%2Fw2CT8wH4dU44PFFTyZyFDkshbTA0fGbLwSa2EA%3D%3D" V 6725 3350 50  0001 C CNN "Vendor"
 	1    6725 3350
 	0    1    1    0   
 $EndComp
@@ -612,6 +635,7 @@ F 0 "C2" V 8175 3925 50  0000 L CNN
 F 1 "1NF" V 8275 3925 50  0000 L CNN
 F 2 "Capacitor_THT:C_Disc_D4.7mm_W2.5mm_P5.00mm" H 8463 3825 50  0001 C CNN
 F 3 "~" H 8425 3975 50  0001 C CNN
+F 4 "https://www.mouser.com/ProductDetail/TDK/CK45-B3AD102KYNNA?qs=%2Fha2pyFadujNF1rR3x4c0siltWlJvDviXGaReNpdvw4ctPBfayLyKEG1JFLLGqeR" V 8425 3975 50  0001 C CNN "Vendor"
 	1    8425 3975
 	0    1    1    0   
 $EndComp
@@ -629,6 +653,7 @@ F 0 "J2" H 8905 3867 50  0000 L CNN
 F 1 "Conn_01x02" H 8905 3776 50  0000 L CNN
 F 2 "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 8825 3875 50  0001 C CNN
 F 3 "~" H 8825 3875 50  0001 C CNN
+F 4 "https://www.mouser.com/ProductDetail/Molex/22-29-2021?qs=5gBG3L055oM6MLYs649kIA%3D%3D" H 8825 3875 50  0001 C CNN "Vendor"
 	1    8825 3875
 	1    0    0    -1  
 $EndComp
@@ -643,6 +668,7 @@ F 0 "J3" H 9380 3192 50  0000 L CNN
 F 1 "Conn_01x02" H 9380 3101 50  0000 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 9300 3200 50  0001 C CNN
 F 3 "~" H 9300 3200 50  0001 C CNN
+F 4 "https://www.mouser.com/ProductDetail/Molex/22-29-2021?qs=5gBG3L055oM6MLYs649kIA%3D%3D" H 9300 3200 50  0001 C CNN "Vendor"
 	1    9300 3200
 	1    0    0    1   
 $EndComp
@@ -731,6 +757,7 @@ F 0 "U1" H 4325 1925 50  0000 C CNN
 F 1 "74HC14" H 4325 2025 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 3975 2150 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74HC14" H 3975 2150 50  0001 C CNN
+F 4 "https://www.mouser.com/ProductDetail/Texas-Instruments/SN74HC14AN?qs=byeeYqUIh0NMy3GLE70Pnw%3D%3D" H 3975 2150 50  0001 C CNN "Vendor"
 	7    3975 2150
 	-1   0    0    1   
 $EndComp
@@ -754,6 +781,7 @@ F 0 "C5" H 4415 2546 50  0000 L CNN
 F 1 "100NF" H 4415 2455 50  0000 L CNN
 F 2 "Capacitor_THT:C_Disc_D4.7mm_W2.5mm_P5.00mm" H 4338 2350 50  0001 C CNN
 F 3 "~" H 4300 2500 50  0001 C CNN
+F 4 "https://www.mouser.com/ProductDetail/TDK/FK26C0G1H104J?qs=zLBlM7QTTNq9rTkG%2Fo4Low%3D%3D" H 4300 2500 50  0001 C CNN "Vendor"
 	1    4300 2500
 	1    0    0    -1  
 $EndComp
@@ -775,7 +803,7 @@ U 5 1 61103622
 P 4125 3350
 F 0 "U1" H 4275 3125 50  0000 C CNN
 F 1 "74HC14" H 4275 3225 50  0000 C CNN
-F 2 "" H 4125 3350 50  0001 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 4125 3350 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74HC14" H 4125 3350 50  0001 C CNN
 	5    4125 3350
 	-1   0    0    1   
@@ -786,7 +814,7 @@ U 6 1 61106EEA
 P 5350 2025
 F 0 "U1" H 5500 1800 50  0000 C CNN
 F 1 "74HC14" H 5500 1900 50  0000 C CNN
-F 2 "" H 5350 2025 50  0001 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 5350 2025 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74HC14" H 5350 2025 50  0001 C CNN
 	6    5350 2025
 	-1   0    0    1   
@@ -797,7 +825,7 @@ U 4 1 6110A8C5
 P 4125 2950
 F 0 "U1" H 4275 2725 50  0000 C CNN
 F 1 "74HC14" H 4275 2825 50  0000 C CNN
-F 2 "" H 4125 2950 50  0001 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 4125 2950 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74HC14" H 4125 2950 50  0001 C CNN
 	4    4125 2950
 	-1   0    0    1   
@@ -808,7 +836,7 @@ U 3 1 6110E653
 P 5350 825
 F 0 "U1" H 5500 600 50  0000 C CNN
 F 1 "74HC14" H 5500 700 50  0000 C CNN
-F 2 "" H 5350 825 50  0001 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 5350 825 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74HC14" H 5350 825 50  0001 C CNN
 	3    5350 825 
 	-1   0    0    1   
@@ -861,6 +889,7 @@ F 0 "C9" H 4800 3500 50  0000 L CNN
 F 1 "22pF_DNP" V 5150 3225 50  0000 L CNN
 F 2 "Capacitor_THT:C_Disc_D4.7mm_W2.5mm_P5.00mm" H 5038 3350 50  0001 C CNN
 F 3 "~" H 5000 3500 50  0001 C CNN
+F 4 "https://www.mouser.com/ProductDetail/TDK/FK18C0G1H220J?qs=kMGq28SsF%252BmBRUAncjs6VQ%3D%3D" H 5000 3500 50  0001 C CNN "Vendor"
 	1    5000 3500
 	1    0    0    -1  
 $EndComp
@@ -875,6 +904,7 @@ F 0 "C6" H 4625 3000 50  0000 L CNN
 F 1 "22pF_DNP" V 4875 2875 50  0000 L CNN
 F 2 "Capacitor_THT:C_Disc_D4.7mm_W2.5mm_P5.00mm" H 4788 2950 50  0001 C CNN
 F 3 "~" H 4750 3100 50  0001 C CNN
+F 4 "https://www.mouser.com/ProductDetail/TDK/FK18C0G1H220J?qs=kMGq28SsF%252BmBRUAncjs6VQ%3D%3D" H 4750 3100 50  0001 C CNN "Vendor"
 	1    4750 3100
 	1    0    0    -1  
 $EndComp
