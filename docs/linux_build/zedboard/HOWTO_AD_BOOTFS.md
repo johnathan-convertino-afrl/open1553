@@ -204,7 +204,7 @@ kernel_image=uImage
 kernel_load_address=0x3000000
 devicetree_image=devicetree.dtb
 devicetree_load_address=0x2A00000
-bitfile=base_system.bit
+bitfile=system_top.bit
 bitfile_load_address=0x5000000
 
 uenvcmd=run adi_sdboot

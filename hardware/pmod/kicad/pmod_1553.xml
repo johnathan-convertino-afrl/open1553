@@ -2,7 +2,7 @@
 <export version="D">
   <design>
     <source>/mnt/data/Programming/open1553/hardware/pmod/kicad/pmod_1553.sch</source>
-    <date>Tue 24 Aug 2021 09:33:48 PM EDT</date>
+    <date>Thu 26 Aug 2021 12:44:18 PM EDT</date>
     <tool>Eeschema 5.1.5+dfsg1-2build2</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -24,7 +24,7 @@
       <footprint>Connector_PinHeader_2.54mm:PinHeader_2x06_P2.54mm_Horizontal</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Vendor">https://www.mouser.com/ProductDetail/Amphenol-FCI/10129382-912001BLF?qs=%2Fha2pyFadug32m4xOB2%252BmVXU3aKMd9PcTrSHZ%252BY316jfSjjQJuKTrO0vID2tiybT</field>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/Amphenol-FCI/10129382-912001BLF</field>
       </fields>
       <libsource lib="Connector_Generic" part="Conn_02x06_Odd_Even" description="Generic connector, double row, 02x06, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <sheetpath names="/" tstamps="/"/>
@@ -41,7 +41,7 @@
         <field name="Manufacturer_Part_Number">TBA 1-0311</field>
         <field name="Mouser Part Number">495-TBA1-0311</field>
         <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/TRACO-Power/TBA-1-0311?qs=byeeYqUIh0OdVWzHzjZFAA%3D%3D</field>
-        <field name="Vendor">https://www.mouser.com/ProductDetail/TRACO-Power/TBA-1-0311?qs=%2Fha2pyFadugnngzec2Cb1SIugpFyxv1FnkCjen6frhWN8ksDQuRpwA%3D%3D</field>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/TRACO-Power/TBA-1-0311</field>
       </fields>
       <libsource lib="TBA_1-0311" part="TBA_1-0311" description="TRACO POWER - TBA 1-0311 - Isolated Board Mount DC/DC Converter, ITE, 1 Output, 1 W, 5 V, 200 mA"/>
       <sheetpath names="/" tstamps="/"/>
@@ -71,7 +71,7 @@
         <field name="Manufacturer_Part_Number">TB001-500-02BE</field>
         <field name="Mouser Part Number">490-TB001-500-02BE</field>
         <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/CUI-Devices/TB001-500-02BE?qs=vLWxofP3U2zBBnHgU5u3DA%3D%3D</field>
-        <field name="Vendor">https://www.mouser.com/ProductDetail/CUI-Devices/TB001-500-02BE?qs=%2Fha2pyFadujMdv6PiXeNZkSsm5Qkxr1FY4D5p2i4LtbuG6HS8Lj7%2Fg%3D%3D</field>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/CUI-Devices/TB001-500-02BE</field>
       </fields>
       <libsource lib="TB001-500-02BE" part="TB001-500-02BE" description="Fixed Terminal Blocks screw type, 5.00, horizontal, 2 poles, CUI Blue, slotted screw, PCB mount"/>
       <sheetpath names="/" tstamps="/"/>
@@ -90,7 +90,7 @@
         <field name="Manufacturer_Part_Number">TB001-500-02BE</field>
         <field name="Mouser Part Number">490-TB001-500-02BE</field>
         <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/CUI-Devices/TB001-500-02BE?qs=vLWxofP3U2zBBnHgU5u3DA%3D%3D</field>
-        <field name="Vendor">https://www.mouser.com/ProductDetail/CUI-Devices/TB001-500-02BE?qs=%2Fha2pyFadujMdv6PiXeNZkSsm5Qkxr1FY4D5p2i4LtbuG6HS8Lj7%2Fg%3D%3D</field>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/CUI-Devices/TB001-500-02BE</field>
       </fields>
       <libsource lib="TB001-500-02BE" part="TB001-500-02BE" description="Fixed Terminal Blocks screw type, 5.00, horizontal, 2 poles, CUI Blue, slotted screw, PCB mount"/>
       <sheetpath names="/" tstamps="/"/>
@@ -100,7 +100,7 @@
       <value>78604-9JC</value>
       <footprint>murata_pulse_transformers:78604-9JC</footprint>
       <fields>
-        <field name="Vendor">https://www.mouser.com/ProductDetail/Murata-Power-Solutions/78604-9JC?qs=f4NXQ36d%252BdAJuzG35nIgNw%3D%3D</field>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/Murata-Power-Solutions/78604-9JC</field>
       </fields>
       <libsource lib="Murata_Pulse_Transformers" part="78604-9JC" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -110,6 +110,9 @@
       <value>100NF</value>
       <footprint>Capacitor_THT:C_Disc_D4.7mm_W2.5mm_P5.00mm</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/TDK/FK26C0G1H104J</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>60D395EB</tstamp>
@@ -118,6 +121,9 @@
       <value>100NF</value>
       <footprint>Capacitor_THT:C_Disc_D4.7mm_W2.5mm_P5.00mm</footprint>
       <datasheet>~</datasheet>
+      <fields>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/TDK/FK26C0G1H104J</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>60D39087</tstamp>
@@ -127,7 +133,7 @@
       <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Vendor">https://www.mouser.com/ProductDetail/TE-Connectivity-Holsworthy/YR1B49R9CC?qs=%2Fha2pyFaduj9DVYKP1mQ5I6cbHeSbqcRTxxAPrgoG9nIERwP%252BGOgJQ%3D%3D</field>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/TE-Connectivity-Holsworthy/YR1B49R9CC</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -138,7 +144,7 @@
       <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Vendor">https://www.mouser.com/ProductDetail/TE-Connectivity-Holsworthy/YR1B49R9CC?qs=%2Fha2pyFaduj9DVYKP1mQ5I6cbHeSbqcRTxxAPrgoG9nIERwP%252BGOgJQ%3D%3D</field>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/TE-Connectivity-Holsworthy/YR1B49R9CC</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -171,7 +177,7 @@
       <footprint>Capacitor_THT:C_Disc_D4.7mm_W2.5mm_P5.00mm</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Vendor">https://www.mouser.com/ProductDetail/TDK/FK18C0G1H100D?qs=kMGq28SsF%252BkXk%252BchLEATyA%3D%3D</field>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/TDK/FK18C0G1H100D</field>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -182,7 +188,7 @@
       <footprint>Capacitor_THT:C_Disc_D4.7mm_W2.5mm_P5.00mm</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Vendor">https://www.mouser.com/ProductDetail/TDK/FK18C0G1H100D?qs=kMGq28SsF%252BkXk%252BchLEATyA%3D%3D</field>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/TDK/FK18C0G1H100D</field>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -193,7 +199,7 @@
       <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Vendor">https://www.mouser.com/ProductDetail/TE-Connectivity-Holsworthy/YR1B100RCC?qs=%2Fha2pyFadujfkjl%2Fw2CT8wH4dU44PFFTyZyFDkshbTA0fGbLwSa2EA%3D%3D</field>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/TE-Connectivity-Holsworthy/YR1B100RCC</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -204,7 +210,7 @@
       <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Vendor">https://www.mouser.com/ProductDetail/TE-Connectivity-Holsworthy/YR1B100RCC?qs=%2Fha2pyFadujfkjl%2Fw2CT8wH4dU44PFFTyZyFDkshbTA0fGbLwSa2EA%3D%3D</field>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/TE-Connectivity-Holsworthy/YR1B100RCC</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -215,7 +221,7 @@
       <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Vendor">https://www.mouser.com/ProductDetail/TE-Connectivity-Holsworthy/YR1B100RCC?qs=%2Fha2pyFadujfkjl%2Fw2CT8wH4dU44PFFTyZyFDkshbTA0fGbLwSa2EA%3D%3D</field>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/TE-Connectivity-Holsworthy/YR1B100RCC</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -226,7 +232,7 @@
       <footprint>Package_DIP:DIP-8_W7.62mm</footprint>
       <datasheet>https://www.vishay.com/doc?84732</datasheet>
       <fields>
-        <field name="Vendor">https://www.mouser.com/ProductDetail/Vishay-Semiconductors/VO2630?qs=xCMk%252BIHWTZOuc1EdsOwr1g%3D%3D</field>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/Vishay-Semiconductors/VO2630</field>
       </fields>
       <libsource lib="Isolator" part="VO2630" description="Dual High Speed CMOS Compatible Optocoupler, dV/dt 1000/us, VCM 10, max 7V VCC, DIP-8"/>
       <sheetpath names="/" tstamps="/"/>
@@ -248,7 +254,7 @@
       <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Vendor">https://www.mouser.com/ProductDetail/TE-Connectivity-Holsworthy/YR1B100RCC?qs=%2Fha2pyFadujfkjl%2Fw2CT8wH4dU44PFFTyZyFDkshbTA0fGbLwSa2EA%3D%3D</field>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/TE-Connectivity-Holsworthy/YR1B100RCC</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -259,7 +265,7 @@
       <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Vendor">https://www.mouser.com/ProductDetail/TE-Connectivity-Holsworthy/YR1B100RCC?qs=%2Fha2pyFadujfkjl%2Fw2CT8wH4dU44PFFTyZyFDkshbTA0fGbLwSa2EA%3D%3D</field>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/TE-Connectivity-Holsworthy/YR1B100RCC</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -270,7 +276,7 @@
       <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Vendor">https://www.mouser.com/ProductDetail/TE-Connectivity-Holsworthy/YR1B332RCC?qs=%2Fha2pyFadug6BvjU2YViCydgO3v3mIlvjAYlexUPMTr57zwxvr%252B3rg%3D%3D</field>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/TE-Connectivity-Holsworthy/YR1B332RCC</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -281,7 +287,7 @@
       <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Vendor">https://www.mouser.com/ProductDetail/TE-Connectivity-Holsworthy/YR1B332RCC?qs=%2Fha2pyFadug6BvjU2YViCydgO3v3mIlvjAYlexUPMTr57zwxvr%252B3rg%3D%3D</field>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/TE-Connectivity-Holsworthy/YR1B332RCC</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -302,7 +308,7 @@
       <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Vendor">https://www.mouser.com/ProductDetail/TE-Connectivity-Holsworthy/YR1B100RCC?qs=%2Fha2pyFadujfkjl%2Fw2CT8wH4dU44PFFTyZyFDkshbTA0fGbLwSa2EA%3D%3D</field>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/TE-Connectivity-Holsworthy/YR1B100RCC</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -329,7 +335,7 @@
       <footprint>Capacitor_THT:C_Disc_D4.7mm_W2.5mm_P5.00mm</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Vendor">https://www.mouser.com/ProductDetail/TDK/CK45-B3AD102KYNNA?qs=%2Fha2pyFadujNF1rR3x4c0siltWlJvDviXGaReNpdvw4ctPBfayLyKEG1JFLLGqeR</field>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/TDK/CK45-B3AD102KYNNA</field>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -340,7 +346,7 @@
       <footprint>Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Vendor">https://www.mouser.com/ProductDetail/Molex/22-29-2021?qs=5gBG3L055oM6MLYs649kIA%3D%3D</field>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/Molex/22-29-2021</field>
       </fields>
       <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <sheetpath names="/" tstamps="/"/>
@@ -351,7 +357,7 @@
       <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Vendor">https://www.mouser.com/ProductDetail/Molex/22-29-2021?qs=5gBG3L055oM6MLYs649kIA%3D%3D</field>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/Molex/22-29-2021</field>
       </fields>
       <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <sheetpath names="/" tstamps="/"/>
@@ -369,7 +375,7 @@
       <footprint>Package_DIP:DIP-14_W7.62mm_LongPads</footprint>
       <datasheet>http://www.ti.com/lit/gpn/sn74HC14</datasheet>
       <fields>
-        <field name="Vendor">https://www.mouser.com/ProductDetail/Texas-Instruments/SN74HC14AN?qs=byeeYqUIh0NMy3GLE70Pnw%3D%3D</field>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/Texas-Instruments/SN74HC14AN</field>
       </fields>
       <libsource lib="74xx" part="74HC14" description="Hex inverter schmitt trigger"/>
       <sheetpath names="/" tstamps="/"/>
@@ -380,7 +386,7 @@
       <footprint>Capacitor_THT:C_Disc_D4.7mm_W2.5mm_P5.00mm</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Vendor">https://www.mouser.com/ProductDetail/TDK/FK26C0G1H104J?qs=zLBlM7QTTNq9rTkG%2Fo4Low%3D%3D</field>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/TDK/FK26C0G1H104J</field>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -391,7 +397,7 @@
       <footprint>Capacitor_THT:C_Disc_D4.7mm_W2.5mm_P5.00mm</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Vendor">https://www.mouser.com/ProductDetail/TDK/FK18C0G1H220J?qs=kMGq28SsF%252BmBRUAncjs6VQ%3D%3D</field>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/TDK/FK18C0G1H220J</field>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -402,7 +408,7 @@
       <footprint>Capacitor_THT:C_Disc_D4.7mm_W2.5mm_P5.00mm</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="Vendor">https://www.mouser.com/ProductDetail/TDK/FK18C0G1H220J?qs=kMGq28SsF%252BmBRUAncjs6VQ%3D%3D</field>
+        <field name="Vendor">https://www.mouser.com/ProductDetail/TDK/FK18C0G1H220J</field>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <sheetpath names="/" tstamps="/"/>
