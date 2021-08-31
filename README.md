@@ -10,6 +10,8 @@
    
    license: Various   
    
+   Special thanks to Analog Devices, their HDL build system is fantastic. I've used it with modifications in the HDL directory.  
+   
 ---
 
 ![logo_img](./logo.png)
