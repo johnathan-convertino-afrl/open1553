@@ -1,5 +1,5 @@
 # HOW TO... Create a boot file system
-## For: Xilinx arm zynq7 (Zedboard)
+## For: Xilinx arm zynq7 (Zybo)
 
 This how-to will explain the steps needed to put a boot file system together for the zedboard development board.
 
@@ -49,7 +49,7 @@ Requirements:
 ### Sources
 * [pmod1553 Github repo](https://github.com/johnathan-convertino-afrl/open1553.git "open1553 Repo")
 * [Analog Devices Linux Kernel AFRL Fork Github repo](https://github.com/johnathan-convertino-afrl/linux.git "Analog Devices Linux Kernel AFRL Fork")
-* [Xilinx Uboot Github repo](https://github.com/johnathan-convertino-afrl/u-boot-xlnx.git "Xilinx uboot")
+* [Xilinx Uboot Github repo](https://github.com/Xilinx/u-boot-xlnx.git "Xilinx uboot")
 
 ### References
 * [Analog Devivces, Building HDL](https://wiki.analog.com/resources/fpga/docs/build)
@@ -80,7 +80,7 @@ Requirements:
 3. Checkout the HDL repo that matches your version of vivado (see root readme for release to vivado versioning).
     - git checkout release_v1
 4. Build the project needed using make.
-    - make fifo_pmod1553.zedboard
+    - make fifo_pmod1553.zybo
 5. Wait for make to finish executing the build.
 6. Open the HDL project with Vivado.
     - This isn't really needed, the bit file already exits, we do this for GUI usage only.
@@ -125,7 +125,7 @@ Requirements:
 [Back to TOC](#Table-of-Contents)
 
 1. Clone the Xilinx Uboot repo to your git folder.
-    - git clone https://github.com/johnathan-convertino-afrl/u-boot-xlnx.git
+    - git clone https://github.com/Xilinx/u-boot-xlnx.git
 2. Enter the u-boot repo
     - cd u-boot-xlnx
 3. Checkout the tag that matches your Vivado version.
@@ -133,8 +133,8 @@ Requirements:
     - The above is the last version that works with uEnv.txt, you've been warned.
 4. Set your cross compiler.
     - export CROSS_COMPILE=arm-linux-gnueabi-
-5. Configure u-boot for the zed.
-    - make zynq_zed_defconfig
+5. Configure u-boot for the zybo.
+    - make zynq_zybo_defconfig
 6. Build uboot.
     - make
 7. Once completed, the root of the u-boot repository will contain output files. u-boot.elf is the one you need (may need to rename uboot to uboot.elf).
@@ -163,7 +163,7 @@ Requirements:
 [Back to TOC](#Table-of-Contents)
 
 1. Clone the Analog Devices Linux Kernel repo to your git folder.
-    - git clone https://github.com/johnathan-convertino-afrl/linux
+    - git clone https://github.com/analogdevicesinc/linux
 2. Enter the Linux Kernel Repo
     - cd linux
 3. Checkout the branch that matches your HDL version.
@@ -186,9 +186,9 @@ Requirements:
 
 1. If you haven't built the kernel yet, follow the directions above in Build Linux Kernel.
 2. Generate the device tree binary.
-    - make zynq-zed-adv7511-pmod1553.dtb
+    - make zynq-zybo-pmod1553.dtb
 3. Copy and rename the device tree binary to the bootfs folder.
-    - cp arch/arm/boot/dts/zynq-zed-adv7511-pmod1553.dtb /path/to/your/bootfs/devicetree.dtb
+    - cp arch/arm/boot/dts/zynq-zybo-pmod1553.dtb /path/to/your/bootfs/devicetree.dtb
 
   <div style="page-break-after: always;"></div>
 

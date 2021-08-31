@@ -51,9 +51,9 @@ Requirements:
 11. [Create uEnv.txt file](#Create-uEnv-text-file)
 
 ### Sources
-* [pmod1553 Github repo](https://github.com/johnathan-convertino-afrl/pmod1553.git "pmod1553 Repo")
+* [pmod1553 Github repo](https://github.com/johnathan-convertino-afrl/open1553.git "open1553 Repo")
 * [Analog Devices Linux Kernel AFRL Fork Github repo](https://github.com/johnathan-convertino-afrl/linux.git "Analog Devices Linux Kernel AFRL Fork")
-* [Xilinx Uboot Github repo](https://github.com/Xilinx/u-boot-xlnx.git "Xilinx uboot")
+* [Xilinx Uboot Github repo](https://github.com/johnathan-convertino-afrl/u-boot-xlnx.git "Xilinx uboot")
 
 ### References
 * [Analog Devivces, Building HDL](https://wiki.analog.com/resources/fpga/docs/build)
@@ -80,9 +80,9 @@ Requirements:
 [Back to TOC](#Table-of-Contents)
 
 1. Clone the pmod1553 repo to your git folder.
-    - git clone https://github.com/johnathan-convertino-afrl/pmod1553.git
+    - git clone https://github.com/johnathan-convertino-afrl/open1553.git
 2. Enter the HDL repo
-    - cd pmod1553/HDL
+    - cd open1553/HDL
 3. Checkout the HDL repo that matches your version of vivado (see root readme for release to vivado versioning).
     - git checkout release_1553_v1
 4. Build the project needed using make.
@@ -163,7 +163,7 @@ Requirements:
 [Back to TOC](#Table-of-Contents)
 
 1. Clone the Xilinx Uboot repo to your git folder.
-    - git clone https://github.com/Xilinx/u-boot-xlnx.git
+    - git clone https://github.com/johnathan-convertino-afrl/u-boot-xlnx.git
 2. Enter the u-boot repo
     - cd u-boot-xlnx
 3. Checkout the tag that matches your Vivado version.
