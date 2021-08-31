@@ -1,3 +1,6 @@
 [submodule "linux/linux_kernel"]
 	path = linux/linux_kernel
 	url = git@github.com:johnathan-convertino-afrl/linux.git
+[submodule "linux/u-boot-xlnx"]
+	path = linux/u-boot-xlnx
+	url = git@github.com:johnathan-convertino-afrl/u-boot-xlnx.git
