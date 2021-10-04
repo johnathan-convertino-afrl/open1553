@@ -76,6 +76,14 @@ The fields are seperated by ;.
   - The fifth is the data in hex format, Hx???? where ? = 4 bits of data (16 bits in total).
   - The carrige return is the string terminator.
       - echo -ne "DATA;D1;P1;I0;Hx5555\r" is your friend for xilinx fifo applications.
+      
+### FUTURE
+Todo list for v2
+  - Add half duplex multiplexer to electrical interface and FPGA cores.
+  - Add high speed opamps to receive and transmit paths.
+  - Add AXI core with custom linux driver for MIL-STD-1553 core.
+    - Option between string and binary output.
+    - Add ability to manipulate clock waveform... for fun.
 
 #### hardware directory
 
