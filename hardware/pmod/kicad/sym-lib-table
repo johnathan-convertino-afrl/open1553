@@ -3,4 +3,5 @@
   (lib (name TB001-500-02BE)(type Legacy)(uri ${KIPRJMOD}/../kicad_symbols/TB001-500-02BE.lib)(options "")(descr ""))
   (lib (name TBA_1-0311)(type Legacy)(uri ${KIPRJMOD}/../kicad_symbols/TBA_1-0311.lib)(options "")(descr ""))
   (lib (name logo)(type Legacy)(uri ${KIPRJMOD}/../kicad_symbols/logo.lib)(options "")(descr ""))
+  (lib (name ADG413BNZ)(type Legacy)(uri ${KIPRJMOD}/../kicad_symbols/ADG413BNZ.lib)(options "")(descr ""))
 )

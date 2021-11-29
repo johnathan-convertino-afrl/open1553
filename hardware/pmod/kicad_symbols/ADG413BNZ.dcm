@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP ADG413BNZ
+D ADG413BNZ, Analogue SPST Switch Quad SPST, 12 V, 16-Pin, PDIP, 4
+K
+F http://www.analog.com/media/en/technical-documentation/data-sheets/ADG411_412_413.pdf
+$ENDCMP
+#
+#End Doc Library
