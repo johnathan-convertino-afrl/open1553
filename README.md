@@ -18,10 +18,13 @@
 
 ### RELEASE VERSIONS
 #### Current
-  - release_1553_v1 (releases are tags)
+  - release_1553_v2 (releases are tags)
+    * added analog switch for proper 1553 multiplexing
+    * added en_diff for switch toggling
   
 #### Past
-  - N/A
+  - release_1553_v1 (releases are tags)
+    * first public release
 
 ### Requirements
 #### HDL
@@ -78,9 +81,8 @@ The fields are seperated by ;.
       - echo -ne "DATA;D1;P1;I0;Hx5555\r" is your friend for xilinx fifo applications.
       
 ### FUTURE
-Todo list for v2
-  - Add half duplex multiplexer to electrical interface and FPGA cores.
-  - Add high speed opamps to receive and transmit paths.
+Todo list for v3
+  - Consider adding high speed opamps to receive and transmit paths.
   - Add AXI core with custom linux driver for MIL-STD-1553 core.
     - Option between string and binary output.
     - Add ability to manipulate clock waveform... for fun.
