@@ -61,7 +61,8 @@ module util_uart_1553_core #(
     input   rx0_1553,
     input   rx1_1553,
     output  tx0_1553,
-    output  tx1_1553
+    output  tx1_1553,
+    output  en_tx_1553
   );
   
   //wires
@@ -371,7 +372,8 @@ module util_uart_1553_core #(
     .s_axis_tuser(mfifo_encoder_user),
     .s_axis_tready(mfifo_encoder_ready),
     //diff output
-    .diff(tx_1553)
+    .diff(tx_1553),
+    .en_diff(en_tx_1553)
   );
   
 endmodule

@@ -18,6 +18,7 @@ module tb_core;
   reg         tb_rst = 0;
   reg  [1:0]  tb_din;
   wire [1:0]  tb_dout;
+  wire        tb_en_dout;
   wire        tb_uart_loop;
   
   //1ns
@@ -85,7 +86,8 @@ module tb_core;
     .rx0_1553(tb_din[0]),
     .rx1_1553(tb_din[1]),
     .tx0_1553(tb_dout[0]),
-    .tx1_1553(tb_dout[1])
+    .tx1_1553(tb_dout[1]),
+    .en_diff(tb_en_dout)
   );
     
   //reset

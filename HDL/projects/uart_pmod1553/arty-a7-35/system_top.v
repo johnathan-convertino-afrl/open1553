@@ -47,6 +47,7 @@ module system_top (
     .pmod_ja_pin2_i(pmod_ja[1]),
     .pmod_ja_pin3_o(pmod_ja[2]),
     .pmod_ja_pin4_o(pmod_ja[3]),
+    .pmod_ja_pin5_o(pmod_ja[4]),
     .resetn(resetn),
     .uart_rxd(uart_rx),
     .uart_txd(uart_tx)

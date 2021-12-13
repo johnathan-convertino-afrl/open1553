@@ -60,7 +60,9 @@ module util_axis_1553_encoder #(
     input   [7:0]   s_axis_tuser,
     output          s_axis_tready,
     //diff output
-    output  reg [1:0]   diff
+    output  reg [1:0]   diff,
+    //enable output
+    output  reg         en_diff
   );
   
   //1553 base clock rate
@@ -108,6 +110,8 @@ module util_axis_1553_encoder #(
   //command tuser decode
   localparam cmd_data = 3'b010;
   localparam cmd_cmnd = 3'b100;
+  //enable diff output
+  localparam enable_diff_output = 1'b1;
   
   //for loop indexs
   integer xor_index;
@@ -266,7 +270,8 @@ module util_axis_1553_encoder #(
   //differential data output positive edge
   always @(posedge aclk) begin
     if(arstn == 1'b0) begin
-      diff            <= 0;
+      diff                <= 0;
+      en_diff             <= ~enable_diff_output;
       trans_counter       <= synth_bits_per_trans-1;
       prev_trans_counter  <= synth_bits_per_trans-1;
     end else begin
@@ -276,6 +281,8 @@ module util_axis_1553_encoder #(
         //once the state machine is in transmisson state, begin data output
         trans: begin
           skip_counter <= skip_counter + 1;
+          
+          en_diff <= enable_diff_output;
           
           diff[0] <= reg_data[trans_counter];
           diff[1] <= ~reg_data[trans_counter];
@@ -296,6 +303,7 @@ module util_axis_1553_encoder #(
           //default state of counters and data output.
           diff                <= 0;
           skip_counter        <= 0;
+          en_diff             <= ~enable_diff_output;
           trans_counter       <= synth_bits_per_trans-1;
           prev_trans_counter  <= synth_bits_per_trans-1;
         end

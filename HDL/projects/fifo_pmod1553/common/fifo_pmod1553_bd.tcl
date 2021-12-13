@@ -3,6 +3,8 @@ set CLK_FREQ_HZ [get_property CONFIG.FREQ_HZ [get_bd_pins -of_objects $sys_cpu_c
 
 # 1553 output
 create_bd_port -dir O -from 1 -to 0 diff_1553_out
+# enable 1553 output
+create_bd_port -dir O en_diff_1553_out
 # 1553 input
 create_bd_port -dir I -from 1 -to 0 diff_1553_in
 
@@ -56,7 +58,8 @@ ad_connect $sys_cpu_clk util_axis_fifo_to_string_decoder/aclk
 ad_connect $sys_cpu_resetn util_axis_fifo_to_string_decoder/aresetn
 ad_connect string_decoder/m_axis mil_1553_encoder/s_axis
 ad_connect util_axis_fifo_to_string_decoder/M_AXIS string_decoder/s_axis
-ad_connect mil_1553_encoder/diff /diff_1553_out
+ad_connect mil_1553_encoder/diff    /diff_1553_out
+ad_connect mil_1553_encoder/en_diff /en_diff_1553_out
 
 # util axis to axi fifo
 ad_ip_instance axi_fifo_mm_s mil_1553_axi_fifo
