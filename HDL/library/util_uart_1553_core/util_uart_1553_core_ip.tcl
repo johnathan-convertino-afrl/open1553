@@ -44,7 +44,8 @@ adi_add_bus "pmod_1553" "master" "digilentinc.com:interface:pmod_rtl:1.0" "digil
     {"rx0_1553"          "PIN1_I"} \
     {"rx1_1553"          "PIN2_I"} \
     {"tx0_1553"          "PIN3_O"} \
-    {"tx1_1553"          "PIN4_O"} ]
+    {"tx1_1553"          "PIN4_O"} \
+    {"en_tx_1553"        "PIN5_O"} ]
 
 adi_ip_add_core_dependencies { \
   afrl.mil:user:util_axis_1553_decoder:1.0 \

@@ -12,6 +12,7 @@ module tb_1553;
   reg         tb_data_clk = 0;
   reg         tb_rst = 0;
   wire [1:0]  tb_dout;
+  wire        tb_en_dout;
   reg  [15:0] tb_tdata;
   reg         tb_tvalid;
   reg  [7:0]  tb_tuser;
@@ -33,7 +34,8 @@ module tb_1553;
     .s_axis_tuser(tb_tuser),
     .s_axis_tready(tb_tready),
     //diff output
-    .diff(tb_dout)
+    .diff(tb_dout),
+    .en_diff(tb_en_dout)
   );
     
   //reset

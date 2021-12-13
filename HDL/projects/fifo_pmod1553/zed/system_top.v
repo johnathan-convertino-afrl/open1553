@@ -83,6 +83,7 @@ module system_top (
   
   //1553 pmoda
   output      [ 1:0]      diff_1553_out,
+  output                  en_diff_1553_out,
   input       [ 1:0]      diff_1553_in,
 
   input                   otg_vbusoc);
@@ -129,6 +130,7 @@ module system_top (
 
   system_wrapper i_system_wrapper (
     .diff_1553_out(diff_1553_out),
+    .en_diff_1553_out(en_diff_1553_out),
     .diff_1553_in(diff_1553_in),
     .ddr_addr (ddr_addr),
     .ddr_ba (ddr_ba),

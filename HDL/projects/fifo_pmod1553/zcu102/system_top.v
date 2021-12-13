@@ -43,6 +43,7 @@ module system_top (
 
   //1553 pmod0
   output      [ 1:0]      diff_1553_out,
+  output                  en_diff_1553_out,
   input       [ 1:0]      diff_1553_in
 
 );
@@ -76,6 +77,7 @@ module system_top (
     .gpio_o (gpio_o),
     .gpio_t (gpio_t),
     .diff_1553_out(diff_1553_out),
+    .en_diff_1553_out(en_diff_1553_out),
     .diff_1553_in(diff_1553_in),
     .spi0_sclk (),
     .spi0_csn (),

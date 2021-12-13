@@ -47,20 +47,26 @@ set_property -dict {PACKAGE_PIN V12 IOSTANDARD LVCMOS33} [get_ports {diff_1553_i
 set_property -dict {PACKAGE_PIN W16 IOSTANDARD LVCMOS33} [get_ports {diff_1553_in[1]}]
 set_property -dict {PACKAGE_PIN J15 IOSTANDARD LVCMOS33} [get_ports {diff_1553_out[0]}]
 set_property -dict {PACKAGE_PIN H15 IOSTANDARD LVCMOS33} [get_ports {diff_1553_out[1]}]
+set_property -dict {PACKAGE_PIN V13 IOSTANDARD LVCMOS33} [get_ports {en_diff_1553_out}]
 
 set_property OFFCHIP_TERM NONE [get_ports diff_1553_out[1]]
 set_property OFFCHIP_TERM NONE [get_ports diff_1553_out[0]]
-set_property DRIVE 16 [get_ports {diff_1553_out[1]}]
+set_property OFFCHIP_TERM NONE [en_diff_1553_out]
 set_property DRIVE 16 [get_ports {diff_1553_out[0]}]
+set_property DRIVE 16 [get_ports {diff_1553_out[1]}]
+set_property DRIVE 16 [get_ports {en_diff_1553_out}]
 set_property SLEW FAST [get_ports {diff_1553_out[0]}]
 set_property SLEW FAST [get_ports {diff_1553_out[1]}]
+set_property SLEW FAST [get_ports {en_diff_1553_out}]
 
 ## I/O delay constraints
 create_clock -period 10.000 -name VIRTUAL_system_clk_100mhz_0 -waveform {0.000 5.000}
-set_input_delay -clock [get_clocks VIRTUAL_system_clk_100mhz_0] -min -add_delay 0.100 [get_ports {diff_1553_in[*]}]
-set_input_delay -clock [get_clocks VIRTUAL_system_clk_100mhz_0] -max -add_delay 0.500 [get_ports {diff_1553_in[*]}]
+set_input_delay  -clock [get_clocks VIRTUAL_system_clk_100mhz_0] -min -add_delay 0.100 [get_ports {diff_1553_in[*]}]
+set_input_delay  -clock [get_clocks VIRTUAL_system_clk_100mhz_0] -max -add_delay 0.500 [get_ports {diff_1553_in[*]}]
 set_output_delay -clock [get_clocks VIRTUAL_system_clk_100mhz_0] -min -add_delay 0.100 [get_ports {diff_1553_out[*]}]
 set_output_delay -clock [get_clocks VIRTUAL_system_clk_100mhz_0] -max -add_delay 0.500 [get_ports {diff_1553_out[*]}]
+set_output_delay -clock [get_clocks VIRTUAL_system_clk_100mhz_0] -min -add_delay 0.100 [get_ports {en_diff_1553_out}]
+set_output_delay -clock [get_clocks VIRTUAL_system_clk_100mhz_0] -max -add_delay 0.500 [get_ports {en_diff_1553_out}]
 
 #set_property  -dict {PACKAGE_PIN  V13   IOSTANDARD LVCMOS33} [get_ports {pmod_je_n[2]}]
 #set_property  -dict {PACKAGE_PIN  U17   IOSTANDARD LVCMOS33} [get_ports {pmod_je_p[2]}]

@@ -68,6 +68,7 @@ module system_top (
   
   //1553 pmode
   output      [ 1:0]      diff_1553_out,
+  output                  en_diff_1553_out,
   input       [ 1:0]      diff_1553_in,
 
   output                  i2s_mclk,
@@ -99,6 +100,7 @@ module system_top (
 
   system_wrapper i_system_wrapper (
     .diff_1553_out(diff_1553_out),
+    .en_diff_1553_out(en_diff_1553_out),
     .diff_1553_in(diff_1553_in),
     .DDR_addr (ddr_addr),
     .DDR_ba (ddr_ba),
