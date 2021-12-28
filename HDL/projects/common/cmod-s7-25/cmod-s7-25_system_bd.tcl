@@ -37,8 +37,8 @@ ad_ip_parameter clk_wiz_48mhz CONFIG.CLKOUT1_REQUESTED_OUT_FREQ 48
 ad_ip_parameter clk_wiz_48mhz CONFIG.USE_LOCKED false
 ad_ip_parameter clk_wiz_48mhz CONFIG.PRIM_IN_FREQ 12.000
 ad_ip_parameter clk_wiz_48mhz CONFIG.USE_RESET true
-ad_ip_parameter clk_wiz_48mhz CONFIG.RESET_TYPE {ACTIVE_LOW}
-ad_ip_parameter clk_wiz_48mhz CONFIG.RESET_PORT {resetn}
+ad_ip_parameter clk_wiz_48mhz CONFIG.RESET_TYPE {ACTIVE_HIGH}
+ad_ip_parameter clk_wiz_48mhz CONFIG.RESET_PORT {reset}
 
 # default reset
 
@@ -60,7 +60,7 @@ ad_connect  sys_clk     sys_rstgen/slowest_sync_clk
 
 set_property CONFIG.POLARITY ACTIVE_HIGH [get_bd_ports reset]
 
-ad_connect /resetn clk_wiz_48mhz/resetn
+ad_connect /reset clk_wiz_48mhz/reset
 
 # generic reset/clock pointers
 
