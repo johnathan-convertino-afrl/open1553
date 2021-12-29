@@ -2,37 +2,33 @@ SRCDIR = src
 SRC = $(wildcard $(SRCDIR)/*.c)
 OBJDIR = obj
 OBJECTS = $(addprefix $(OBJDIR)/, $(notdir $(SRC:.c=.o)))
-RINGBUF_DIR = ../C89_pthread_ring_buffer
-LINKDIR = -I$(RINGBUF_DIR)
-LIBOUT_STATIC = libringBuffer.a
+LIBS = ../lib/ringBuffer/ringBuffer.a ../lib/mil1553threads/mil1553threads.a
+LIBS_DIR = $(addprefix -L, $(dir $(LIBS)))
+LINK_DIR = $(addprefix -I, $(dir $(LIBS)))
+LINK_LIBS = $(addprefix -l,$(basename $(notdir $(LIBS))))
 EXEC = simple_bc
-
-#$(addprefix -l,$(basename $(LIBS)))
-#$(notdir $(basename $(SRC)))
 
 CC = gcc
 CFLAGS = -Wall -O2 -std=gnu99
-LFLAGS = -I. -fPIC -lpthread
-EXELFLAGS = $(LINKDIR)
+LFLAGS = $(LINK_DIR) $(LIBS_DIR) -I. -fPIC -lpthread $(LINK_LIBS)
 
-.PHONY: clean
+.PHONY: clean $(LIBS)
 
 all: lib exe
-lib: $(LIBOUT_STATIC)
+lib: $(LIBS)
 
 exe: $(EXEC)
 
-$(EXEC): $(OBJECTS) $(LIBOUT_STATIC)
-	$(CROSS_COMPILE)$(CC) $(CFLAGS) $< -o $@ $(LFLAGS) -L$(RINGBUF_DIR) -lringBuffer
+$(EXEC): $(OBJECTS) $(LIBS)
+	$(CROSS_COMPILE)$(CC) $(CFLAGS) $< -o $@ $(LFLAGS)
 
-$(LIBOUT_STATIC):
-	@$(MAKE) -C $(RINGBUF_DIR) $@;
+$(LIBS):
+	@$(MAKE) -C $(@D) lib$(@F);
 	
 $(OBJDIR)/%.o : $(SRCDIR)/%.c
 	mkdir -p $(OBJDIR)
-	$(CROSS_COMPILE)$(CC) $(CFLAGS) $(LFLAGS) $(EXELFLAGS) -c $< -o $@
+	$(CROSS_COMPILE)$(CC) $(CFLAGS) $(LFLAGS) -c $< -o $@
 	
 clean:
-	@$(MAKE) -C $(RINGBUF_DIR) clean
-	rm -f  $(EXEC)
+	rm -f $(EXEC)
 	rm -rf $(OBJDIR)
