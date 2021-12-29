@@ -88,6 +88,7 @@ int main(int argc, char *argv[])
   /* variables */
   int error = 0;
   int opt = 0;
+  int blocking = 0;
   
   /* allow CTRL+C to kill producer thread */
   signal(SIGINT,  signalHandler);
@@ -110,7 +111,7 @@ int main(int argc, char *argv[])
   FILE *p_inFile = NULL;
   
   /* parse arguments */
-  while((opt = getopt(argc, argv, "a:f:d:h")) != -1)
+  while((opt = getopt(argc, argv, "a:f:d:bh")) != -1)
   {
     switch(opt)
     {
@@ -122,6 +123,9 @@ int main(int argc, char *argv[])
         break;
       case 'd':
         strcpy(deviceName, optarg);
+        break;
+      case 'b':
+        blocking = 1;
         break;
       case 'h':
       default:
@@ -137,7 +141,7 @@ int main(int argc, char *argv[])
   }
   
   /* open MIL-STD-1553 device that provides open1553 formatted strings */
-  deviceOpts.discriptor = open(deviceName, O_RDWR | O_NONBLOCK);
+  deviceOpts.discriptor = open(deviceName, O_RDWR | (blocking ? 0 : O_NONBLOCK));
   /* check for discriptor existance in the next two ifs, exit if they don't exist */
   if(deviceOpts.discriptor < 0)
   {
@@ -305,6 +309,7 @@ void *consumer(void *data)
     int numElemRead = 0;
     int numElemWrote = -2; //eat the first 2 written for command packet (index backoff)
     int received = 0;
+    int totalReceived = 0;
     uint16_t packetData = 0;
     
     char outputString[LEN_1553_STRING+1] = {'\0'};
@@ -315,6 +320,8 @@ void *consumer(void *data)
       memset(p_dataBuffer, 0, MAX_1553_DATA*2);
       
       numElemRead = ringBufferBlockingRead(p_ringBuffer, p_dataBuffer, MAX_1553_DATA*2, NULL);
+      
+      if(numElemRead == 0) continue;
       // send command packet
       commandPacket.bit.count = (uint16_t)(numElemRead + 1)/2; //32 and higher will be 0, 11111 should be 31... should be perfect.
     }
@@ -326,25 +333,31 @@ void *consumer(void *data)
     do
     {
       int sent = 0;
+      int totalSent = 0;
       
       do
       {
-        sent += write(p_deviceOpts->discriptor, &outputString[sent], LEN_1553_STRING - sent);
-      }
-      while((LEN_1553_STRING - sent) > 0);
+        sent = write(p_deviceOpts->discriptor, &outputString[totalSent], LEN_1553_STRING - totalSent);
+        
+        totalSent += (sent > 0) ? sent : 0;
+        
+      } while(totalSent < LEN_1553_STRING);
       
       numElemWrote += 2;
       
-      sprintf(outputString, "DATA;D0;P1;I0;Hx%02X%02X\r", p_dataBuffer[numElemWrote], p_dataBuffer[numElemWrote+1]);
+      sprintf(outputString, "DATA;D0;P1;I0;Hx%02X%02X\r", (uint8_t)p_dataBuffer[numElemWrote],  (uint8_t)p_dataBuffer[numElemWrote+1]);
       
     // keep looping till all data from numElemRead sent
-    } while((numElemRead - numElemWrote) > 0);
+    } while(numElemWrote < numElemRead);
     
     // once looping is done, wait for a status response from RT
     do
     {
-      received += read(p_deviceOpts->discriptor, &statusString[received], LEN_1553_STRING - received);
-    } while ((LEN_1553_STRING - received) > 0);
+      received += read(p_deviceOpts->discriptor, &statusString[totalReceived], LEN_1553_STRING - totalReceived);
+      
+      totalReceived += (received > 0) ? received : 0;
+      
+    } while (totalReceived < LEN_1553_STRING);
     
     packetData = (uint16_t)strtol(&statusString[16], NULL, 16);
     
@@ -368,6 +381,8 @@ void *consumer(void *data)
   ringBufferEndBlocking(p_ringBuffer);
   
   free(p_dataBuffer);
+  
+  //SEND TERMINATION TO REMOTE TERMINAL
   
   return NULL;
 }
