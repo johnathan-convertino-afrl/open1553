@@ -1,0 +1,6 @@
+*.a
+*.so
+test/test
+test/*.txt
+obj/
+doxygen/
