@@ -26,6 +26,8 @@
 #define READ_BYTES (1 << 5)
 /* open1553 string size with return */
 #define LEN_1553_STRING (21)
+/* max 1553 data packets */
+#define MAX_1553_DATA   32
 
 /* Ringbuffer is a global structure for the two threads */
 struct s_ringBuffer *p_ringBuffer = NULL;
@@ -86,6 +88,7 @@ int main(int argc, char *argv[])
   /* variables */
   int error = 0;
   int opt = 0;
+  int blocking = 0;
   
   /* allow CTRL+C to kill producer thread */
   signal(SIGINT,  signalHandler);
@@ -108,7 +111,7 @@ int main(int argc, char *argv[])
   FILE *p_outFile = NULL;
   
   /* parse arguments */
-  while((opt = getopt(argc, argv, "a:f:d:h")) != -1)
+  while((opt = getopt(argc, argv, "a:f:d:bh")) != -1)
   {
     switch(opt)
     {
@@ -120,6 +123,9 @@ int main(int argc, char *argv[])
         break;
       case 'd':
         strcpy(deviceName, optarg);
+        break;
+      case 'b':
+        blocking = 1;
         break;
       case 'h':
       default:
@@ -135,7 +141,7 @@ int main(int argc, char *argv[])
   }
   
   /* open MIL-STD-1553 device that provides open1553 formatted strings */
-  deviceOpts.discriptor = open(deviceName, O_RDWR | O_NONBLOCK);
+  deviceOpts.discriptor = open(deviceName, O_RDWR | (blocking ? 0 : O_NONBLOCK));
   /* check for discriptor existance in the next two ifs, exit if they don't exist */
   if(deviceOpts.discriptor < 0)
   {
@@ -226,6 +232,8 @@ void *producer(void *data)
 {
   int recvCount = 0;
   int boolRTaddrOK = 0;
+  uint8_t  dataCount = 0;
+  uint16_t storedData[MAX_1553_DATA] = {0};
   
   char *p_deviceBuffer = NULL;
   
@@ -236,6 +244,8 @@ void *producer(void *data)
   struct s_device *p_deviceOpts = NULL;
   
   p_deviceOpts = (struct s_device *)data;
+  
+  
   
   if(p_deviceOpts < 0)
   {
@@ -270,11 +280,13 @@ void *producer(void *data)
     /* read till we get all of the elements needed*/
     do
     {
-      numElemRead += read(p_deviceOpts->discriptor, &p_deviceBuffer[numElemRead], LEN_1553_STRING - numElemRead);
+      int received = 0;
+      
+      received = read(p_deviceOpts->discriptor, &p_deviceBuffer[numElemRead], LEN_1553_STRING - numElemRead);
+      
+      numElemRead += (received > 0) ? received : 0;
+         
     } while ((LEN_1553_STRING - numElemRead) > 0);
-    
-    
-    if(numElemRead <= 0) continue;
     
     /* convert hex data */
     packetData = (uint16_t)strtol(&p_deviceBuffer[16], NULL, 16);
@@ -292,8 +304,9 @@ void *producer(void *data)
       {
         /* recv only for this remote terminal, it will not transmit, only status messages at end of data transmissions */
         boolRTaddrOK = ~commandPacket.bit.TR;
-        printf("CMD Received\n");
       }
+      
+      dataCount = (commandPacket.bit.count != 0) ? commandPacket.bit.count : 32;
       //command process
       //do not write packet data from commands or status
       continue;
@@ -305,28 +318,40 @@ void *producer(void *data)
       statusPacket.bit.mesgError = 1;
     }
     
-    printf("DATA Received %d\n", recvCount);
+    printf("DATA Received %d %d %04x\n", recvCount, dataCount, packetData);
     
     if(boolRTaddrOK)
     {
-      if(recvCount < commandPacket.bit.count)
+      if(recvCount < dataCount)
       {
-        ringBufferBlockingWrite(p_ringBuffer, &packetData, 2, NULL);
+        storedData[recvCount] = packetData;
         recvCount++;
       }
       
-      if(recvCount >= commandPacket.bit.count)
+      if(recvCount >= dataCount)
       {
+        ringBufferBlockingWrite(p_ringBuffer, storedData, recvCount, NULL);
+        
         boolRTaddrOK = 0;
         recvCount    = 0;
         
-        sprintf(statusString, "CMDS;D0;P1;I0;Hx%04X\r", statusPacket.data);
+        sprintf(statusString, "CMDS;D1;P1;I0;Hx%04X\r", statusPacket.data);
         
+        printf("STATUS STRING: %s\n", statusString);
+        
+        sleep(1);
         //fix hangup
         do
         {
-          numElemWrote += write(p_deviceOpts->discriptor, &statusString[numElemWrote], LEN_1553_STRING - numElemWrote);
-        } while((LEN_1553_STRING - numElemWrote) > 0);
+          int sent = 0;
+          
+          sent = write(p_deviceOpts->discriptor, &statusString[numElemWrote], LEN_1553_STRING - numElemWrote);
+          
+          numElemWrote += (sent > 0) ? sent : 0;
+          
+        } while(numElemWrote < LEN_1553_STRING);
+        
+        printf("STATUS STRING WROTE\n");
       }
     }
 

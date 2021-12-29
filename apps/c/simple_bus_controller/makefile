@@ -35,4 +35,4 @@ $(OBJDIR)/%.o : $(SRCDIR)/%.c
 clean:
 	@$(MAKE) -C $(RINGBUF_DIR) clean
 	rm -f  $(EXEC)
-	rm -rf $(OBJDIR) $(DOXYGEN_GEN)
+	rm -rf $(OBJDIR)
