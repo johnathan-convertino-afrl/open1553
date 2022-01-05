@@ -389,12 +389,12 @@
   )
 
   (module logos:afrl (layer F.Cu) (tedit 0) (tstamp 6106B9E8)
-    (at 171.5 103.5)
+    (at 177 92.5 90)
     (path /6108267E)
-    (fp_text reference L1 (at 0 0) (layer F.SilkS) hide
+    (fp_text reference L1 (at 0 0 90) (layer F.SilkS) hide
       (effects (font (size 1.524 1.524) (thickness 0.3)))
     )
-    (fp_text value afrl (at 0.75 0) (layer F.SilkS) hide
+    (fp_text value afrl (at 0.75 0 90) (layer F.SilkS) hide
       (effects (font (size 1.524 1.524) (thickness 0.3)))
     )
     (fp_poly (pts (xy 5.842 -1.42875) (xy 5.81025 -1.397) (xy 5.7785 -1.42875) (xy 5.81025 -1.4605)
@@ -1839,7 +1839,7 @@
   (gr_line (start 211 111.5) (end 211 73) (layer Edge.Cuts) (width 1.5748))
   (gr_line (start 94 111.5) (end 211 111.5) (layer Edge.Cuts) (width 1.5748))
   (gr_line (start 94 73) (end 94 111.5) (layer Edge.Cuts) (width 1.5748))
-  (gr_text "2021 JAY CONVERTINO\nMIL-STD-1553 PMOD" (at 171 108.5) (layer F.SilkS)
+  (gr_text "2021 JAY CONVERTINO\nMIL-STD-1553 PMOD" (at 180 92 90) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.15)))
   )
 
