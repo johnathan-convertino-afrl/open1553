@@ -1,5 +1,12 @@
 # get clock frequency from pll/mcmm/ps
-set CLK_FREQ_HZ [get_property CONFIG.FREQ_HZ [get_bd_pins -of_objects $sys_cpu_clk -filter {DIR == "O"}]]
+set CLK_FREQ_HZ [get_property CONFIG.FREQ_HZ [get_bd_pins -of_objects $sys_cpu_clk -filter {DIR == "O"}]] 
+
+#add a retimer component here with a gpio and en_diff enable 
+#only when en_diff or gpio enable are set, will the DAC work.
+#when its both work, when its none then dac not selected.
+#feed in dac enable has a master enable.
+#but output enable is delayed by the number of cycles between
+#1553 encoder, diff converter, dac switch and lvds_dac path.
 
 # adc interface
 ad_ip_instance util_adc_diff adc_to_diff

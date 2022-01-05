@@ -98,3 +98,5 @@ set_property -dict {PACKAGE_PIN G2 IOSTANDARD LVCMOS33} [get_ports {pmod_jd[7]}]
 
 
 
+
+

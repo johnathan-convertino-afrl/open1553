@@ -7,7 +7,7 @@ ad_ip_instance util_uart_1553_core util_uart_1553_transceiver
 
 ad_ip_parameter util_uart_1553_transceiver CONFIG.clock_speed $CLK_FREQ_HZ
 ad_ip_parameter util_uart_1553_transceiver CONFIG.uart_baud_clock_speed $CLK_FREQ_HZ
-ad_ip_parameter util_uart_1553_transceiver CONFIG.uart_baud_rate {2000000}
+ad_ip_parameter util_uart_1553_transceiver CONFIG.uart_baud_rate {1000000}
 ad_ip_parameter util_uart_1553_transceiver CONFIG.uart_rx_delay {4}
 ad_ip_parameter util_uart_1553_transceiver CONFIG.uart_tx_delay {4}
 ad_ip_parameter util_uart_1553_transceiver CONFIG.uart_parity_ena {0}

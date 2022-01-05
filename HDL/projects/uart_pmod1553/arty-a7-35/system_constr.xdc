@@ -19,7 +19,10 @@ set_output_delay -clock [get_clocks VIRTUAL_clk_out1_system_clk_wiz_48mhz_0] -ma
 set_output_delay -clock [get_clocks VIRTUAL_clk_out1_system_clk_wiz_48mhz_0] -min -add_delay 0.050 [get_ports uart_tx]
 set_output_delay -clock [get_clocks VIRTUAL_clk_out1_system_clk_wiz_48mhz_0] -max -add_delay 0.500 [get_ports uart_tx]
 
+
 set_property BITSTREAM.CONFIG.SPI_BUSWIDTH 4 [current_design]
+
+
 
 
 
