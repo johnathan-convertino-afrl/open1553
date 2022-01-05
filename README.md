@@ -82,22 +82,54 @@ The fields are seperated by ; .
   - The fifth is the data in hex format, Hx???? where ? = 4 bits of data (16 bits in total).
   - The carrige return is the string terminator.
       - echo -ne "DATA;D1;P1;I0;Hx5555\r" is your friend for xilinx fifo applications.
-      
-## FUTURE
-Todo list for v3
-  - Consider adding high speed opamps to receive and transmit paths.
-  - Add AXI core with custom linux driver for MIL-STD-1553 core.
-    - Option between string and binary output.
-    - Add ability to manipulate clock waveform... for fun. (v3.X)
-  - High Speed C program to act as bus controller/remote terminal (v3.X)
 
-### hardware directory
+## DIRECTORIES
+### docs
 
-Simply open the KiCAD project file in hardware/pmod/kicad. This will allow you to  
+Helpful documents for the open1553 systems.
+
+The subfolder diagrams contains high level block diagrams of the 1553 data flow.
+
+The subfolder linux_build contrains documents for Linux on the Zedboard, ZCU102,   
+and other targets.
+
+### apps
+
+Example applications for using the uart/fifo1553 in with python. Won't set the world   
+on fire performance wise, but shows how quickly something can be put together.
+
+Python2 seems to be the best for fifo1553, python3 seems to be the best for the uart1553.  
+
+### hardware
+
+![pmod_img](img/pmod1553.png)
+
+Hardware design and information for the pmod_1553 device.   
+This design is drafted in KiCAD version 5.x.   
+
+Open the KiCAD project file in hardware/pmod/kicad. This will allow you to  
 look over the schematic and board design. You may then export it to whatever format   
 needed for your PCB manufacturing process.  
 
 ### HDL
+
+FPGA files for pmod_1553 projects. It contains libraries that are the  
+actual code for IP cores, and projects that generate for target boards.  
+Currently Supported:   
+
+  - Digilent Arty 35T (UART DEVICE)
+  - Digilent CMOD S7  (UART DEVICE)
+  - Zedboard (Xilinx FIFO pmod1553)
+  - Zybo ORIGINAL (Xilinx FIFO pmod1553)
+  - ZCU102 (Xilinx FIFO fmc1553)
+  - ZCU102 (Xilinx FIFO pmod1553)
+
+The original source for the HDL build system is from Analog Devices, all copyrights   
+are there own and I claim no ownership of their code.
+
+The original code has been altered and simulation capibility added.
+
+HDL code built with Vivado 2018.3.1
 
 The HDL build systems requires both Vivado and Icarus if you run a make all.   
 If you make individual projects or cores you or may not need icarus. Vivado is a  
@@ -124,55 +156,10 @@ included in the same folder.
 
 The reference base image file is included for SDCARD imaging. (2019_R1-2020_06_22.img.xz)
 
-### apps
-
-Python2 seems to be the best for fifo1553, python3 seems to be the best for the uart1553.  
-
-## DIRECTORIES
-### docs
-
-Helpful documents for the open1553 systems.
-
-The subfolder diagrams contains high level block diagrams of the 1553 data flow.
-
-The subfolder linux_build contrains documents for Linux on the Zedboard, ZCU102,   
-and other targets.
-
-### apps
-
-Example applications for using the uart/fifo1553 in with python. Won't set the world   
-on fire performance wise, but shows how quickly something can be put together.
-
-### hardware
-
-![pmod_img](img/pmod1553.png)
-
-Hardware design and information for the pmod_1553 device.   
-This design is drafted in KiCAD version 5.x.   
-
-### HDL
-
-FPGA files for pmod_1553 projects. It contains libraries that are the  
-actual code for IP cores, and projects that generate for target boards.  
-Currently Supported:   
-
-  - Digilent Arty 35T (UART DEVICE)
-  - Digilent CMOD S7  (UART DEVICE)
-  - Zedboard (Xilinx FIFO pmod1553)
-  - Zybo ORIGINAL (Xilinx FIFO pmod1553)
-  - ZCU102 (Xilinx FIFO fmc1553)
-  - ZCU102 (Xilinx FIFO pmod1553)
-
-The original source for the HDL build system is from Analog Devices, all copyrights   
-are there own and I claim no ownership of their code.
-
-The original code has been altered and simulation capibility added.
-
-HDL code built with Vivado 2018.3.1
-
-### linux
-
-Code for Xilinx FIFO projects. This project uses the    
-Analog Devices HDL base and its SDCARD image. The axisfifo folder contains the  
-opensource driver for the xilinx axis fifo ip core. Zed contains the folder with   
-needed files for generating boot files, and a device tree with the correct settings.  
+## FUTURE
+Todo list for v3
+  - Consider adding high speed opamps to receive and transmit paths.
+  - Add AXI core with custom linux driver for MIL-STD-1553 core.
+    - Option between string and binary output.
+    - Add ability to manipulate clock waveform... for fun. (v3.X)
+  - High Speed C program to act as bus controller/remote terminal (v3.X)
