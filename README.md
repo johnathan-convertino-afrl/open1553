@@ -1,6 +1,6 @@
 # open1553
-## Respository of open source 1553 designs for the pmod1553 device.
----
+
+Respository of open source 1553 designs for the pmod1553 device.
 
 author: Jay Convertino   
    
@@ -12,7 +12,6 @@ license: Various
    
 Special thanks to Analog Devices, their HDL build system is fantastic. I've used it with modifications in the HDL directory.  
    
----
 
 ![logo_img](img/logo.png)
 
