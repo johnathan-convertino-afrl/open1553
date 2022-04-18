@@ -10,7 +10,7 @@ create_bd_port -dir I -type rst resetn
 
 # 4bit leds
 
-create_bd_port -dir O -from 3 -to 0 four_leds
+create_bd_port -dir O -from 15 -to 0 leds
 
 # rgb led 0
 
@@ -20,22 +20,13 @@ create_bd_port -dir O -from 2 -to 0 rgb_led0
 
 create_bd_port -dir O -from 2 -to 0 rgb_led1
 
-# rgb led 2
-
-create_bd_port -dir O -from 2 -to 0 rgb_led2
-
-# rgb led 3
-
-create_bd_port -dir O -from 2 -to 0 rgb_led3
-
-
 # push buttons
 
-create_bd_port -dir I -from 3 -to 0 push_buttons
+create_bd_port -dir I -from 4 -to 0 push_buttons
 
 # slide switches
 
-create_bd_port -dir I -from 3 -to 0 slide_switches
+create_bd_port -dir I -from 15 -to 0 slide_switches
 
 # pmoda
 

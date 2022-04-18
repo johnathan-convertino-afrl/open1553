@@ -61,12 +61,16 @@ module util_axis_uart #(
     input   uart_clk,
     input   uart_rstn,
     output  tx,
-    input   rx
+    input   rx,
+    output  rts,
+    input   cts
   );
   
   wire uart_ena_tx;
   wire uart_ena_rx;
   wire uart_hold_rx;
+  
+  assign rts = cts;
   
   //baud enable generator for tx, enable blocks when data i/o is needed at set rate.
   util_uart_baud_gen #(

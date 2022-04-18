@@ -92,6 +92,11 @@ proc adi_project {project_name {mode 0} {parameter_list {}} } {
     set p_board "digilentinc.com:arty-a7-35:part0:1.0"
     set sys_zynq 0
   }
+  if [regexp "_nexys-a7-100t$" $project_name] {
+    set p_device "xc7a100tcsg324-1"
+    set p_board "digilentinc.com:nexys-a7-100t:part0:1.0"
+    set sys_zynq 0
+  }
   if [regexp "_zed$" $project_name] {
     set p_device "xc7z020clg484-1"
     set p_board "em.avnet.com:zed:part0:1.3"

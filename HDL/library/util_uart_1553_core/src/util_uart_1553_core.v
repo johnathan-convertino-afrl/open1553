@@ -57,6 +57,8 @@ module util_uart_1553_core #(
     //uart i/o
     input   rx_UART,
     output  tx_UART,
+    output  rts_UART,
+    input   cts_UART,
     //1553
     input   rx0_1553,
     input   rx1_1553,
@@ -264,7 +266,9 @@ module util_uart_1553_core #(
     .uart_clk(uart_clk),
     .uart_rstn(uart_rstn),
     .tx(tx_UART),
-    .rx(rx_UART)
+    .rx(rx_UART),
+    .rts(rts_UART),
+    .cts(cts_UART)
   );
   
   //encoder path
