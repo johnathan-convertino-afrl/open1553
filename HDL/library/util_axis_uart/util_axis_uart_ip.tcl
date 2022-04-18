@@ -41,10 +41,19 @@ set_property abstraction_type_vlnv xilinx.com:interface:uart_rtl:1.0 [ipx::get_b
 set_property bus_type_vlnv xilinx.com:interface:uart:1.0 [ipx::get_bus_interfaces uart -of_objects [ipx::current_core]]
 set_property interface_mode master [ipx::get_bus_interfaces uart -of_objects [ipx::current_core]]
 set_property display_name uart [ipx::get_bus_interfaces uart -of_objects [ipx::current_core]]
+
 ipx::add_port_map TxD [ipx::get_bus_interfaces uart -of_objects [ipx::current_core]]
 set_property physical_name tx [ipx::get_port_maps TxD -of_objects [ipx::get_bus_interfaces uart -of_objects [ipx::current_core]]]
+
 ipx::add_port_map RxD [ipx::get_bus_interfaces uart -of_objects [ipx::current_core]]
 set_property physical_name rx [ipx::get_port_maps RxD -of_objects [ipx::get_bus_interfaces uart -of_objects [ipx::current_core]]]
+
+ipx::add_port_map RTSn [ipx::get_bus_interfaces uart -of_objects [ipx::current_core]]
+set_property physical_name rts [ipx::get_port_maps RTSn -of_objects [ipx::get_bus_interfaces uart -of_objects [ipx::current_core]]]
+
+ipx::add_port_map CTSn [ipx::get_bus_interfaces uart -of_objects [ipx::current_core]]
+set_property physical_name cts [ipx::get_port_maps CTSn -of_objects [ipx::get_bus_interfaces uart -of_objects [ipx::current_core]]]
+
 ipx::associate_bus_interfaces -busif uart -clock uart_clk [ipx::current_core]
 
 ipx::save_core [ipx::current_core]

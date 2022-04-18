@@ -50,7 +50,9 @@ module system_top (
     .pmod_ja_pin5_o(pmod_ja[4]),
     .resetn(resetn),
     .uart_rxd(uart_rx),
-    .uart_txd(uart_tx)
+    .uart_txd(uart_tx),
+    .uart_rtsn(),
+    .uart_ctsn(1'b1)
   );
 
 endmodule
