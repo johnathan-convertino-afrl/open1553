@@ -16,8 +16,8 @@ module system_top (
   // 1553
   inout   [7:0]   pmod_ja,
   // uart
-  output           uart_tx,
-  input            uart_rx
+  input           ftdi_tx,
+  output          ftdi_rx
   );
   
   system_wrapper i_system_wrapper (
@@ -31,8 +31,8 @@ module system_top (
     .pmod_ja_pin4_o(pmod_ja[3]),
     .pmod_ja_pin5_o(pmod_ja[4]),
     .reset(push_buttons[0]),
-    .uart_rxd(uart_rx),
-    .uart_txd(uart_tx),
+    .uart_rxd(ftdi_tx),
+    .uart_txd(ftdi_rx),
     .uart_rtsn(),
     .uart_ctsn(1'b1)
   );

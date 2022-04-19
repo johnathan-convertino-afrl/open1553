@@ -19,7 +19,7 @@ module system_top (
   
   input   [4:0]   push_buttons,
   
-  input   [15:0]   slide_switches,
+  input   [15:0]  slide_switches,
   
   // pmod
   inout   [7:0]   pmod_ja,
@@ -28,10 +28,10 @@ module system_top (
   inout   [7:0]   pmod_jd,
   
   // uart
-  output           uart_tx,
-  input            uart_rx,
-  output           uart_rts,
-  input            uart_cts
+  input           ftdi_tx,
+  output          ftdi_rx,
+  input           ftdi_rts,
+  output          ftdi_cts
   );
   
   system_wrapper i_system_wrapper (
@@ -47,10 +47,10 @@ module system_top (
     .pmod_ja_pin4_o(pmod_ja[3]),
     .pmod_ja_pin5_o(pmod_ja[4]),
     .resetn(resetn),
-    .uart_rxd(uart_rx),
-    .uart_txd(uart_tx),
-    .uart_rtsn(uart_rts),
-    .uart_ctsn(uart_cts)
+    .uart_rxd(ftdi_tx),
+    .uart_txd(ftdi_rx),
+    .uart_rtsn(ftdi_cts),
+    .uart_ctsn(ftdi_rts)
   );
 
 endmodule

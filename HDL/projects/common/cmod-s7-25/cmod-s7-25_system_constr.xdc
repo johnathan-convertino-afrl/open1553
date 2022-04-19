@@ -20,8 +20,8 @@ set_property -dict {PACKAGE_PIN D2 IOSTANDARD LVCMOS33} [get_ports {push_buttons
 set_property -dict {PACKAGE_PIN D1 IOSTANDARD LVCMOS33} [get_ports {push_buttons[1]}]
 
 ## uart
-set_property -dict {PACKAGE_PIN L12 IOSTANDARD LVCMOS33} [get_ports uart_tx]
-set_property -dict {PACKAGE_PIN K15 IOSTANDARD LVCMOS33} [get_ports uart_rx]
+set_property -dict {PACKAGE_PIN K15 IOSTANDARD LVCMOS33} [get_ports ftdi_tx]
+set_property -dict {PACKAGE_PIN L12 IOSTANDARD LVCMOS33} [get_ports ftdi_rx]
 
 ## pmod
 ## pmod

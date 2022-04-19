@@ -61,13 +61,13 @@ set_property -dict {PACKAGE_PIN P18 IOSTANDARD LVCMOS33} [get_ports {push_button
 #set_property -dict { PACKAGE_PIN V10   IOSTANDARD LVCMOS33 } [get_ports { slide_switches[15] }]
 
 ## uart
-set_property PACKAGE_PIN C4 [get_ports uart_tx]
-set_property IOSTANDARD LVCMOS33 [get_ports uart_tx]
-set_property SLEW FAST [get_ports uart_tx]
-set_property DRIVE 4 [get_ports uart_tx]
-set_property -dict {PACKAGE_PIN D4 IOSTANDARD LVCMOS33} [get_ports uart_rx]
-set_property -dict {PACKAGE_PIN D3 IOSTANDARD LVCMOS33} [get_ports uart_cts]
-set_property -dict {PACKAGE_PIN E5 IOSTANDARD LVCMOS33} [get_ports uart_rts]
+set_property PACKAGE_PIN C4 [get_ports ftdi_tx]
+set_property IOSTANDARD LVCMOS33 [get_ports ftdi_tx]
+set_property SLEW FAST [get_ports ftdi_tx]
+set_property DRIVE 4 [get_ports ftdi_tx]
+set_property -dict {PACKAGE_PIN D4 IOSTANDARD LVCMOS33} [get_ports ftdi_rx]
+set_property -dict {PACKAGE_PIN D3 IOSTANDARD LVCMOS33} [get_ports ftdi_cts]
+set_property -dict {PACKAGE_PIN E5 IOSTANDARD LVCMOS33} [get_ports ftdi_rts]
 
 ##Pmod Headers
 ##Pmod Header pmod_ja
