@@ -70,7 +70,7 @@ module util_axis_uart #(
   wire uart_ena_rx;
   wire uart_hold_rx;
   
-  assign rts = cts;
+  assign rts = 1'b1;
   
   //baud enable generator for tx, enable blocks when data i/o is needed at set rate.
   util_uart_baud_gen #(

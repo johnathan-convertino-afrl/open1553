@@ -118,6 +118,7 @@ Currently Supported:
 
   - Digilent Arty 35T (UART DEVICE)
   - Digilent CMOD S7  (UART DEVICE)
+  - Digilent Nexys A7 100t (UART DEVICE)
   - Zedboard (Xilinx FIFO pmod1553)
   - Zybo ORIGINAL (Xilinx FIFO pmod1553)
   - ZCU102 (Xilinx FIFO fmc1553)

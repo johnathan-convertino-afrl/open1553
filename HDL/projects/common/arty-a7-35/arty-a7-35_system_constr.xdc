@@ -46,11 +46,11 @@ set_property -dict {PACKAGE_PIN C10 IOSTANDARD LVCMOS33} [get_ports {slide_switc
 set_property -dict {PACKAGE_PIN A10 IOSTANDARD LVCMOS33} [get_ports {slide_switches[3]}]
 
 ## uart
-set_property PACKAGE_PIN D10 [get_ports uart_tx]
-set_property IOSTANDARD LVCMOS33 [get_ports uart_tx]
-set_property SLEW FAST [get_ports uart_tx]
-set_property DRIVE 4 [get_ports uart_tx]
-set_property -dict {PACKAGE_PIN A9 IOSTANDARD LVCMOS33} [get_ports uart_rx]
+set_property PACKAGE_PIN D10 [get_ports ftdi_rx]
+set_property IOSTANDARD LVCMOS33 [get_ports ftdi_rx]
+set_property SLEW FAST [get_ports ftdi_rx]
+set_property DRIVE 4 [get_ports ftdi_rx]
+set_property -dict {PACKAGE_PIN A9 IOSTANDARD LVCMOS33} [get_ports ftdi_tx]
 
 ## pmod
 ## pmoda
