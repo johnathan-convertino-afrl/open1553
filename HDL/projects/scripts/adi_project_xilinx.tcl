@@ -313,6 +313,11 @@ proc adi_project_run {project_name} {
   set NPROC [number_of_processor]
   puts "Number of processors: $NPROC"
   
+  if {$NPROC > 32} {
+    set NPROC 32
+    puts "Number of processors reduced to 32."
+  }
+  
   set_param general.maxThreads $NPROC
 
   if {$ADI_USE_OOC_SYNTHESIS == 1} {
